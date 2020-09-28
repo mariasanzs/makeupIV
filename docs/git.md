@@ -13,5 +13,6 @@ Luego añadí la clave pública a GitHub
 
 ## Configuración correcta para los commits
 El fichero "config" está dentro de la carpeta .git
+
 ![fichero config](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/config.png)
 
