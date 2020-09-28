@@ -6,7 +6,7 @@ La idea del proyecto es poder enterarse rápidamente de descuentos, promociones 
 ## Herramientas
 Para el proyecto se usaré Node.js porque permite hacer web scrapping además de ser bastante modular y tener gran variedad de librerías.
 
-## Hito 0
+## Documentación
 [Configuración de git](https://github.com/mariasanzs/makeupIV/blob/master/docs/git.md) correctamente incluyendo el archivo config y las claves pública y privada]
 
 ## Autora
