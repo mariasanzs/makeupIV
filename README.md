@@ -1,10 +1,12 @@
-# plannerIV
-API para la organización y gestión de tu tiempo. Asignatura Infraestructura Virtual (IV) , ETSIIT, UGR
-Explicar un poco más:
-rmato y extensión convencional, que explique de qué va a ir el proyecto, en qué va a estar basado y algunas referencias relacionadas con el mismo. 
+# MakeUpIV
+API para obterner avisos en descuentos de maquillaje. Asignatura Infraestructura Virtual (IV) , ETSIIT, UGR
+La idea del proyecto es poder enterarse rápidamente de descuentos, promociones o ofertas rápidas de productos de maquillaje de tiendas Sephora, la cual muchas veces lanza gangas a través de sus redes sociales y demás medios que acaban agotándose de inmediato.
 
-## Lenguaje
-Para el proyecto se usará el lenguaje ...
+## Herramientas
+Para el proyecto se usaré Node.js porque permite hacer web scrapping además de ser bastante modular
+
+## Hito 0
+[Configuración de git](https://github.com/mariasanzs/makeupIV/blob/master/docs/git.md) correctamente incluyendo el archivo config y las claves pública y privada]
 
 ## Autora
 María Sanz Sánchez
