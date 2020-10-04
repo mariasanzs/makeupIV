@@ -1,0 +1,19 @@
+{
+  "name": "makeupIV",
+  "version": "0.0.0",
+  "main": "app.js",
+  "author": "mariasanzs",
+  "license": "GPL-3.0",
+  "keywords": ["makeup", "maquillaje", "iv"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mariasanzs/makeupIV.git"
+    },
+  "bugs": "https://github.com/mariasanzs/makeupIV/issues",
+  "dependencies": {
+    "express": "^4.7.1",
+    "mongoose": "~3.6.11",
+    "method-override": "^2.1.2",
+    "body-parser": "^1.5.1"
+  }
+}
