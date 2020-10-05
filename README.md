@@ -1,4 +1,5 @@
 # MakeUpIV
+![MakeUpIV](https://img.pngio.com/makeup-icon-design-vector-makeup-beauty-icon-png-and-vector-makeup-icon-png-640_640.png)
 API para obterner avisos en descuentos de maquillaje. Asignatura Infraestructura Virtual (IV) , ETSIIT, UGR.
 
 La idea del proyecto es poder enterarse rápidamente de descuentos, promociones o ofertas rápidas de productos de maquillaje de tiendas Sephora, la cual muchas veces lanza gangas a través de sus redes sociales y demás medios que acaban agotándose de inmediato.
@@ -9,7 +10,6 @@ Para conocer todas las herramientas de las que se hará uso durante el desarroll
 ## Documentación
 [Configuración de git](https://github.com/mariasanzs/makeupIV/blob/master/docs/git.md) correctamente incluyendo el archivo config y las claves pública y privada]
 
-[Instalación de las herramientas y primeros avances en el código](https://github.com/mariasanzs/makeupIV/blob/master/docs/hito1.md)
 
 ## Autora
 María Sanz Sánchez
