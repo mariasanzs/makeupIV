@@ -1,15 +1,28 @@
 {
   "name": "makeupIV",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "proyecto para conseguir gangas de maquillaje",
   "main": "app.js",
+  "directories": {
+      "doc" : "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository":{
+    "type": "git",
+    "url": "git+https://github.com/mariasanzs/makeupIV.git"
+  },
   "author": "mariasanzs",
   "license": "GPL-3.0",
-  "keywords": ["makeup", "maquillaje", "iv"],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mariasanzs/makeupIV.git"
-    },
-  "bugs": "https://github.com/mariasanzs/makeupIV/issues",
+  "bugs": {
+    "url": "https://github.com/mariasanzs/makeupIV/issues"
+  },
+  "keywords": [
+    "makeup",
+    "iv"
+  ],
+  "homepage": "https://github.com/mariasanzs/makeupIV#readme",
   "dependencies": {
     "express": "^4.7.1",
     "mongoose": "~3.6.11",
