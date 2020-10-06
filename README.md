@@ -15,5 +15,8 @@ Para conocer todas las herramientas de las que se hará uso durante el desarroll
 ## Historias de Usuario
 Puedes consultar las historias de usuario en la sección "Issues" bajo el label [user-stories](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aopen+is%3Aissue+label%3Auser-stories)
 
+## Pasos en el desarrollo
+Puedes seguir los pasos llevados a cabo durante el proyecto en el siguiente [enlace](https://github.com/mariasanzs/makeupIV/blob/master/docs/pasos.md)
+
 ## Autora ✒️
 * **María Sanz Sánchez** - [mariasanzs](https://github.com/mariasanzs)
