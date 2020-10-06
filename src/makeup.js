@@ -1,24 +1,24 @@
 class Maquillaje {
-  function producto(n, c, t, p){
+  producto(n, c, t, p){
     this.nombre = n;
     this.categoria = c;
     this.tono = t;
     this.precio = p;
   }
 
-  function getNombre(){
+   getNombre(){
     return nombre;
   }
 
-  function getCategoria(){
+  getCategoria(){
     return categoria;
   }
 
-  function getTono(){
+  getTono(){
     return tono;
   }
 
-  function getPrecio(){
+  getPrecio(){
     return precio;
   }
 }
