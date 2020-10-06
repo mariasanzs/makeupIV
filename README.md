@@ -12,5 +12,5 @@ Para conocer todas las herramientas de las que se hará uso durante el desarroll
 ## Documentación
 [Configuración de git](https://github.com/mariasanzs/makeupIV/blob/master/docs/git.md) correctamente incluyendo el archivo config y las claves pública y privada]
 
-## Autora
+## Autora ✒️
 María Sanz Sánchez
