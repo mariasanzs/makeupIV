@@ -3,12 +3,9 @@ class Maquillaje {
     this.nombre = n;
     this.categoria = c;
     this.tono = t;
-    this.precio = p;
+    this.preciorebajado = p;
   }
 
-   getNombre(){
-    return nombre;
-  }
 
   getCategoria(){
     return categoria;
@@ -18,7 +15,7 @@ class Maquillaje {
     return tono;
   }
 
-  getPrecio(){
-    return precio;
+  getPreciorebajado(){
+    return preciorebajado;
   }
 }
