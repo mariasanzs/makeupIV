@@ -1,5 +1,5 @@
 class Maquillaje {
-  producto(n, c, t, p){
+  constructor(n, c, t, p){
     this.nombre = n;
     this.categoria = c;
     this.tono = t;

@@ -1,6 +1,4 @@
-# MakeUpIV
-![MakeUpIV](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/icon.png)
-
+# MakeUpIV 💄
 
 API para obterner avisos en descuentos de maquillaje. Asignatura Infraestructura Virtual (IV) , ETSIIT, UGR.
 
