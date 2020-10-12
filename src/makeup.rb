@@ -17,7 +17,7 @@ class Maquillaje
 
   end
 
-  def listarCaracteristicas()
+  def listarCaracteristicasProducto()
 
   end
 
