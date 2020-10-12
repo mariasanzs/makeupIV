@@ -1,12 +1,14 @@
 class Maquillaje
-  attr_reader :nombre, :categoria, :tono, :preciorebajado
+  attr_accessor :nombre, :tono, :preciorebajado, :precio, :unidades, :unidadesvendidas
   #inicialización de la clase
-  def initialize(nombre, categoria, tonos, precio, preciorebajado)
+  def initialize(nombre, tonos, precio, preciorebajado, unidades)
     @nombre = nombre
     @categoria = categoria
     @tonos = tonos
     @precio = precio
     @preciorebajado = preciorebajado
+    @unidades = unidades
+    @unidadesvendidas = 0
   end
 
 
@@ -22,9 +24,8 @@ class Maquillaje
 
   end
 
-  def consultarCategoria()
+  def consultarUnidadesDisponibles()
 
   end
-end
 
-#obj = Maquillaje.new('lipStain','labiales','17','8')
+end
