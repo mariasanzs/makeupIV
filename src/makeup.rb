@@ -1,15 +1,16 @@
 class Maquillaje
   attr_reader :nombre, :categoria, :tono, :preciorebajado
   #inicialización de la clase
-  def initialize(nombre, categoria, tonos, preciorebajado)
+  def initialize(nombre, categoria, tonos, precio, preciorebajado)
     @nombre = nombre
     @categoria = categoria
     @tonos = tonos
+    @precio = precio
     @preciorebajado = preciorebajado
   end
 
 
-  def consultarPrecio()
+  def consultarPrecioDescontado()
 
   end
 
