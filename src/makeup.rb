@@ -1,19 +1,13 @@
 class Maquillaje
   attr_accessor :nombre, :tono, :preciorebajado, :precio, :unidades, :unidadesvendidas
   #inicialización de la clase
-  def initialize(nombre, tonos, precio, preciorebajado, unidades)
+  def initialize(nombre, tonos, precio, preciorebajado, unidades, unidadesvendidas)
     @nombre = nombre
-    @categoria = categoria
     @tonos = tonos
     @precio = precio
     @preciorebajado = preciorebajado
     @unidades = unidades
-    @unidadesvendidas = 0
-  end
-
-
-  def consultarPrecioDescontado()
-
+    @unidadesvendidas = unidadesvendidas
   end
 
   def consultarTonos()
@@ -26,6 +20,12 @@ class Maquillaje
 
   def consultarUnidadesDisponibles()
 
+  end
+
+  def consultarPrecioDescontado()
+    porcentajeDescuento = (@preciorebajado/@precio)*100
+    #Ahorras un #{porcentajeDescuento}%"
+    return porcentajeDescuento
   end
 
 end
