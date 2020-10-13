@@ -10,8 +10,14 @@ class Maquillaje
     @unidadesvendidas = unidadesvendidas
   end
 
-  def consultarTonos()
-
+  def tonosDisponibles()
+    disponibleTono = Array.new
+    for i in 0..(@tonos.size-1)
+      if @unidades[i] > @unidadesvendidas[i]
+        disponibleTono << @tonos[i]
+      end
+    end
+    return disponibleTono
   end
 
   def listarCaracteristicasProducto()
