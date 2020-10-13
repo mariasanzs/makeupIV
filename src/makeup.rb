@@ -20,10 +20,6 @@ class Maquillaje
     return disponibleTono
   end
 
-  def listarCaracteristicasProducto()
-
-  end
-
   def consultarUnidadesDisponibles()
     unidadesxtono = Array.new
     for i in 0..(@unidades.size-1)
@@ -37,5 +33,22 @@ class Maquillaje
     #Ahorras un #{porcentajeDescuento}%"
     return porcentajeDescuento
   end
+
+  def listarCaracteristicasProducto()
+    cadena = " Detalles del producto:
+    Nombre: #{@nombre}
+    Tonos: #{@tonos}
+    Tonos disponibles: #{tonosDisponibles()}
+    Precio: #{@precio}
+    Precio Rebajado: #{@preciorebajado}
+    Ahorras un #{consultarPrecioDescontado()}%
+    Unidades de cada tono: #{consultarUnidadesDisponibles()} \n"
+    return cadena
+  end
+
+  #obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],[0, 0, 0, 7])
+  #obj.consultarPrecioDescontado()
+  #obj.listarCaracteristicasProducto()
+  #obj.tonosDisponibles()
 
 end
