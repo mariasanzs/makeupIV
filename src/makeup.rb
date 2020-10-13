@@ -25,7 +25,11 @@ class Maquillaje
   end
 
   def consultarUnidadesDisponibles()
-
+    unidadesxtono = Array.new
+    for i in 0..(@unidades.size-1)
+      unidadesxtono << @unidades[i]-@unidadesvendidas[i]
+    end
+    return unidadesxtono
   end
 
   def consultarPrecioDescontado()
