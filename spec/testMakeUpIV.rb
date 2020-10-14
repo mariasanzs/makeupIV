@@ -50,4 +50,10 @@ describe Maquillaje do
       expect(obj.consultarUnidadesDisponibles()). to eql([3, 2, 1, 0])
     end
   end
+
+  describe "#consultarPrecioDescontado" do
+    it "Debería devolver el % de descuento que hay" do
+      expect(obj.consultarPrecioDescontado()). to eql(50.0)
+    end
+  end
 end
