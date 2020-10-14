@@ -43,12 +43,13 @@ class Maquillaje
     Precio Rebajado: #{@preciorebajado}
     Ahorras un #{consultarPrecioDescontado()}%
     Unidades de cada tono: #{consultarUnidadesDisponibles()} \n"
+    print cadena
     return cadena
   end
 
   obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],[0, 0, 0, 7])
   #obj.consultarPrecioDescontado()
-  #obj.listarCaracteristicasProducto()
+  obj.listarCaracteristicasProducto()
   #obj.tonosDisponibles()
   #obj.consultarUnidadesDisponibles()
 

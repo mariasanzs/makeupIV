@@ -38,4 +38,11 @@ describe Maquillaje do
       expect(obj.unidadesvendidas). to eql([0, 0, 0, 7])
     end
   end
+
+  describe "#tonosDisponibles" do
+    it "Debería devolver un listado de los tonos de los que hay unidades" do
+      expect(obj.tonosDisponibles()). to eql([4, 5, 6])
+    end
+  end
+
 end
