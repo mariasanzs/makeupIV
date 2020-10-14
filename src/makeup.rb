@@ -1,13 +1,28 @@
 class Maquillaje
-  attr_accessor :nombre, :tonos, :preciorebajado, :precio, :unidades, :unidadesvendidas
+  attr_reader :nombre, :tonos, :precio, :unidades
+  attr_accessor :preciorebajado, :unidadesvendidas
+
+  def unidades=(unidades)
+    if unidades.size-1 != @tonos.size-1
+      raise ArgumentError.new('El número de elementos de unidades no coincide con el de tonos')
+    end
+    @unidades = unidades
+  end
+
   #inicialización de la clase
-  def initialize(nombre, tonos, precio, preciorebajado, unidades, unidadesvendidas)
+  def initialize(nombre, tonos, precio, preciorebajado, unidades)
     @nombre = nombre
     @tonos = tonos
+    if precio < preciorebajado
+      raise ArgumentError.new('Este producto es más caro de su precio normal')
+    end
     @precio = precio
     @preciorebajado = preciorebajado
-    @unidades = unidades
-    @unidadesvendidas = unidadesvendidas
+    self.unidades = unidades
+    @unidadesvendidas = Array.new
+    for i in 0..(@tonos.size-1)
+      @unidadesvendidas << 0
+    end
   end
 
   def tonosDisponibles()
@@ -43,13 +58,12 @@ class Maquillaje
     Precio Rebajado: #{@preciorebajado}
     Ahorras un #{consultarPrecioDescontado()}%
     Unidades de cada tono: #{consultarUnidadesDisponibles()} \n"
-    print cadena
     return cadena
   end
 
-  obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],[0, 0, 0, 7])
+  #obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7])
   #obj.consultarPrecioDescontado()
-  obj.listarCaracteristicasProducto()
+  #obj.listarCaracteristicasProducto()
   #obj.tonosDisponibles()
   #obj.consultarUnidadesDisponibles()
 
