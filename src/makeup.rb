@@ -1,5 +1,5 @@
 class Maquillaje
-  attr_accessor :nombre, :tono, :preciorebajado, :precio, :unidades, :unidadesvendidas
+  attr_accessor :nombre, :tonos, :preciorebajado, :precio, :unidades, :unidadesvendidas
   #inicialización de la clase
   def initialize(nombre, tonos, precio, preciorebajado, unidades, unidadesvendidas)
     @nombre = nombre
@@ -46,9 +46,10 @@ class Maquillaje
     return cadena
   end
 
-  #obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],[0, 0, 0, 7])
+  obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],[0, 0, 0, 7])
   #obj.consultarPrecioDescontado()
   #obj.listarCaracteristicasProducto()
   #obj.tonosDisponibles()
+  #obj.consultarUnidadesDisponibles()
 
 end
