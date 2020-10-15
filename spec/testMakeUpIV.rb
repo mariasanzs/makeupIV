@@ -1,7 +1,9 @@
 require '../src/makeup.rb'
 
 describe Maquillaje do
-  obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],[0, 0, 0, 7])
+  obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7])
+  obj.venderProducto(5)
+  obj.venderProducto(6)
 
   describe "#nombre" do
     it "Debería devolver el nombre del producto" do
@@ -35,19 +37,19 @@ describe Maquillaje do
 
   describe "#unidadesvendidas" do
     it "Debería devolver cuantas unidades se han vendido" do
-      expect(obj.unidadesvendidas). to eql([0, 0, 0, 7])
+      expect(obj.unidadesvendidas). to eql([0, 1, 1, 0])
     end
   end
 
   describe "#tonosDisponibles" do
     it "Debería devolver un listado de los tonos de los que hay unidades" do
-      expect(obj.tonosDisponibles()). to eql([4, 5, 6])
+      expect(obj.tonosDisponibles()). to eql([4, 5, 7])
     end
   end
 
   describe "#consultarUnidadesDisponibles" do
     it "Debería devolver cuantas unidades quedan de cada tono" do
-      expect(obj.consultarUnidadesDisponibles()). to eql([3, 2, 1, 0])
+      expect(obj.consultarUnidadesDisponibles()). to eql([3, 1, 0, 7])
     end
   end
 
@@ -62,12 +64,11 @@ describe Maquillaje do
       expect(obj.listarCaracteristicasProducto()). to eql(" Detalles del producto:
     Nombre: prueba
     Tonos: [4, 5, 6, 7]
-    Tonos disponibles: [4, 5, 6]
+    Tonos disponibles: [4, 5, 7]
     Precio: 10.0
     Precio Rebajado: 5.0
     Ahorras un 50.0%
-    Unidades de cada tono: [3, 2, 1, 0]
-  ")
+    Unidades de cada tono: [3, 1, 0, 7] \n")
     end
   end
 end
