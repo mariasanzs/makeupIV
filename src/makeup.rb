@@ -1,6 +1,7 @@
 class Maquillaje
   attr_reader :nombre, :tonos, :precio , :unidades
   attr_accessor :preciorebajado, :unidadesvendidas
+  
 
   def unidades=(unidades)
     if unidades.size-1 != @tonos.size-1
