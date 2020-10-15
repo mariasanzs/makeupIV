@@ -1,4 +1,4 @@
-require '../src/makeup.rb'
+require_relative '../src/makeup.rb'
 
 describe Maquillaje do
   obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7])
