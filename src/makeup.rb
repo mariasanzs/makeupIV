@@ -60,6 +60,14 @@ class Maquillaje
   def consultarPrecioDescontado()
     porcentajeDescuento = (@preciorebajado/@precio)*100
     #Ahorras un #{porcentajeDescuento}%"
+    if porcentajeDescuento > 100.0
+      begin
+        raise 'Este producto no tiene ningun descuento'
+      rescue Exception => e
+        puts e.message
+        puts e.backtrace.inspect
+      end
+    end
     return porcentajeDescuento
   end
 
