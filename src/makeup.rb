@@ -25,6 +25,20 @@ class Maquillaje
     end
   end
 
+  def venderProducto(tono)
+    indice = @tonos.index(tono)
+    if indice && @unidades[indice]-@unidadesvendidas[indice]>0
+      @unidadesvendidas[indice] += 1
+    else
+      begin
+        raise 'Ese tono no está'
+      rescue Exception => e
+        puts e.message
+        puts e.backtrace.inspect
+      end
+    end
+  end
+
   def tonosDisponibles()
     disponibleTono = Array.new
     for i in 0..(@tonos.size-1)
@@ -60,11 +74,5 @@ class Maquillaje
     Unidades de cada tono: #{consultarUnidadesDisponibles()} \n"
     return cadena
   end
-
-  #obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7])
-  #obj.consultarPrecioDescontado()
-  #obj.listarCaracteristicasProducto()
-  #obj.tonosDisponibles()
-  #obj.consultarUnidadesDisponibles()
 
 end
