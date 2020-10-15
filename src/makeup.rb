@@ -1,5 +1,5 @@
 class Maquillaje
-  attr_reader :nombre, :tonos, :precio, :unidades
+  attr_reader :nombre, :tonos, :precio , :unidades
   attr_accessor :preciorebajado, :unidadesvendidas
 
   def unidades=(unidades)
@@ -30,13 +30,9 @@ class Maquillaje
     if indice && @unidades[indice]-@unidadesvendidas[indice]>0
       @unidadesvendidas[indice] += 1
     else
-      begin
-        raise 'Ese tono no está'
-      rescue Exception => e
-        puts e.message
-        puts e.backtrace.inspect
-      end
+      raise StandardError.new('Este tono no está')
     end
+    return @unidadesvendidas[indice]
   end
 
   def tonosDisponibles()
@@ -61,12 +57,7 @@ class Maquillaje
     porcentajeDescuento = (@preciorebajado/@precio)*100
     #Ahorras un #{porcentajeDescuento}%"
     if porcentajeDescuento > 100.0
-      begin
-        raise 'Este producto no tiene ningun descuento'
-      rescue Exception => e
-        puts e.message
-        puts e.backtrace.inspect
-      end
+      raise StandardError.new('Este producto no tiene ningun descuento')
     end
     return porcentajeDescuento
   end
@@ -82,5 +73,4 @@ class Maquillaje
     Unidades de cada tono: #{consultarUnidadesDisponibles()} \n"
     return cadena
   end
-
 end
