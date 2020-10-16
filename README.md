@@ -50,18 +50,11 @@ o
 
 >rake -T
 
-  El resultado sería el [siguiente](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/rake-T.png)
-
-
 * Para instalar las dependencias con Bundler
 >rake -installdeps
 
-  El resultado sería el [siguiente](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/rakeinstalldeps.png)
-
 * Para ejecutar el test
 >rake test
-
-  El resultado sería el [siguiente](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/raketest.png)
 
 Por otro lado, configurar el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) es muy sencillo, en él se van definiendo "task", en nuestro caso _installdeps_ y _test_ que ejecutan lo especificado en la tarea, para el caso de install deps se hace "bundle install" para lanzar la insercción/actualización de las herramientas, y para el caso de test se hace "rspec ./spec/testMakeUpIV.rb" para ejecutar con Rspec nuestro fichero de test
 
@@ -69,7 +62,8 @@ Por otro lado, configurar el fichero [Rakefile](https://github.com/mariasanzs/ma
 Puedes consultar las historias de usuario en la sección "Issues" bajo el label [user-stories](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aopen+is%3Aissue+label%3Auser-stories)
 
 ## Issues
-Puedes consultar todas las tareas que se han ido cumpliendo [aquí](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aissue+is%3Aclosed)
+Puedes consultar los issues cerrados en el hito 2 [aquí](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22Hito+2+-+Test%22)
+Y si quieres consultar todas las tareas que se han ido cumpliendo [aquí](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aissue+is%3Aclosed)
 
 ## Milestones
 Enlace a los [Milestones](https://github.com/mariasanzs/makeupIV/milestones) del proyecto
