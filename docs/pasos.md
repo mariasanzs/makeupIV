@@ -12,9 +12,10 @@
 
 ## Hito 2 - Test
 
-- Instalación un gestor de versiones, en mi caso ---
+- Instalación un gestor de versiones, en mi caso RBENV
 - Instalación Rspec para usarlo como herramienta BDD y poder testear nuestros programas.
 - Creación de nuevos [Issues](https://github.com/mariasanzs/makeupIV/milestone/2) correspondientes al hito 2.
 - Implementación código fuente correspondiente a las [HU](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aopen+is%3Aissue+label%3Auser-stories) (Historias de usuario)
-- Creación y modificación de métodos y/o funcionalidades dentro del [código fuente](https://github.com/mariasanzs/makeupIV/blob/master/src/makeup.rb), incluidas las excepciones
+- Creación y modificación de métodos y/o funcionalidades dentro del [código fuente](https://github.com/mariasanzs/makeupIV/blob/master/src/makeup.rb), incluidas las excepciones. Para aprender sobre la implementación de excepciones consulté enlaces como [este](http://rubylearning.com/satishtalim/ruby_exceptions.html)
 - Implementación de test unitarios y significativos para cada una de las funciones de la clase en el fichero y de sus excepciones [testMakeUpIV.rb](https://github.com/mariasanzs/makeupIV/blob/master/spec/testMakeUpIV.rb) dentro de la carpeta [/spec](https://github.com/mariasanzs/makeupIV/tree/master/spec)
+
