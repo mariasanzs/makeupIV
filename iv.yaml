@@ -1,5 +1,5 @@
 entidad: src/makeup.rb
 
 lenguaje: Ruby
-test: ./spec/testMakeUpIV.rb
+test: spec/testMakeUpIV.rb
 taskfile: Rakefile
