@@ -31,32 +31,37 @@ Rakefile nos va a permitir tanto ejecutar los test como instalar las dependencia
 
 Para instalar Bundler:
 >gem install bundler
+
 >bundle init
+
 >bundle add rspec
+
 >bundle add rake
+
 >bundle install
+
 y ya se generan Gemfile y Gemfile.lock
 
-*Comandos con Rake:
-Para ver una descripción de las acciones que podemos realizar
+**Comandos con Rake:**
+* Para ver una descripción de las acciones que podemos realizar
 >rake --task
 
 o
 
 >rake -T
 
-El resultado sería el [siguiente](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/rake-T.png)
+  El resultado sería el [siguiente](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/rake-T.png)
 
 
-Para instalar las dependencias con Bundler
+* Para instalar las dependencias con Bundler
 >rake -installdeps
 
-El resultado sería el [siguiente](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/rakeinstalldeps.png)
+  El resultado sería el [siguiente](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/rakeinstalldeps.png)
 
-Para ejecutar el test
+* Para ejecutar el test
 >rake test
 
-El resultado sería el [siguiente](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/raketest.png)
+  El resultado sería el [siguiente](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/raketest.png)
 
 Por otro lado, configurar el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) es muy sencillo, en él se van definiendo "task", en nuestro caso _installdeps_ y _test_ que ejecutan lo especificado en la tarea, para el caso de install deps se hace "bundle install" para lanzar la insercción/actualización de las herramientas, y para el caso de test se hace "rspec ./spec/testMakeUpIV.rb" para ejecutar con Rspec nuestro fichero de test
 
