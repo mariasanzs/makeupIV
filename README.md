@@ -63,6 +63,7 @@ Puedes consultar las historias de usuario en la sección "Issues" bajo el label 
 
 ## Issues
 Puedes consultar los issues cerrados en el hito 2 [aquí](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22Hito+2+-+Test%22)
+
 Y si quieres consultar todas las tareas que se han ido cumpliendo [aquí](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aissue+is%3Aclosed)
 
 ## Milestones
