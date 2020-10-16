@@ -39,10 +39,16 @@ y ya se generan Gemfile y Gemfile.lock
 
 *Comandos con Rake:
 Para ver una descripción de las acciones que podemos realizar
+>rake --task
+
+o
+
 >rake -T
 
 Para instalar las dependencias con Bundler
 >rake -installdeps
+
+El resultado sería el siguiente
 
 Para ejecutar el test
 >rake test
