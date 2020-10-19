@@ -5,7 +5,6 @@ API para obterner avisos en descuentos de maquillaje. Asignatura Infraestructura
 La idea del proyecto es poder enterarse rápidamente de descuentos, promociones o ofertas rápidas de productos de maquillaje de tiendas Sephora, la cual muchas veces lanza gangas a través de sus redes sociales y demás medios que acaban agotándose de inmediato.
 
 
-
 ## Herramientas 🛠️
 
 ### Lenguaje
@@ -52,7 +51,7 @@ Aquí se encuentran los ficheros [Gemfile](https://github.com/mariasanzs/makeupI
 
 Aquí se encuentra el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) con el que podemos gestionar la tareas y automatizarlas con [Rake](https://github.com/mariasanzs/makeupIV/blob/master/docs/rake.md)
 
-## Haciendo uso de Rakefile
+## Haciendo uso de Rakefile 🔷
 
 Antes de ejecutar el Rakefile deberíamos de tener instalado Bundler y Rake:
 
@@ -60,14 +59,14 @@ Antes de ejecutar el Rakefile deberíamos de tener instalado Bundler y Rake:
 
 > gem install rake
 
-### Para instalar las dependencias con Bundler:
+### Para instalar las dependencias con Bundler: 🔹
 
 Simplemente debemos de escribir el siguiente comando para instalar las dependencias:
 
 >rake -installdeps
 
 
-### Para realizar los test de nuestro código:
+### Para realizar los test de nuestro código: 🔹
 
 * Ejecutamos los test haciendo:
 >rake test
