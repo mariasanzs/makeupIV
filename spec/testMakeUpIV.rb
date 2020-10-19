@@ -74,4 +74,16 @@ describe Maquillaje do
     end
   end
 
+  obj2.preciorebajado = 20.0
+
+  describe "#consultarPrecioDescontado" do
+    it "Debería devolver el % de descuento que hay" do
+      expect(obj.consultarPrecioDescontado()). to eql(50.0)
+    end
+
+    it "Debería lanzar error si no tuviera ningún descuento" do
+      expect{ obj2.consultarPrecioDescontado() }.to raise_error(StandardError)
+    end
+  end
+
 end
