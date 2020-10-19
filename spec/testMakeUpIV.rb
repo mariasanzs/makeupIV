@@ -86,4 +86,18 @@ describe Maquillaje do
     end
   end
 
+
+  describe "#listarCaracteristicasProducto" do
+    it "Debería devolver cuantas unidades se han vendido" do
+      expect(obj.listarCaracteristicasProducto()). to eql(" Detalles del producto:
+    Nombre: prueba
+    Tonos: [4, 5, 6, 7]
+    Tonos disponibles: [4, 5, 7]
+    Precio: 10.0
+    Precio Rebajado: 5.0
+    Ahorras un 50.0%
+    Unidades de cada tono: [3, 1, 0, 7] \n")
+    end
+  end
+
 end
