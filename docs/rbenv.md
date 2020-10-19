@@ -9,4 +9,5 @@ Rbenv permite especificar versiones de Ruby especificas de la aplicación ademá
 Debido a que Rbenv no gestiona los conjuntos de gemas (gemsets) por defecto, se recomienda el uso de [Bundler](https://github.com/mariasanzs/makeupIV/blob/master/docs/bundler.md).
 
 ***Instalación de RBENV***
+
 En el siguiente [enlace](https://github.com/rbenv/rbenv#basic-github-checkout) se explican los pasos que hay que seguir para instalar RBENV de forma manual
