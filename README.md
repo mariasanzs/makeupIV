@@ -76,7 +76,7 @@ Simplemente debemos de escribir el siguiente comando para instalar las dependenc
 Puedes consultar las historias de usuario en la sección "Issues" bajo el label [user-stories](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aopen+is%3Aissue+label%3Auser-stories)
 
 ## Issues
-Puedes consultar los issues cerrados en el hito 2 [aquí](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22Hito+2+-+Test%22)
+Puedes consultar los issues cerrados en la práctica de esta última semana [aquí](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22Hito+2+-+Test%22)
 
 Y si quieres consultar todas las tareas que se han ido cumpliendo [aquí](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aissue+is%3Aclosed)
 
