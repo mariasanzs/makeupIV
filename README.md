@@ -45,9 +45,11 @@ Todos los test están localizados en la carpeta [/spec](https://github.com/maria
 Puedes consultar el fichero iv.yaml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/iv.yaml)
 
 ***Ficheros de dependencias***
+
 Aquí se encuentran los ficheros [Gemfile](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile) y [Gemfile.lock](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile.lock). En Gemfile especificamos que gemas vamos a usar mientras que Gemfile.lock se encarga de mantener esas versiones actualizadas cuando corremos [Bundler](https://github.com/mariasanzs/makeupIV/blob/master/docs/bundler.md#bundler---gestor-de-dependencias).
 
 ***Fichero de gestión de tareas***
+
 Aquí se encuentra el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) con el que podemos gestionar la tareas y automatizarlas con [Rake](https://github.com/mariasanzs/makeupIV/blob/master/docs/rake.md)
 
 ## Haciendo uso de Rakefile
@@ -55,6 +57,7 @@ Aquí se encuentra el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/
 Antes de ejecutar el Rakefile deberíamos de tener instalado Bundler y Rake:
 
 > gem install bundler
+
 > gem install rake
 
 ### Para instalar las dependencias con Bundler:
