@@ -24,4 +24,8 @@ o
 * Para ejecutar el test
 >rake test
 
-Por otro lado, configurar el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) es muy sencillo, en él se van definiendo "task", en nuestro caso _installdeps_ y _test_ que ejecutan lo especificado en la tarea, para el caso de install deps se hace "bundle install" para lanzar la insercción/actualización de las herramientas, y para el caso de test se hace "rspec ./spec/testMakeUpIV.rb" para ejecutar con Rspec nuestro fichero de test
+Por otro lado, configurar el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) es muy sencillo, en él se van definiendo "task", en nuestro caso
+_installdeps_ y _test_ que ejecutan lo especificado en la tarea.
+
+Para el caso de install deps se hace "bundle install" para lanzar la insercción/actualización de las herramientas, y para el caso de test se hace
+ "rspec ./spec/testMakeUpIV.rb" para ejecutar con Rspec nuestro fichero de test
