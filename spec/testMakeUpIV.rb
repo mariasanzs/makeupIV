@@ -62,40 +62,4 @@ describe Maquillaje do
     end
   end
 
-  describe "#tonosDisponibles" do
-    it "Debería devolver un listado de los tonos de los que hay unidades" do
-      expect(obj.tonosDisponibles()). to eql([4, 5, 7])
-    end
-  end
-
-  describe "#consultarUnidadesDisponibles" do
-    it "Debería devolver cuantas unidades quedan de cada tono" do
-      expect(obj.consultarUnidadesDisponibles()). to eql([3, 1, 0, 7])
-    end
-  end
-
-  obj2.preciorebajado = 20.0
-
-  describe "#consultarPrecioDescontado" do
-    it "Debería devolver el % de descuento que hay" do
-      expect(obj.consultarPrecioDescontado()). to eql(50.0)
-    end
-
-    it "Debería lanzar error si no tuviera ningún descuento" do
-      expect{ obj2.consultarPrecioDescontado() }.to raise_error(StandardError)
-    end
-  end
-
-  describe "#listarCaracteristicasProducto" do
-    it "Debería devolver cuantas unidades se han vendido" do
-      expect(obj.listarCaracteristicasProducto()). to eql(" Detalles del producto:
-    Nombre: prueba
-    Tonos: [4, 5, 6, 7]
-    Tonos disponibles: [4, 5, 7]
-    Precio: 10.0
-    Precio Rebajado: 5.0
-    Ahorras un 50.0%
-    Unidades de cada tono: [3, 1, 0, 7] \n")
-    end
-  end
 end
