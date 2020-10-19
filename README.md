@@ -4,6 +4,8 @@ API para obterner avisos en descuentos de maquillaje. Asignatura Infraestructura
 
 La idea del proyecto es poder enterarse rápidamente de descuentos, promociones o ofertas rápidas de productos de maquillaje de tiendas Sephora, la cual muchas veces lanza gangas a través de sus redes sociales y demás medios que acaban agotándose de inmediato.
 
+
+
 ## Herramientas 🛠️
 
 ### Lenguaje
@@ -12,9 +14,20 @@ Como lenguaje de programación se ha elegido [Ruby](https://github.com/mariasanz
 
 ### Gestor de versiones
 
+Se ha elegido RBENV como gestor de versiones, la justificación de la elección y demás información puedes consultarlo [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/rbenv.md#rbenv---gestor-de-versiones)
+
 ### Herramienta de testeo
 
-### Gestor de tareas
+Se utilizará Rspec como herramienta para testear todo nuestro código. Toda la información esta [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/rspec.md#rspec---marco-de-test) disponible
+
+### Gestor de dependencias
+
+Para gestionar las dependencias se usará Bundler, para conocer más sobre esta herramienta y su elección consulte el siguiente [enlace](https://github.com/mariasanzs/makeupIV/blob/master/docs/bundler.md)
+
+### Herramienta de construcción
+
+Como herramienta para automatizar y gestionar tareas se hace uso de Rake, toda la información relevante se encuentra [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/rake.md)
+
 
 
 ## Enlaces a ficheros 📑
@@ -32,39 +45,30 @@ Todos los test están localizados en la carpeta [/spec](https://github.com/maria
 Puedes consultar el fichero iv.yaml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/iv.yaml)
 
 ***Ficheros de dependencias***
-Aquí se encuentran los ficheros [Gemfile](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile) y [Gemfile.lock](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile.lock). En Gemfile especificamos que gemas vamos a usar mientras que Gemfile.lock se encarga de mantener esas versiones actualizadas cuando corremos Bundler.
+Aquí se encuentran los ficheros [Gemfile](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile) y [Gemfile.lock](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile.lock). En Gemfile especificamos que gemas vamos a usar mientras que Gemfile.lock se encarga de mantener esas versiones actualizadas cuando corremos [Bundler](https://github.com/mariasanzs/makeupIV/blob/master/docs/bundler.md#bundler---gestor-de-dependencias).
 
 ***Fichero de gestión de tareas***
-Usando [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) podemos gestionar la tareas y automatizarlas.
+Aquí se encuentra el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) con el que podemos gestionar la tareas y automatizarlas con [Rake](https://github.com/mariasanzs/makeupIV/blob/master/docs/rake.md)
 
-Para instalar Bundler:
->gem install bundler
+## Haciendo uso de Rakefile
 
->bundle init
+Antes de ejecutar el Rakefile deberíamos de tener instalado Bundler y Rake:
 
->bundle add rspec
+> gem install bundler
+> gem install rake
 
->bundle add rake
+### Para instalar las dependencias con Bundler:
 
->bundle install
+Simplemente debemos de escribir el siguiente comando para instalar las dependencias:
 
-y ya se generan Gemfile y Gemfile.lock
-
-**Comandos con Rake:**
-* Para ver una descripción de las acciones que podemos realizar
->rake --task
-
-o
-
->rake -T
-
-* Para instalar las dependencias con Bundler
 >rake -installdeps
 
-* Para ejecutar el test
+
+### Para realizar los test de nuestro código:
+
+* Ejecutamos los test haciendo:
 >rake test
 
-Por otro lado, configurar el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) es muy sencillo, en él se van definiendo "task", en nuestro caso _installdeps_ y _test_ que ejecutan lo especificado en la tarea, para el caso de install deps se hace "bundle install" para lanzar la insercción/actualización de las herramientas, y para el caso de test se hace "rspec ./spec/testMakeUpIV.rb" para ejecutar con Rspec nuestro fichero de test
 
 ## Historias de Usuario
 Puedes consultar las historias de usuario en la sección "Issues" bajo el label [user-stories](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aopen+is%3Aissue+label%3Auser-stories)
