@@ -6,7 +6,7 @@ on:
     branches: master
 jobs:
 #Configura el trabajo para que se ejecute en un corredor de Ubuntu
-  runs-on: ubuntu-latest
+  run-on: ubuntu-latest
   steps:
     -
     #Verifica el repositorio y lo descarga al corredor
@@ -20,8 +20,5 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GCR_PASSWORD }}
     -
-      name: build the last docker image
-      run: docker build -t ghrc.io/mariasanzs/makeupiv:latest .
-    -
-      name: push the last docker image
-      run: docker push ghrc.io/mariasanzs/makeupiv:latest
+      name: build and push the last docker image
+      run: docker build -t ghrc.io/mariasanzs/makeupiv:latest . && docker push ghrc.io/mariasanzs/makeupiv:latest
