@@ -4,32 +4,61 @@ API para obterner avisos en descuentos de maquillaje. Asignatura Infraestructura
 
 La idea del proyecto es poder enterarse rápidamente de descuentos, promociones o ofertas rápidas de productos de maquillaje de tiendas Sephora, la cual muchas veces lanza gangas a través de sus redes sociales y demás medios que acaban agotándose de inmediato.
 
+## Ejecutar test con Docker :whale:
+Para ejecutar los test necesitamos tener clonado el respositorio de GitHub y además tener descargado en nuestro repositorio local el contenedor base.
 
-## Herramientas 🛠️
+Para clonar el repositorio:
+>git clone git@github.com:mariasanzs/makeupIV.git
 
-### Lenguaje
+Podemos encontrar el contenedor base tanto en DockerHub como en GitHub Container Registry.
 
-Como lenguaje de programación se ha elegido [Ruby](https://github.com/mariasanzs/makeupIV/blob/master/docs/herramientas.md)
+Para descargar desde DockerHub:
+>docker pull mariasanzs/makeupiv
 
-### Gestor de versiones
+Para descargar desde GitHub Container Registry:
+>docker pull ghcr.io/mariasanzs/makeupiv/packagemakeupiv:latest
 
-Se ha elegido RBENV como gestor de versiones, la justificación de la elección y demás información puedes consultarlo [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/rbenv.md#rbenv---gestor-de-versiones)
+Para ejecutar los test desde la carpeta del repositorio se hace:
+>docker run -t -v `pwd`:/test mariasanzs/makeupiv
 
-### Herramienta de testeo
+## Elección del contenedor base
 
-Se utilizará Rspec como herramienta para testear todo nuestro código. Toda la información esta [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/rspec.md#rspec---marco-de-test) disponible
+Puedes consultar la justificación del contenedor base [aquí]
+---------------añadir link
 
-### Gestor de dependencias
-
-Para gestionar las dependencias se usará Bundler, para conocer más sobre esta herramienta y su elección consulte el siguiente [enlace](https://github.com/mariasanzs/makeupIV/blob/master/docs/bundler.md)
-
-### Herramienta de construcción
-
-Como herramienta para automatizar y gestionar tareas se hace uso de Rake, toda la información relevante se encuentra [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/rake.md)
+Puedes consultar información sobre la comparación de diferentes imágenes y la optimización del tamaño y/o la velocidad del contenedor resultante [aquí]
+---------------añadir link
 
 
+## Repositorios de contenedores de Docker :whale:
+### ▪️Docker Hub
+
+Puedes consultar la documentación sobre Docker Hub [aquí]
+----------------añadir link
+
+Puedes acceder al contenedor en Docker Hub en este [enlace](https://hub.docker.com/repository/docker/mariasanzs/makeupiv)
+
+### ▪️Github Container Registry
+
+Puedes consultar la documentación sobre Github Container Registry [aquí]
+----------------añadir link
+
+Puedes acceder al paquete de Github Container Registry en este [enlace](https://github.com/users/mariasanzs/packages/container/package/makeupiv%2Fpackagemakeupiv)
 
 ## Enlaces a ficheros 📑
+***Dockerfile***
+
+Puedes consultar el fichero Dockerfile [aqui](https://github.com/mariasanzs/makeupIV/blob/master/Dockerfile)
+
+También puedes consultar la documentación del dockerfile y la justificación de las ordenes [aquí]
+--------añadir link
+
+***Fichero GitHub Actions para definir un flujo de trabajo***
+
+GitHub Actions nos permite actualizar autómaticamente el repositorio en GitHub Container Registry.
+
+Puedes consultar el fichero de GitHub Actions [aquí]
+(https://github.com/mariasanzs/makeupIV/blob/master/.github/workflows/actions.yml)
 
 ***Código fuente***
 
@@ -70,6 +99,30 @@ Simplemente debemos de escribir el siguiente comando para instalar las dependenc
 
 * Ejecutamos los test haciendo:
 >rake test
+
+
+## Herramientas 🛠️
+
+### Lenguaje
+
+Como lenguaje de programación se ha elegido [Ruby](https://github.com/mariasanzs/makeupIV/blob/master/docs/herramientas.md)
+
+### Gestor de versiones
+
+Se ha elegido RBENV como gestor de versiones, la justificación de la elección y demás información puedes consultarlo [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/rbenv.md#rbenv---gestor-de-versiones)
+
+### Herramienta de testeo
+
+Se utilizará Rspec como herramienta para testear todo nuestro código. Toda la información esta [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/rspec.md#rspec---marco-de-test) disponible
+
+### Gestor de dependencias
+
+Para gestionar las dependencias se usará Bundler, para conocer más sobre esta herramienta y su elección consulte el siguiente [enlace](https://github.com/mariasanzs/makeupIV/blob/master/docs/bundler.md)
+
+### Herramienta de construcción
+
+Como herramienta para automatizar y gestionar tareas se hace uso de Rake, toda la información relevante se encuentra [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/rake.md)
+
 
 
 ## Historias de Usuario
