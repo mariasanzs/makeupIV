@@ -25,3 +25,12 @@
 - Actualización del archivo [iv.yaml](https://github.com/mariasanzs/makeupIV/blob/master/iv.yaml).
 - Actualización del fichero [herramientas.md](https://github.com/mariasanzs/makeupIV/blob/master/docs/herramientas.md) incluyendo las nuevas herramientas que se han utilizado en este hito.
 - Mejora y actualización del fichero [README.md](https://github.com/mariasanzs/makeupIV#readme).
+
+## Hito3 - Creación de un contenedor para pruebas
+
+- Creación de un fichero [Dockerfile](https://github.com/mariasanzs/makeupIV/blob/master/Dockerfile) para poder generar contenedores para los test
+- Creación de una cuenta en [Docker Hub](https://hub.docker.com/u/mariasanzs) y subir en dicha cuenta el [contenedor](https://hub.docker.com/r/mariasanzs/makeupiv)
+- Creación de un [fichero GitHub Actions](https://github.com/mariasanzs/makeupIV/blob/master/.github/workflows/actions.yml) para actualizar automaticamente el repositorio en GHCR
+- Puesta en Github Container Registry del [contenedor base](https://github.com/users/mariasanzs/packages/container/package/makeupiv%2Fpackagemakeupiv).
+- Añadir la nueva documentación sobre todos los conceptos desarrollados en el hito. Disponible en la carpeta [/docs](https://github.com/mariasanzs/makeupIV/tree/master/docs)
+- Mejora y actualización del fichero [README.md](https://github.com/mariasanzs/makeupIV#readme).
