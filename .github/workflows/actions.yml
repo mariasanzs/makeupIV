@@ -19,4 +19,4 @@ jobs:
        password: ${{ secrets.GCR_PASSWORD }}
     -
      name: build and push the last docker image
-     run: docker build -t ghcr.io/mariasanzs/makeupiv:latest . && docker push ghcr.io/mariasanzs/makeupiv:latest
+     run: docker build -t ghcr.io/mariasanzs/makeupiv/packagemakeupiv:latest . && docker push ghcr.io/mariasanzs/makeupiv/packagemakeupiv:latest
