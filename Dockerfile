@@ -16,5 +16,11 @@ COPY Gemfile.lock /test/Gemfile.lock
 # Builds the application
 RUN bundle install
 
+#Create a dedicated user for running test
+RUN adduser -D my-test-user
+
+#Set the user for CMD
+USER my-test-user
+
 # specifies what command to run within the container
 CMD ["rake", "test"]
