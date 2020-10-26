@@ -7,12 +7,9 @@ La idea del proyecto es poder enterarse rápidamente de descuentos, promociones 
 ## Ejecutar test con Docker :whale:
 Para ejecutar los test necesitamos tener clonado el respositorio de GitHub y además tener descargado en nuestro repositorio local el contenedor base.
 
-Para clonar el repositorio:
->git clone git@github.com:mariasanzs/makeupIV.git
-
 Podemos encontrar el contenedor base tanto en DockerHub como en GitHub Container Registry.
 
-Para descargar desde DockerHub:
+Para descargar desde Docker Hub:
 >docker pull mariasanzs/makeupiv
 
 Para descargar desde GitHub Container Registry:
