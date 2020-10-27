@@ -31,7 +31,7 @@ Puedes consultar información sobre la comparación de diferentes imágenes y la
 ### ▪️Docker Hub
 
 Puedes consultar la documentación sobre Docker Hub [aquí]
-----------------añadir link
+(https://github.com/mariasanzs/makeupIV/blob/master/docs/dockerHub.md)
 
 Puedes acceder al contenedor en Docker Hub en este [enlace](https://hub.docker.com/repository/docker/mariasanzs/makeupiv)
 
