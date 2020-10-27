@@ -8,11 +8,16 @@ Tras esto debemos de crear un repositorio público con nombre igual al de nuestr
 
 Debemos de configurar las herramientas de construcción automática para que se actualice de forma autómatica nuestro repositorio en Docker Hub cuando realicemos cambios en el repositorio de GitHub, estas ocpiones las encontraremos en la sección Automated Builds dentro del apartado [Builds](https://hub.docker.com/repository/docker/mariasanzs/makeupiv/builds) del repositorio
 
+***Imágenes de la configuración***
+
 * Automated Builds
 ![AutomatedBuilds](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/AutomatedBuilds.png)
 
 * Build Configurations:
 ![BuildConfigurations](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/BuildConfigurations.png)
+
+* Linked Accounts:
+![LinkedAcounts](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/LinkedAcounts.png)
 
 Una vez tengamos todas las configuraciones realizadas podremos ver que el build ha funcionado con éxito y que aparece nuestro README.md actualizado
 
