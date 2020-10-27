@@ -20,25 +20,21 @@ Para ejecutar los test desde la carpeta del repositorio se hace:
 
 ## Elección del contenedor base
 
-Puedes consultar la justificación del contenedor base [aquí]
----------------añadir link
+Puedes consultar la justificación del contenedor base [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/justificacionContenedor.md)
 
-Puedes consultar información sobre la comparación de diferentes imágenes y la optimización del tamaño y/o la velocidad del contenedor resultante [aquí]
----------------añadir link
+Puedes consultar información sobre la comparación de diferentes imágenes y la optimización del tamaño y/o la velocidad del contenedor resultante [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/comparacionImagenes.md)
 
 
 ## Repositorios de contenedores de Docker :whale:
 ### ▪️Docker Hub
 
-Puedes consultar la documentación sobre Docker Hub [aquí]
-(https://github.com/mariasanzs/makeupIV/blob/master/docs/dockerHub.md)
+Puedes consultar la documentación sobre Docker Hub [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/dockerHub.md)
 
 Puedes acceder al contenedor en Docker Hub en este [enlace](https://hub.docker.com/repository/docker/mariasanzs/makeupiv)
 
 ### ▪️Github Container Registry
 
-Puedes consultar la documentación sobre Github Container Registry [aquí]
-----------------añadir link
+Puedes consultar la documentación sobre Github Container Registry [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/githubContainerRegistry.md)
 
 Puedes acceder al paquete de Github Container Registry en este [enlace](https://github.com/users/mariasanzs/packages/container/package/makeupiv%2Fpackagemakeupiv)
 
@@ -47,15 +43,7 @@ Puedes acceder al paquete de Github Container Registry en este [enlace](https://
 
 Puedes consultar el fichero Dockerfile [aqui](https://github.com/mariasanzs/makeupIV/blob/master/Dockerfile)
 
-También puedes consultar la documentación del dockerfile y la justificación de las ordenes [aquí]
---------añadir link
-
-***Fichero GitHub Actions para definir un flujo de trabajo***
-
-GitHub Actions nos permite actualizar autómaticamente el repositorio en GitHub Container Registry.
-
-Puedes consultar el fichero de GitHub Actions [aquí]
-(https://github.com/mariasanzs/makeupIV/blob/master/.github/workflows/actions.yml)
+También puedes consultar la documentación del dockerfile y la justificación de las ordenes [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/dockerfile.md)
 
 ***Código fuente***
 
