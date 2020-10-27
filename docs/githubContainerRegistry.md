@@ -4,7 +4,7 @@ Se ha usado GitHub Container Registry como una herramienta alternativa a Docker 
 
 ***Cómo subir el contenedor a GHCR***
 
-Creamos una nueva imagen con docker build -t y copiamos el ID de la nueva imagen haciendo $docker image ls.
+Creamos una nueva imagen con docker build -t y copiamos el ID de la nueva imagen haciendo $docker images.
 
 Una vez la tenemos, debemos de etiquetarla con:
 
