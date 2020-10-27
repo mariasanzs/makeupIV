@@ -17,7 +17,8 @@ Para comparar tamaños crearemos una imagen con cada versión y podemos comproba
 
 Como podemos ver la versión por defecto es 7 veces más grande que la de Slim, y 12 veces más grande que la de Alpine. Además Alpine es la que menos espacio ocupa (69.3MB)
 
-***Comparación respecto al tiempo de ejecución ***
+***Comparación respecto al tiempo de ejecución***
+
 Para comparar los tiempos de ejecución lanzaremos:
 
 >docker run -t -v `pwd`:/test 'nombre version':latest
