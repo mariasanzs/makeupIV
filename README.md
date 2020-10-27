@@ -20,10 +20,9 @@ Para ejecutar los test desde la carpeta del repositorio se hace:
 
 ## Elección del contenedor base
 
-Puedes consultar la justificación del contenedor base [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/justificacionContenedor.md)
-
 Puedes consultar información sobre la comparación de diferentes imágenes y la optimización del tamaño y/o la velocidad del contenedor resultante [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/comparacionImagenes.md)
 
+Puedes consultar la justificación del contenedor base [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/justificacionContenedor.md)
 
 ## Repositorios de contenedores de Docker :whale:
 ### ▪️Docker Hub
@@ -39,7 +38,7 @@ Puedes consultar la documentación sobre Github Container Registry [aquí](https
 Puedes acceder al paquete de Github Container Registry en este [enlace](https://github.com/users/mariasanzs/packages/container/package/makeupiv%2Fpackagemakeupiv)
 
 ## Enlaces a ficheros 📑
-***Dockerfile***
+***🆕 Dockerfile***
 
 Puedes consultar el fichero Dockerfile [aqui](https://github.com/mariasanzs/makeupIV/blob/master/Dockerfile)
 
