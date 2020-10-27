@@ -27,6 +27,7 @@ Trabajamos en el directorio test para copiar después los Gemfile
 Para copiar los ficheros para poder instalar bundler usamos el usuario sin privilegios, para ello debemos de añadir antes la orden --chown
 
 > COPY --chown=my-test-user Gemfile /test/Gemfile
+
 > COPY --chown=my-test-user Gemfile.lock /test/Gemfile.lock
 
 Construimos la aplicación
