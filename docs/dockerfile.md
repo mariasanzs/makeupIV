@@ -12,15 +12,6 @@ Especificamos quién es el desarrollador del fichero
 
 > MAINTAINER María Sanz Sánchez "mariasanz@correo.ugr.es"
 
-> WORKDIR /test
-
-> COPY Gemfile /test/Gemfile
-> COPY Gemfile.lock /test/Gemfile.lock
-
-Construimos la aplicación
-
-> RUN bundle install
-
 Hay que evitar ejecutar nuestra aplicación como root ya que proporciona vulnerabilidad a la aplicación, por ello debemos de crear un usuario sin privilegios para que corra la apliación siempre y cuando sea posible. Usamos la opción -D para no tener que configurar todos los parámetros del usuario
 
 > RUN adduser -D my-test-user
@@ -28,6 +19,19 @@ Hay que evitar ejecutar nuestra aplicación como root ya que proporciona vulnera
 Accedemos al usuario para realizar la orden CMD
 
 > USER my-test-user
+
+Trabajamos en el directorio test para copiar después los Gemfile
+
+> WORKDIR /test
+
+Para copiar los ficheros para poder instalar bundler usamos el usuario sin privilegios, para ello debemos de añadir antes la orden --chown
+
+> COPY --chown=my-test-user Gemfile /test/Gemfile
+> COPY --chown=my-test-user Gemfile.lock /test/Gemfile.lock
+
+Construimos la aplicación
+
+> RUN bundle install
 
 En el siguiente comando se especifica cual es la orden que se desea correr, es importante expresarla en formato exec y no en formato shell, ya que es la forma recomendada y asegura que el proceso se ejecutará como PID 1
 
