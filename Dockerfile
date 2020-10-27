@@ -8,19 +8,19 @@ MAINTAINER María Sanz Sánchez "mariasanz@correo.ugr.es"
 # throw errors if Gemfile has been modified since Gemfile.lock
 #RUN bundle config --global frozen 1
 
-WORKDIR /test
-
-COPY Gemfile /test/Gemfile
-COPY Gemfile.lock /test/Gemfile.lock
-
-# Builds the application
-RUN bundle install
-
 #Create a dedicated user for running test
 RUN adduser -D my-test-user
 
 #Set the user for CMD
 USER my-test-user
+
+WORKDIR /test
+
+COPY --chown=my-test-user Gemfile /test/Gemfile
+COPY --chown=my-test-user Gemfile.lock /test/Gemfile.lock
+
+# Builds the application
+RUN bundle install
 
 # specifies what command to run within the container
 CMD ["rake", "test"]
