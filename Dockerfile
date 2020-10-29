@@ -11,18 +11,22 @@ RUN bundle config --global frozen 1
 #Create a dedicated user for running test
 RUN adduser -D my-test-user
 
+RUN chown my-test-user $GEM_HOME &&  chmod 777 $GEM_HOME
+
 #Set the user for CMD
 USER my-test-user
 
-WORKDIR /test
+WORKDIR /home/my-test-user
 
-COPY --chown=my-test-user Gemfile /test/Gemfile
-COPY --chown=my-test-user Gemfile.lock /test/Gemfile.lock
+COPY --chown=my-test-user Gemfile ./
+COPY --chown=my-test-user Gemfile.lock ./
 
 # Builds the application
 RUN bundle install
 
-RUN rm -r /test/Gemfile*
+RUN rm -r /home/my-test-user/Gemfile*
+
+WORKDIR /test
 
 # specifies what command to run within the container
 CMD ["rake", "test"]
