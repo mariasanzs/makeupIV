@@ -11,6 +11,7 @@ RUN bundle config --global frozen 1
 #Create a dedicated user for running test
 RUN adduser -D my-test-user
 
+#Gives ownership to our user 
 RUN chown my-test-user $GEM_HOME &&  chmod 777 $GEM_HOME
 
 #Set the user for CMD
