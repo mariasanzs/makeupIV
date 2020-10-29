@@ -16,7 +16,7 @@ Para comparar tamaños crearemos una imagen con cada versión y podemos comproba
 
 ![tamaños](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/tamano.png)
 
-Como podemos ver la versión por defecto es 7 veces más grande que la de Slim, y 12 veces más grande que la de Alpine. Además Alpine es la que menos espacio ocupa (69.3MB)
+Como podemos ver la versión por defecto es 7 veces más grande que la de Slim, y 12 veces más grande que las de Alpine. Además Alpine es la que menos espacio ocupa (69.3MB) seguida de RC-Alpine con una diferencia de unos 6MB
 
 ***Comparación respecto al tiempo de ejecución***
 
@@ -40,14 +40,20 @@ Los resultado en tiempo son:
 
 ![slim tiempo](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/imagenSlim.png)
 
-* ruby:2.7.2-alpine --- 5,714 seconds
+* ruby:2.7.2-alpine --- 4,628 seconds
 
 ![time alpine](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/timealpine.png)
 
 ![Alpine tiempo](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/ImagenAlpine.png)
 
-Por lo tanto la imagen que ejecuta los test a más velocidad es alpine seguida de la imagen por defecto y por último slim.
+* ruby:3.0-rc-alpine3.12 --- 4,798 seconds
 
-Por ser la que mejores resultados ha obtenido en relación tamaño del contenedor/velocidad de ejecución se ha elegido ruby:2.7.2-alpine como imagen base.
+![time rc alpine](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/timerc.png)
+
+![rc Alpine tiempo](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/ImagenRC.png)
+
+Por lo tanto la imagen que ejecuta los test a más velocidad es alpine seguida de su otra versión con rc con una diferencia casi despreciable y por último la imagen por defecto y por slim.
+
+Por ser la que mejores resultados ha obtenido en relación tamaño del contenedor/velocidad de ejecución se ha elegido ruby:2.7.2-alpine como imagen base aunque ruby:3.0-rc-alpine3.12 también es buena opción y ha obtenido unos resultados ligeramente inferiores.
 
 Puedes acceder desde [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/justificacionContenedor.md) a una justificación más extensa de la misma
