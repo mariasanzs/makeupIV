@@ -2,8 +2,7 @@ require_relative 'tipoProducto.rb'
 
 class Maquillaje
   attr_reader :nombre, :tonos, :precio , :unidades, :tipo
-  attr_accessor :preciorebajado, :unidadesvendidas
-
+  attr_accessor :preciorebajado, :unidadesvendidas, :codigos
 
   def unidades=(unidades)
     if unidades.size-1 != @tonos.size-1
@@ -13,10 +12,11 @@ class Maquillaje
   end
 
   #inicialización de la clase
-  def initialize(nombre, tonos, precio, preciorebajado, unidades, tipo)
+  def initialize(nombre, tonos, precio, preciorebajado, unidades, tipo, codigos)
     @nombre = nombre
     @tonos = tonos
     @tipo = tipo
+    @codigos = codigos #Array de códigos de descuento
     if precio < preciorebajado
       raise ArgumentError.new('Este producto es más caro de su precio normal')
     end
@@ -58,7 +58,7 @@ class Maquillaje
   end
 
   def consultarPrecioDescontado()
-    porcentajeDescuento = (@preciorebajado/@precio)*100
+    porcentajeDescuento = 100-(@preciorebajado/@precio)*100
     if porcentajeDescuento > 100.0
       raise StandardError.new('Este producto no tiene ningun descuento')
     end
@@ -77,4 +77,13 @@ class Maquillaje
     Unidades de cada tono: #{consultarUnidadesDisponibles()} \n"
     return cadena
   end
+
+  def canjearCodigo(codigo)
+    if @codigos.include?(codigo)
+      @preciorebajado=0.85*@preciorebajado #Descuento del 15%
+    else
+      raise StandardError.new('Este código no es válido')
+    end
+  end
+
 end
