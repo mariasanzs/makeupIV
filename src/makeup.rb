@@ -1,7 +1,7 @@
-require_relative 'TipoProducto.rb'
+require_relative 'tipoProducto.rb'
 
 class Maquillaje
-  attr_reader :nombre, :tonos, :precio , :unidades
+  attr_reader :nombre, :tonos, :precio , :unidades, :tipo
   attr_accessor :preciorebajado, :unidadesvendidas
 
 
