@@ -59,8 +59,8 @@ class Maquillaje
   end
 
   def consultarPrecioDescontado()
-    porcentajeDescuento = 100-(@preciorebajado/@precio)*100
-    if porcentajeDescuento > 100.0
+    porcentajeDescuento = 100.0-(@preciorebajado*100.0/@precio)
+    if porcentajeDescuento <= 0
       raise StandardError.new('Este producto no tiene ningun descuento')
     end
     return porcentajeDescuento
@@ -85,6 +85,7 @@ class Maquillaje
     else
       raise StandardError.new('Este código no es válido')
     end
+    return @preciorebajado
   end
 
 end

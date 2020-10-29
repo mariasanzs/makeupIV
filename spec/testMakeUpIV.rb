@@ -115,9 +115,9 @@ describe Maquillaje do
 
   describe "#canjearCodigo" do
     it "Debería devolver el nuevo precio rebajado" do
-      expect( obj.canjearCodigo('maria15')).to eql(57.5)
+      expect( obj.canjearCodigo('maria15')).to eql(4.25)
     end
-    
+
     it "Debería lanzar error si no existiera ningún código descuento" do
       expect{ obj.canjearCodigo('fallo') }.to raise_error(StandardError)
     end
