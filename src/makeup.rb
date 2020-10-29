@@ -1,7 +1,9 @@
+require_relative 'TipoProducto.rb'
+
 class Maquillaje
   attr_reader :nombre, :tonos, :precio , :unidades
   attr_accessor :preciorebajado, :unidadesvendidas
-  
+
 
   def unidades=(unidades)
     if unidades.size-1 != @tonos.size-1
@@ -11,9 +13,10 @@ class Maquillaje
   end
 
   #inicialización de la clase
-  def initialize(nombre, tonos, precio, preciorebajado, unidades)
+  def initialize(nombre, tonos, precio, preciorebajado, unidades, tipo)
     @nombre = nombre
     @tonos = tonos
+    @tipo = tipo
     if precio < preciorebajado
       raise ArgumentError.new('Este producto es más caro de su precio normal')
     end
@@ -65,6 +68,7 @@ class Maquillaje
   def listarCaracteristicasProducto()
     cadena = " Detalles del producto:
     Nombre: #{@nombre}
+    Tipo: #{@tipo}
     Tonos: #{@tonos}
     Tonos disponibles: #{tonosDisponibles()}
     Precio: #{@precio}
