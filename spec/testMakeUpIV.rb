@@ -1,8 +1,8 @@
 require_relative '../src/makeup.rb'
 
 describe Maquillaje do
-  obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],TipoProducto::LABIOS)
-  obj2 = Maquillaje.new('prueba',[1, 2, 3, 4],10.0,5.0,[3, 4, 2, 3],TipoProducto::LABIOS)
+  obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],TipoProducto::LABIOS,['maria15','labios15'])
+  obj2 = Maquillaje.new('prueba',[1, 2, 3, 4],10.0,5.0,[3, 4, 2, 3],TipoProducto::LABIOS,['maria15','labios15'])
   obj.venderProducto(5)
   obj.venderProducto(6)
 
@@ -12,7 +12,7 @@ describe Maquillaje do
     end
   end
 
-  describe "#tono" do
+  describe "#tonos" do
     it "Debería devolver un listado de tonos que hay" do
       expect(obj.tonos). to eql([4, 5, 6, 7])
     end
@@ -27,6 +27,12 @@ describe Maquillaje do
   describe "#precio" do
     it "Debería devolver el precio que suele tener el producto" do
       expect(obj.precio). to eql(10.0)
+    end
+  end
+
+  describe "#codigos" do
+    it "Debería devolver los codigos de descuento de un producto" do
+      expect(obj.codigos). to eql(['maria15','labios15'])
     end
   end
 
@@ -104,6 +110,16 @@ describe Maquillaje do
     Precio Rebajado: 5.0
     Ahorras un 50.0%
     Unidades de cada tono: [3, 1, 0, 7] \n")
+    end
+  end
+
+  describe "#canjearCodigo" do
+    it "Debería devolver el nuevo precio rebajado" do
+      expect( obj.canjearCodigo('maria15')).to eql(57.5)
+    end
+    
+    it "Debería lanzar error si no existiera ningún código descuento" do
+      expect{ obj.canjearCodigo('fallo') }.to raise_error(StandardError)
     end
   end
 
