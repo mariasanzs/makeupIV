@@ -2,10 +2,11 @@
 
 Compararemos las diferentes imágenes oficiales que podemos encontrar para Ruby en cuestión de tamaño que ocupan y velocidad con la que consiguen ejecutar los test
 
-Ruby tiene diferentes variantes de imagen nosotros compararemos las tres:
+Ruby tiene diferentes variantes de imagen nosotros compararemos las siguientes:
 - ruby:2.7.2 que es la imagen por defecto
 - ruby:2.7.2-slim que solo contiene los paquetes mínimos necesarios para ejecutar ruby
 - ruby:2.7.2-alpine que es mucho más pequeño que la mayoría de imagenes 
+- ruby:3.0-rc-alpine3.12 - que es una versión de alpine que usa [OpenRC](https://wiki.gentoo.org/wiki/OpenRC)
 
 Podemos encontrar muchas más etiquetas compatibles con Dockerfile [aquí](https://hub.docker.com/_/ruby)
 
