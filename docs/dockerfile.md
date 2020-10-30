@@ -58,3 +58,37 @@ En el siguiente comando se especifica cual es la orden que se desea correr, es i
 ## Buenas prácticas en el desarrollo del Dockerfile
 
 Para conocer cuales son las buenas prácticas durante el desarrollo del Dockerfile, uno de los enlaces que me fueron más útiles es el [siguiente](https://lipanski.com/posts/dockerfile-ruby-best-practices)
+
+Las buenas prácticas permiten optimizar tanto la calidad del código como la velocidad de ejecución o el tamaño de la imagen.
+
+Aunque ya se han mencionado en el apartado anterior todas las órdenes y la justificación del uso de cada una, aquí se lista una serie de optimizaciones que se han realizado:
+
+* Se ha hecho uso de una imagen base minimizada y oficial
+* Solo se hace copia de lo justo y necesario, y una vez es usada se elimina para reducir el tamaño.
+* Se hace uso de múltiples líneas con RUN para reducir el número de capas
+* Se evita el uso de root en la aplicación para evitar vulnerabilidad en la aplicación.
+* Se han colocado los comandos con menos probabilidad de que sean cambiados en la parte superior ya que Docker cuando detecta los cambios reconstruye todos los pasos desde el cambio
+
+### Optimización tras la construcción
+
+Existen opciones para docker build que permiten una optimización de nuestra imagen tales son como --squash o --compress que reducen el tamaño de la imagen al minimizar el número de capas.
+
+Hay que tener en cuenta cuando se hace uso de estas opciones que es necesario tener habilitado el modo experimental dentro de la configuración de docker ya que son relativamente nuevas.
+
+En el siguiente [enlace](https://docs.docker.com/engine/reference/commandline/build/) por ejemplo, se especifican los pasos que se han de seguir para usar squash.
+
+Por otro lado, tras hacer 
+
+> docker history 'id de la imagen' 
+
+se puede comprobar cuando espacio ocupa cada línea del archivo dockerfile que se ejecuta
+
+Aquí se muestra el antes y el después de ejecutar con 
+
+> docker build --squash -t ejemplo:latest .
+
+***antes***
+
+***después***
+
+Como se puede observar , todas las capas se han mergeado aunque el espacio que ocupa la imagen sigue siendo el mismo
