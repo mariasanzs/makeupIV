@@ -88,7 +88,7 @@ Aquí se muestra el antes y el después de ejecutar con
 > docker build --squash -t ejemplo:latest .
 
 ***antes***
-
+![antessquash](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/dockerhistory.png)
 ***después***
-
+![despuessquash](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/dockerhistorydespues.png)
 Como se puede observar , todas las capas se han mergeado aunque el espacio que ocupa la imagen sigue siendo el mismo
