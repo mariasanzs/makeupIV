@@ -1,11 +1,11 @@
 language: ruby
 
-ruby:
-  -2.7.2
+rvm:
+  - 2.7.2
 
-before-install:
-  -gem install bundle
-  -bundle install
+before_install:
+  - gem install bundle
+  - bundle install
 
 script:
-  -rake
+  - rake
