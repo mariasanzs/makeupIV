@@ -1,7 +1,7 @@
 language: ruby
 
 rvm:
-  -2.3.1
+  -2.7.2
 
 before-install:
   -gem install bundle
