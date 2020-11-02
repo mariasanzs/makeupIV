@@ -1,0 +1,9 @@
+language: ruby
+
+rvm:
+  - 2.7.2
+
+build:
+  ci:
+    - docker build -t mariasanzs/makeupiv:latest .
+    - docker run -t -v `pwd`:/test mariasanzs/makeupiv:latest
