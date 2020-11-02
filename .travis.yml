@@ -6,6 +6,7 @@ rvm:
 before_install:
   - docker build -t mariasanzs/makeupiv:latest .
   - docker run -t -v `pwd`:/test mariasanzs/makeupiv:latest
+  - bundle install
 
 script:
   - rake test
