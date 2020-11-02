@@ -5,5 +5,5 @@ rvm:
 
 build:
   ci:
-    - docker build -t mariasanzs/makeupiv:latest .
-    - docker run -t -v `pwd`:/test mariasanzs/makeupiv:latest
+    - bundle install
+    - rake test
