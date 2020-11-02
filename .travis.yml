@@ -4,8 +4,8 @@ rvm:
   - 2.7.2
 
 before_install:
-  - gem install bundle
-  - bundle install
+  - docker build -t mariasanzs/makeupiv:latest .
+  - docker run -t -v `pwd`:/test mariasanzs/makeupiv:latest
 
 script:
   - rake test
