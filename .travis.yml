@@ -3,10 +3,9 @@ language: ruby
 rvm:
   - 2.7.2
 
-before_install:
-  - docker build -t mariasanzs/makeupiv:latest .
-  - docker run -t -v `pwd`:/test mariasanzs/makeupiv:latest
-  - bundle install
+install:
+  - docker pull mariasanzs/makeupiv
+  - docker images
 
 script:
-  - rake test
+  - docker run -t -v `pwd`:/test mariasanzs/makeupiv:latest
