@@ -1,12 +1,9 @@
-language: ruby
-cache: bundler
+language: 
+  - minimal
 
-rvm:
-  - 2.7.2
-
-before-install:
-  - gem install bundler
-  - bundle install
+install:
+  - docker pull mariasanzs/makeupiv
+  - docker images
 
 script:
-  - rake test
+  - docker run -t -v `pwd`:/test mariasanzs/makeupiv:latest
