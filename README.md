@@ -4,6 +4,49 @@ API para obterner avisos en descuentos de maquillaje. Asignatura Infraestructura
 
 La idea del proyecto es poder enterarse rápidamente de descuentos, promociones o ofertas rápidas de productos de maquillaje de tiendas Sephora, la cual muchas veces lanza gangas a través de sus redes sociales y demás medios que acaban agotándose de inmediato.
 
+## Integración Continua 🟡➡✔ 
+
+La integración garantiza que los cambios se creen y prueben con la última versión de todo el código base con el fin de encontrar errores lo antes posible y asegurar la calidad del código.
+
+Para configurar la integración continua (CI) disponemos de dos plataformas online, Travis y Shippable.
+  - Puedes consultar la documentación y justificación de Travis [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/travis.md)
+  - Puedes consultar la documentación y justificación de Shippable [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/shippable.md)
+
+## Enlaces a ficheros 📑
+***🆕 .travis.yml***
+
+Puedes consultar el fichero .travis.yml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/.travis.yml)
+
+***🆕 Shippable.yml***
+
+Puedes consultar el fichero shippable.yml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/shippable.yml)
+
+***Dockerfile***
+
+Puedes consultar el fichero Dockerfile [aqui](https://github.com/mariasanzs/makeupIV/blob/master/Dockerfile)
+
+También puedes consultar la documentación del dockerfile y la justificación de las ordenes [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/dockerfile.md)
+
+***Código fuente***
+
+Puedes acceder al código fuente del proyecto desde la carpeta [/src](https://github.com/mariasanzs/makeupIV/tree/master/src)
+
+***Ficheros de test***
+
+Todos los test están localizados en la carpeta [/spec](https://github.com/mariasanzs/makeupIV/tree/master/spec)
+
+***iv.yaml***
+
+Puedes consultar el fichero iv.yaml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/iv.yaml)
+
+***Ficheros de dependencias***
+
+Aquí se encuentran los ficheros [Gemfile](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile) y [Gemfile.lock](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile.lock). En Gemfile especificamos que gemas vamos a usar mientras que Gemfile.lock se encarga de mantener esas versiones actualizadas cuando corremos [Bundler](https://github.com/mariasanzs/makeupIV/blob/master/docs/bundler.md#bundler---gestor-de-dependencias).
+
+***Fichero de gestión de tareas***
+
+Aquí se encuentra el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) con el que podemos gestionar la tareas y automatizarlas con [Rake](https://github.com/mariasanzs/makeupIV/blob/master/docs/rake.md)
+
 ## Ejecutar test con Docker :whale:
 Para ejecutar los test necesitamos tener clonado el respositorio de GitHub y además tener descargado en nuestro repositorio local el contenedor base.
 
@@ -36,33 +79,6 @@ Puedes acceder al contenedor en Docker Hub en este [enlace](https://hub.docker.c
 Puedes consultar la documentación sobre Github Container Registry [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/githubContainerRegistry.md)
 
 Puedes acceder al paquete de Github Container Registry en este [enlace](https://github.com/users/mariasanzs/packages/container/package/makeupiv%2Fpackagemakeupiv)
-
-## Enlaces a ficheros 📑
-***🆕 Dockerfile***
-
-Puedes consultar el fichero Dockerfile [aqui](https://github.com/mariasanzs/makeupIV/blob/master/Dockerfile)
-
-También puedes consultar la documentación del dockerfile y la justificación de las ordenes [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/dockerfile.md)
-
-***Código fuente***
-
-Puedes acceder al código fuente del proyecto desde la carpeta [/src](https://github.com/mariasanzs/makeupIV/tree/master/src)
-
-***Ficheros de test***
-
-Todos los test están localizados en la carpeta [/spec](https://github.com/mariasanzs/makeupIV/tree/master/spec)
-
-***iv.yaml***
-
-Puedes consultar el fichero iv.yaml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/iv.yaml)
-
-***Ficheros de dependencias***
-
-Aquí se encuentran los ficheros [Gemfile](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile) y [Gemfile.lock](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile.lock). En Gemfile especificamos que gemas vamos a usar mientras que Gemfile.lock se encarga de mantener esas versiones actualizadas cuando corremos [Bundler](https://github.com/mariasanzs/makeupIV/blob/master/docs/bundler.md#bundler---gestor-de-dependencias).
-
-***Fichero de gestión de tareas***
-
-Aquí se encuentra el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) con el que podemos gestionar la tareas y automatizarlas con [Rake](https://github.com/mariasanzs/makeupIV/blob/master/docs/rake.md)
 
 ## Haciendo uso de Rakefile 🔷
 
