@@ -33,3 +33,12 @@
 - Puesta en Github Container Registry del [contenedor base](https://github.com/users/mariasanzs/packages/container/package/makeupiv%2Fpackagemakeupiv).
 - Añadir la nueva documentación sobre todos los conceptos desarrollados en el hito. Disponible en la carpeta [/docs](https://github.com/mariasanzs/makeupIV/tree/master/docs)
 - Mejora y actualización del fichero [README.md](https://github.com/mariasanzs/makeupIV#readme).
+
+## Hito4 - Integración Continua
+
+- Realizar los ejercicios de autoevaluación
+- Creación y configuración de una cuenta en Travis[https://github.com/mariasanzs/makeupIV/blob/master/docs/travis.md] para realizar test de integración Continua
+- Creación y configuración de una cuenta en [Shippable](https://github.com/mariasanzs/makeupIV/blob/master/docs/shippable.md) para realizar test de CI
+- Añadir la nueva documentación sobre todos los conceptos desarrollados en el hito, como puede ser la justificación de la plataforma, el uso del task runner o el aprovechamiento del dockerfile. Disponible en la carpeta [/docs](https://github.com/mariasanzs/makeupIV/tree/master/docs)
+- Avanzar y mejorar el código reflejado en las [user-stories](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aopen+is%3Aissue+label%3Auser-stories)
+- Mejora y actualización del fichero [README.md](https://github.com/mariasanzs/makeupIV#readme).
