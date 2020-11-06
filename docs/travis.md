@@ -29,7 +29,13 @@ script:
 
 ## Comprobando el funcionamiento de TravisCI
 
+Una vez actualizamos ficheros de nuestro proyecto, se ejecuta travis, podemos ver el action que genera aquí:
 
+![trascommit](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/travistrascommit.png)
+
+Si accedemos a la construcción podremos ver las especificaciones correspondientes al test, tales como el tiempo que ha tardado en ejecutarse, que en nuestro caso suele rondar los 20s
+
+![build](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/buildtravis.png)
 
 De todas formas también puedes ver ese mismo build [aquí](https://travis-ci.com/github/mariasanzs/makeupIV/builds/198622059)
 
