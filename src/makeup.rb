@@ -17,7 +17,7 @@ class Maquillaje
     @nombre = nombre
     @tonos = tonos
     @tipo = tipo
-    @codigos = codigos #Array de códigos de descuento
+    @codigos = codigos #matriz de códigos de descuento
     if precio < preciorebajado
       raise ArgumentError.new('Este producto es más caro de su precio normal')
     end
@@ -80,8 +80,10 @@ class Maquillaje
   end
 
   def canjearCodigo(codigo)
-    if @codigos.include?(codigo)
-      @preciorebajado=0.85*@preciorebajado #Descuento del 15%
+    if @codigos[0].include?(codigo)
+      indice = @codigos[0].index(codigo)
+      descuento = (100.0 - @codigos[1][indice])/100.0
+      @preciorebajado=descuento*@preciorebajado #Descuento del 15%
     else
       raise StandardError.new('Este código no es válido')
     end
