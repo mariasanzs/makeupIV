@@ -34,5 +34,22 @@ build:
 
 Con respecto al tiempo de contrucción que conlleva realizar el test, es claramente superior al que se necesita con Travis, esto es debido a que Shippable va recorriendo las compilaciones una a una y no de forma paralela como si que sucede en TravisCI
 
+## ¿Cómo he puesto en marcha Shippable?
 
-## ¿Qué nos ofrece Shippable?
+Darse de alta en Shippable es muy sencillo, simplemente debes de ir a la web y entrar usando tu cuenta de github
+
+![signup](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/shippable.png)
+
+Tras esto simplemente deberemos de autorizar a Shippable para tener acceso a nuestra cuenta 
+
+![accessAuthorize](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/Authorize%20prod-shippable.png)
+
+Así ya podremos acceder al repositorio y a los resultados de las construcciones y test que se le realicen a este
+
+
+
+
+
+
+
+
