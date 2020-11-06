@@ -14,15 +14,23 @@ language:
   - minimal
 ~~~
 
-
+- Construimos nuestro contenedor de docker descargándolo desde Docker Hub. De esta forma aprovechamos el contenedor que habíamos generado en el hito anterior.
 ~~~
 install:
   - docker pull mariasanzs/makeupiv
   - docker images
 ~~~
 
+- Se ejecutan los test desde la carpeta del contenedor para verificar que todo funciona correctamente.
 ~~~
 script:
   - docker run -t -v `pwd`:/test mariasanzs/makeupiv:latest
 ~~~
+
+## Comprobando el funcionamiento de TravisCI
+
+
+
+De todas formas también puedes ver ese mismo build [aquí](https://travis-ci.com/github/mariasanzs/makeupIV/builds/198622059)
+
 
