@@ -1,10 +1,14 @@
 require_relative '../src/makeup.rb'
+require_relative '../src/compra.rb'
 
 describe Maquillaje do
   obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])
   obj2 = Maquillaje.new('prueba',[1, 2, 3, 4],10.0,5.0,[3, 4, 2, 3],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])
   obj.venderProducto(5)
   obj.venderProducto(6)
+
+  comp1 = Compra.new('00001')
+  obj3 = Maquillaje.new('hola',[1, 2, 3, 4],10.0,5.0,[3, 4, 2, 3],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])
 
   describe "#nombre" do
     it "Debería devolver el nombre del producto" do
@@ -120,6 +124,45 @@ describe Maquillaje do
 
     it "Debería lanzar error si no existiera ningún código descuento" do
       expect{ obj.canjearCodigo('fallo') }.to raise_error(StandardError)
+    end
+  end
+
+  describe "#cliente" do
+    it "Debería devolver el id del cliente" do
+      expect(comp1.cliente). to eql'00001'
+    end
+  end
+
+  describe "#anadirCesta" do
+    it "Debería devolver el nuevo producto añadido" do
+      expect(comp1.anadirCesta(obj).listarCaracteristicasProducto). to eql(" Detalles del producto:
+    Nombre: prueba
+    Tipo: labios
+    Tonos: [4, 5, 6, 7]
+    Tonos disponibles: [4, 5, 7]
+    Precio: 10.0
+    Precio Rebajado: 4.25
+    Ahorras un 57.5%
+    Unidades de cada tono: [3, 1, 0, 7] \n")
+    end
+  end
+
+  comp1.anadirCesta(obj)
+  comp1.anadirCesta(obj3)
+
+  describe "#quitarCesta" do
+    it "Debería devolver el nuevo producto añadido" do
+      expect(comp1.quitarCesta(obj)). to eql(true)
+    end
+
+    it "Debería lanzar error si no existiera ese producto en la cesta" do
+      expect{ comp1.quitarCesta(obj2) }.to raise_error(ArgumentError)
+    end
+  end
+
+  describe "#calcularPrecioTotal" do
+    it "Debería devolver el precio total de los productos de la cesta" do
+      expect(comp1.calcularPrecioTotal()). to eql(9.25)
     end
   end
 
