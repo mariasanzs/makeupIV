@@ -2,7 +2,7 @@ require_relative '../src/makeup.rb'
 
 describe Maquillaje do
   obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])
-  obj2 = Maquillaje.new('prueba',[1, 2, 3, 4],10.0,5.0,[3, 4, 2, 3],TipoProducto::LABIOS,['maria15','labios30'])
+  obj2 = Maquillaje.new('prueba',[1, 2, 3, 4],10.0,5.0,[3, 4, 2, 3],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])
   obj.venderProducto(5)
   obj.venderProducto(6)
 
@@ -32,7 +32,7 @@ describe Maquillaje do
 
   describe "#codigos" do
     it "Debería devolver los codigos de descuento de un producto" do
-      expect(obj.codigos). to eql(['maria15','labios30'])
+      expect(obj.codigos). to eql([['maria15','labios30'],[15,30]])
     end
   end
 
