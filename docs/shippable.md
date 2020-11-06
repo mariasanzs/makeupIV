@@ -18,6 +18,8 @@ Para desarrollar el fichero seguí el siguiente [enlace](http://docs.shippable.c
 ~~~
 rvm:
   - 2.7.2
+  - 2.5.0
+  - 2.4.0
 ~~~
 
 - Realizamos la "construcción" dentro de la siguiente sección en la que primero instalamos las dependencias y luego llamamos al task runner para ejecutar rake test 
@@ -29,6 +31,8 @@ build:
 ~~~
 
 ## Resultados construcción y test
+
+Con respecto al tiempo de contrucción que conlleva realizar el test, es claramente superior al que se necesita con Travis, esto es debido a que Shippable va recorriendo las compilaciones una a una y no de forma paralela como si que sucede en TravisCI
 
 
 ## ¿Qué nos ofrece Shippable?
