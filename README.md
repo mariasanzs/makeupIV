@@ -10,7 +10,10 @@ La integración garantiza que los cambios se creen y prueben con la última vers
 
 Para configurar la integración continua (CI) disponemos de dos plataformas online, Travis y Shippable.
   - Puedes consultar la documentación y justificación de Travis [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/travis.md)
+	- También puedes consultar información sobre una alternativa al travis.yml actual en la que se hace uso del gestor de tareas en vez de aprovecharse Docker [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/AlternativaTravis.md)
   - Puedes consultar la documentación y justificación de Shippable [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/shippable.md)
+
+Puedes acceder también a mi [perfil de Travis](https://travis-ci.com/github/mariasanzs) y a mi [perfil de Shippable](https://app.shippable.com/subs/github/mariasanzs/dashboard) 
 
 ## Enlaces a ficheros 📑
 ***🆕 .travis.yml***
