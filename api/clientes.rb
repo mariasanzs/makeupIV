@@ -9,7 +9,7 @@ def leerDatos()
 end
 
 def datosCliente(correo)
-
+  clientes = leerDatos()
   cad = 'Usuario no encontrado'
   for i in (0..clientes["clientes"].length-1)
     if clientes["clientes"][i]["correo"] == correo
@@ -27,7 +27,6 @@ end
 Handler = Proc.new do |req, res|
   correo = req.query['correo'] || 'mariasanz@correo.ugr.es'
 
-  clientes = leerDatos()
   cad = datosCliente(correo)
 
   res.status = 200
