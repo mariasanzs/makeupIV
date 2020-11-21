@@ -1,7 +1,7 @@
 require 'json'
 
 def leerDatos()
-  file = open("/api/clientes.json")
+  file = open("/api/datosClientes.json")
   json = file.read
   clientes = JSON.parse(json)
   return clientes
