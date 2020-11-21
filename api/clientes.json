@@ -1,0 +1,47 @@
+{
+  "name": "Cientes de MakeUpIV",
+  "clientes":[
+    {
+      "nombre":"María",
+      "apellidos":"Sanz Sánchez",
+      "codigoPostal":"18012",
+      "correo":"mariasanz@correo.ugr.es",
+      "FechaNacimiento": "29-12-1999"
+    },
+    {
+      "nombre":"Darío",
+      "apellidos":"Padial Sánchez",
+      "codigoPostal":"15002",
+      "correo":"dps@gmail.com",
+      "FechaNacimiento": "17-10-1995"
+    },
+    {
+      "nombre":"Celia",
+      "apellidos":"López García",
+      "codigoPostal":"18001",
+      "correo":"celialopez@correo.ugr.es",
+      "FechaNacimiento": "15-04-1999"
+    },
+    {
+      "nombre":"Alba",
+      "apellidos":"García Carrasco",
+      "codigoPostal":"14014",
+      "correo":"albagc@gmail.com",
+      "FechaNacimiento": "16-09-2000"
+    },
+    {
+      "nombre":"Isabel",
+      "apellidos":"Díaz Gómez",
+      "codigoPostal":"19015",
+      "correo":"isabeldiazg@gmail.com",
+      "FechaNacimiento": "31-08-1998"
+    },
+    {
+      "nombre":"Jorge",
+      "apellidos":"Rodríguez Cerezo",
+      "codigoPostal":"17003",
+      "correo":"jrcerezo@gmail.com",
+      "FechaNacimiento": "03-07-1997"
+    }
+  ]
+}
