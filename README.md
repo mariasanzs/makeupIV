@@ -12,7 +12,7 @@ La idea del proyecto es poder enterarse rápidamente de descuentos, promociones 
 
 - Puedes acceder a mi respositorio en Vercel [aquí](https://makeup-iv.mariasanzs.vercel.app/)
 
-- Y también puedes consultar la integración dentro del proyecto de nuevo código, todo alojado en la carpeta [/api](https://github.com/mariasanzs/makeupIV/tree/master/api)
+- Y también puedes consultar la integración dentro del proyecto de nuevo código, todo alojado en la carpeta [/api](https://github.com/mariasanzs/makeupIV/tree/master/api) corresponientes a la [HU07](https://github.com/mariasanzs/makeupIV/issues/45)
 
 
 ## Enlaces a ficheros 📑
