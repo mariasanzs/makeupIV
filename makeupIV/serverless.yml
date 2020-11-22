@@ -1,0 +1,26 @@
+service: makeupiv
+
+provider:
+  name: aws
+  runtime: ruby2.7
+  memorySize: 128
+  region: eu-central-1
+  stage: dev
+
+functions:
+  misdatospersonales:
+    handler: handler.misdatospersonales
+    description: "Muestra mis datos personales de MakeupIV"
+    events:
+      - http:
+          path: /
+          method: post
+      enviroment:
+        TG_TOKEN: ${ssm:makeupiv-token~true}
+plugins:
+  - serverless-hooks-plugin
+
+custom:
+  hooks:
+    package:initialize:
+      -bundle install --deployment
