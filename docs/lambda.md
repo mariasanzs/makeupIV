@@ -20,10 +20,14 @@ Sobreescribiremos el código generado e insertaremos nosotros la configuración:
 //archivo credenciales
 https://gist.githubusercontent.com/ServerlessBot/7618156b8671840a539f405dea2704c8/raw/a76e80cdbf2e9808352c3fec79a9625fa345a00d/IAMCredentials.json
 
-export AWS_ACCESS_KEY_ID=
-export AWS_SECRET_ACCESS_KEY=
+export AWS_ACCESS_KEY_ID=AKIA54NTP7MRLJEOLGEN
+export AWS_SECRET_ACCESS_KEY=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
 serverless plugin install --name serverless-hooks-plugin
 
+ID de clave de acceso:
+AKIAI6M4SBJ22YZJNMZQ
+Clave de acceso secreta:
+dlNWYBYAkfTLrQcnhn/J+bNiPpkUlvBBmaGr4zz1
 
 
 

@@ -17,10 +17,3 @@ functions:
           method: post
     environment:
         TG_TOKEN: ${ssm:makeupiv-token~true}
-plugins:
-  - serverless-hooks-plugin
-
-custom:
-  hooks:
-    package:initialize:
-      -bundle install --deployment
