@@ -4,7 +4,7 @@ provider:
   name: aws
   runtime: ruby2.7
   memorySize: 128
-  region: eu-central-1
+  region: eu-west-3
   stage: dev
 
 functions:
@@ -15,7 +15,7 @@ functions:
       - http:
           path: /
           method: post
-      enviroment:
+    environment:
         TG_TOKEN: ${ssm:makeupiv-token~true}
 plugins:
   - serverless-hooks-plugin
