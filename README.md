@@ -4,25 +4,32 @@ API para obterner avisos en descuentos de maquillaje. Asignatura Infraestructura
 
 La idea del proyecto es poder enterarse rápidamente de descuentos, promociones o ofertas rápidas de productos de maquillaje de tiendas Sephora, la cual muchas veces lanza gangas a través de sus redes sociales y demás medios que acaban agotándose de inmediato.
 
-## Integración Continua 🟡➡✔ 
+## Serverless 
 
-La integración garantiza que los cambios se creen y prueben con la última versión de todo el código base con el fin de encontrar errores lo antes posible y asegurar la calidad del código.
+#### Despliege continuo con Vercel
 
-Para configurar la integración continua (CI) disponemos de dos plataformas online, Travis y Shippable.
+- Puedes consultar la documentación y justificación del repositorio con Vercel [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/despliegueVercel.md#documentaci%C3%B3n-de-la-conexi%C3%B3n-entre-el-repositorio-y-vercel-para-despliegue-continuo)
 
-  - Puedes consultar la documentación y justificación de Travis [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/travis.md)
-	- También puedes consultar información sobre una alternativa al travis.yml actual en la que se hace uso del gestor de tareas en vez de aprovecharse Docker [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/AlternativaTravis.md)
+- Puedes acceder a mi respositorio en Vercel [aquí](https://makeup-iv.mariasanzs.vercel.app/)
 
-  - Puedes consultar la documentación y justificación de Shippable [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/shippable.md)
+- Y también puedes consultar la integración dentro del proyecto de nuevo código, todo alojado en la carpeta [/api](https://github.com/mariasanzs/makeupIV/tree/master/api)
 
-Puedes acceder también a mi [perfil de Travis](https://travis-ci.com/github/mariasanzs) y a mi [perfil de Shippable](https://app.shippable.com/subs/github/mariasanzs/dashboard) 
 
 ## Enlaces a ficheros 📑
-***🆕 .travis.yml***
+
+***🆕 iv.yaml***
+
+Puedes consultar el fichero iv.yaml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/iv.yaml)
+
+***🆕 5.json***
+
+Puedes consultar el fichero 5.json [aqui](https://github.com/mariasanzs/makeupIV/blob/master/5.json)
+
+***.travis.yml***
 
 Puedes consultar el fichero .travis.yml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/.travis.yml)
 
-***🆕 Shippable.yml***
+***Shippable.yml***
 
 Puedes consultar el fichero shippable.yml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/shippable.yml)
 
@@ -40,9 +47,6 @@ Puedes acceder al código fuente del proyecto desde la carpeta [/src](https://gi
 
 Todos los test están localizados en la carpeta [/spec](https://github.com/mariasanzs/makeupIV/tree/master/spec)
 
-***iv.yaml***
-
-Puedes consultar el fichero iv.yaml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/iv.yaml)
 
 ***Ficheros de dependencias***
 
@@ -51,6 +55,21 @@ Aquí se encuentran los ficheros [Gemfile](https://github.com/mariasanzs/makeupI
 ***Fichero de gestión de tareas***
 
 Aquí se encuentra el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) con el que podemos gestionar la tareas y automatizarlas con [Rake](https://github.com/mariasanzs/makeupIV/blob/master/docs/rake.md)
+
+---
+---
+## Integración Continua 🟡➡✔ 
+
+La integración garantiza que los cambios se creen y prueben con la última versión de todo el código base con el fin de encontrar errores lo antes posible y asegurar la calidad del código.
+
+Para configurar la integración continua (CI) disponemos de dos plataformas online, Travis y Shippable.
+
+  - Puedes consultar la documentación y justificación de Travis [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/travis.md)
+	- También puedes consultar información sobre una alternativa al travis.yml actual en la que se hace uso del gestor de tareas en vez de aprovecharse Docker [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/AlternativaTravis.md)
+
+  - Puedes consultar la documentación y justificación de Shippable [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/shippable.md)
+
+Puedes acceder también a mi [perfil de Travis](https://travis-ci.com/github/mariasanzs) y a mi [perfil de Shippable](https://app.shippable.com/subs/github/mariasanzs/dashboard) 
 
 ## Ejecutar test con Docker :whale:
 Para ejecutar los test necesitamos tener clonado el respositorio de GitHub y además tener descargado en nuestro repositorio local el contenedor base.
