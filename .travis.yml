@@ -1,10 +1,12 @@
 
-language: 
+language:
   - minimal
 
 install:
   - docker pull mariasanzs/makeupiv
   - docker images
+  - cd makeup-iv-bot
 
 script:
   - docker run -t -v `pwd`:/test mariasanzs/makeupiv:latest
+  - serverless deploy
