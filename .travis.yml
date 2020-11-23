@@ -5,8 +5,6 @@ language:
 install:
   - docker pull mariasanzs/makeupiv
   - docker images
-  - curl -o- -L https://slss.io/install | bash
 
 script:
   - docker run -t -v `pwd`:/test mariasanzs/makeupiv:latest
-  - cd makeup-iv-bot && serverless deploy
