@@ -53,7 +53,6 @@ def datospersonales(event:, context:)
       first_name = data["message"]["chat"]["first_name"]
 
       response = "Hola #{first_name}!, Bienvenido a MakeupIV-bot \n"
-      responde += " **Comandos**\n"
       response += " Si quieres ver los datos de un cliente haz '/misdatos <correo>'\n"
       response += " Si quieres ver los datos de un producto haz '/listaproducto <correo>'\n "
 
