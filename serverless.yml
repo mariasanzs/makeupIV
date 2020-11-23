@@ -4,6 +4,8 @@ frameworkVersion: '2'
 provider:
   name: aws
   runtime: ruby2.7
+  apiGateway:
+    shouldStartNameWithService: true
   stage: dev
   region: eu-west-3
   memorySize: 128
@@ -35,9 +37,9 @@ provider:
 functions:
   datospersonales:
     handler: handler.datospersonales
+    description: "Muestra los datos personales de un cliente"
     events:
       - http:
           path: /
           method: post
-    environment:
-      TG_TOKEN: ${ssm:makeup-token~true}
+          cors: true
