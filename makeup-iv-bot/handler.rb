@@ -29,7 +29,21 @@ def datosCliente(correo)
   return cad
 end
 
-
+def datosProducto(nombre)
+  productos = leerDatos("producto")
+  cad = 'Producto no encontrado'
+  for i in (0..productos["productos"].length-1)
+    if productos["productos"][i]["nombre"] == nombre.to_s
+      cad = " Detalles del producto:
+    Nombre: #{productos["productos"][i]["nombre"]}
+    Tipo: #{productos["productos"][i]["tipo"]}
+    Tonos: #{productos["productos"][i]["tonos"]}
+    Precio: #{productos["productos"][i]["precio"]}
+    Precio Rebajado: #{productos["productos"][i]["precioRebajado"]}\n"
+    end
+  end
+  return cad
+end
 
 def datospersonales(event:, context:)
     begin
@@ -47,7 +61,10 @@ def datospersonales(event:, context:)
       if command == '/misdatos'
         response = datosCliente(message.split(" ")[1])
       end
-
+      if command == '/listaproducto'
+        command += " "
+        response = datosProducto(message.split(command).last)
+      end
 
       payload = {text:response, method:'sendMessage', chat_id:chat_id}
 
