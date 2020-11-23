@@ -1,0 +1,54 @@
+{
+  "name": "Productos de MakeUpIV",
+  "productos":[
+    {
+      "nombre":"prueba",
+      "tipo":"rostro",
+      "tonos":"1-Fair, 2-Light, 3-Light/Medium, 4-Medium, 5-Tan, 6-Dark Tan ",
+      "precio":"40,99$",
+      "precioRebajado": "33,50$"
+    },
+    {
+      "nombre":"Hollywood Flawless Filter - Charlotte Tilbury",
+      "tipo":"rostro",
+      "tonos":"1-Fair, 2-Light, 3-Light/Medium, 4-Medium, 5-Tan, 6-Dark Tan ",
+      "precio":"40,99$",
+      "precioRebajado": "33,50$"
+    },
+    {
+      "nombre":"Nude Obsessions - Huda Beauty",
+      "tipo":"paletas",
+      "tonos":"Light, Medium, Rich ",
+      "precio":"29,99$",
+      "precioRebajado": "15,99$"
+    },
+    {
+      "nombre":"Roller Liner - Benefit Cosmetics",
+      "tipo":"ojos",
+      "tonos":"1-Black, 2-Brown",
+      "precio":"26,99$",
+      "precioRebajado": "17,50$"
+    },
+    {
+      "nombre":"Cream Lip Stain - Sephora Collection",
+      "tipo":"labios",
+      "tonos":"01-Always red, 05-Infinite Rose, 09-Watermelon Slice, 04-Cherry Nectar, 25-Coral Sunset, 29-Dark Forest, 38-Sweet Raspberry ",
+      "precio":"12,99$",
+      "precioRebajado": "9,74$"
+    },
+    {
+      "nombre":"Brow Wiz - Anastasia Beverly Hills",
+      "tipo":"cejas",
+      "tonos":"Caramel, Soft Brown, Auburn, Chocolate, Ebony, Dark Brown ",
+      "precio":"29,99$",
+      "precioRebajado": "26,50$"
+    },
+    {
+      "nombre":"Vegan Prime Set - ZOEVA",
+      "tipo":"brochas",
+      "tonos":"1-Limited Edition ",
+      "precio":"85,99$",
+      "precioRebajado": "60,99$"
+    }
+  ]
+}
