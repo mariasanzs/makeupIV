@@ -82,7 +82,3 @@ def datospersonales(event:, context:)
       }
     }
 end
-# Quick Ruby Test!
-# Uncomment below to lines and test on local computer by running `ruby handler.rb` (note you may need to update some ids)
-#event ={"body"=>"{\"update_id\":673032935,\n\"message\":{\"message_id\":25,\"from\":{\"id\":735947889,\"is_bot\":false,\"first_name\":\"Darren\",\"last_name\":\"Jensen\",\"language_code\":\"en\"},\"chat\":{\"id\":735947889,\"first_name\":\"Darren\",\"last_name\":\"Jensen\",\"type\":\"private\"},\"date\":1572085353,\"text\":\"mrs robinson\"}}", "isBase64Encoded"=>false}
-#datospersonales(event: event, context: nil)
