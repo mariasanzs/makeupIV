@@ -1,19 +1,25 @@
 require 'json'
-require 'telegram/bot'
+require 'net/https'
+
+TOKEN = ENV['TG_TOKEN']
 
 def misdatospersonales(event:, context:)
-  client = Aws::Translate::Client.new
-  bot = Telegram::Bot::Client.new(ENV["TG_TOKEN"])
-  message = JSON.parse(event["body"])["message"]
+  data = JSON.parse(event["body"])
+  message = data["message"]["text"]
+  chat_id = data["message"]["chat"]["id"]
+  first_name = data["message"]["chat"]["first_name"]
 
-  mensaje = "hola"
 
-  bot.api.send_message(chat_id: message["chat"]["id"], text: mensaje)
+  msg = "hola"
+  payload = {text: msg, chat_id: chat_id}
 
-  {
-    "statusCode": 200,
-    "headers": {},
-    "body": mensaje,
-    "isBase64Encoded": false
-  }
-end
+ uri = URI("https://api.telegram.org")
+
+ Net::HTTP.start(uri.hostname, uri.port, {use_ssl: true}) do |http|
+     req = Net::HTTP::Get.new("/bot#{TOKEN}/sendMessage", {'Content-Type' => 'application/json; charset=utf-8'})
+     req.body = payload.to_json
+     http.request(req)
+ end
+
+     return { statusCode: 200 }
+ end
