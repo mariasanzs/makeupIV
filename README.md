@@ -6,7 +6,7 @@ La idea del proyecto es poder enterarse rápidamente de descuentos, promociones 
 
 ## Serverless 
 
-#### Despliege continuo con Vercel
+#### Usando Vercel
 
 - Puedes consultar la documentación y justificación del repositorio con Vercel [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/despliegueVercel.md#documentaci%C3%B3n-de-la-conexi%C3%B3n-entre-el-repositorio-y-vercel-para-despliegue-continuo)
 
@@ -14,6 +14,14 @@ La idea del proyecto es poder enterarse rápidamente de descuentos, promociones 
 
 - Y también puedes consultar la integración dentro del proyecto de nuevo código, todo alojado en la carpeta [/api](https://github.com/mariasanzs/makeupIV/tree/master/api) corresponientes a la [HU07](https://github.com/mariasanzs/makeupIV/issues/45)
 
+
+#### Usando AWS Lambda
+
+- Puedes consultar toda la información de cómo he creado un bot de telegram con AWS Lambda [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/lambda.md)
+
+- Puedes acceder al bot de telegram desde [aquí](http://t.me/makeup_iv_bot)
+
+- Y también puedes acceder a todos los archivos necesarios en la carpeta [/makeup-iv-bot](https://github.com/mariasanzs/makeupIV/tree/master/makeup-iv-bot) en la que están, en el archivo [handler.rb](https://github.com/mariasanzs/makeupIV/blob/master/makeup-iv-bot/handler.rb) las funciones corresponientes a las [HU07](https://github.com/mariasanzs/makeupIV/issues/45) y [HU02](https://github.com/mariasanzs/makeupIV/issues/10)
 
 ## Enlaces a ficheros 📑
 
