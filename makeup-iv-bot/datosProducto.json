@@ -2,13 +2,12 @@
   "name": "Productos de MakeUpIV",
   "productos":[
     {
-      "nombre":"prueba",
+      "nombre":"Ejemplo",
       "tipo":"rostro",
-      "tonos":"1-Fair, 2-Light, 3-Light/Medium, 4-Medium, 5-Tan, 6-Dark Tan ",
-      "precio":"40,99$",
-      "precioRebajado": "33,50$"
+      "tonos":"1,2,3,4",
+      "precio":"5$",
+      "precioRebajado": "1$"
     },
-    {
       "nombre":"Hollywood Flawless Filter - Charlotte Tilbury",
       "tipo":"rostro",
       "tonos":"1-Fair, 2-Light, 3-Light/Medium, 4-Medium, 5-Tan, 6-Dark Tan ",
