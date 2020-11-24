@@ -1,9 +1,14 @@
 # Uso de AWS Serverless Ruby para la creación de funciones en un bot de Telegram
 
--------------introducción
+Se ha decidido usar la plataforma AWS porque es la plataforma que mejores opciones ofrece a la hora de crear un bot con el lenguaje Ruby, el cual no tiene mucha versatilidad en el mundo serverless. Otra opción podría haber sido el uso de Google Clouds Functions pero no hay ni la misma documentación ni las mismas buenas opiniones para el uso con Ruby que con AWS.
 
-----------Crear cuenta AWS
+Por otro lado es una oportunidad para comenzar a usar AWS, que tiene muchos más servicios a parte de este y puede resultar muy interesante a nivel de aprendizaje, aunque algo complejo en comparación con otros como Vercel o Netlify.
 
+## Darse de alta en AWS
+
+Es un proceso bastante sencillo simplemente debes registrarte añadiendo tus datos, el único inconveniente es que debes meter también una tarjeta de crédito, pero el primera año es gratuito, simplemente te cobran de forma simbólica 1$.
+
+También existe la posibilidad de registrarse con AWSeducate, que es gratuito al pertenecer a la universidad, sin embargo para lo que vamos a realizar no es válido ya que no permite ciertas cosas como el tema de los credenciales que veremos después
 
 ## Instalar serverless para trabajar de forma local:
 
@@ -41,13 +46,12 @@ Es importante tener recordar que al final del serverless deploy se nos da una UR
 
 Una vez tenemos el deployment hecho y si no ha habido problemas, podemos ver todo lo que ha sido generado en la consola de AWS.
 
-	- En cloudFormation podemos ver como Serverless Framework crea una pila por cada entorno del servicio (nosotros tenemos solo uno) y dentro de esta (en 'resources') como se han generado varios recursos diferentes.
+-> En cloudFormation podemos ver como Serverless Framework crea una pila por cada entorno del servicio (nosotros tenemos solo uno) y dentro de esta (en 'resources') como se han generado varios recursos diferentes.
 
 ![cloudFormation](mcowmso)
 ![resources]()
 
-
-	- En la sección S3 (almacenamiento escalable en la nube) encontraremos un nuevo depósito para el servicio, que almacena el código de función empaquetado junto con la plantilla de CloudFormation compilada
+-> En la sección S3 (almacenamiento escalable en la nube) encontraremos un nuevo depósito para el servicio, que almacena el código de función empaquetado junto con la plantilla de CloudFormation compilada
 
 ![s3objetos2]()
 
@@ -57,15 +61,34 @@ Para la creación del bot de telegram simplemente deberemos de iniciar un chat c
 
 ![botTelegram]()
 
-## Creación de un WebHook para 
+## Creación de un WebHook para conectar el bot a la función lambda
+
+Como habíamos dicho antes, al hacer deploy se nos devuelve una URL en la sección `endpoints`, esta la usaremos para crear el Web Hook con el siguiente comando:
+
+> curl --request POST --url https://api.telegram.org/bot<TOKEN DE TELEGRAM>/setWebHook --header 'content-type: application/json' --data '{"url": "<URL DEL DEPLOY>"}'
+
+![webHook]()
+
+y ya estaría creado el Web Hook y podríamos probar nuestro bot
+
+El link al bot está [aquí], prueba comandos como `/misdatos mariasanz@correo.ugr.es` o `/listaproducto Hollywood Flawless Filter - Charlotte Tilbury`
 
 ## Creación de un script en git Hook para automatizar los deploy al hacer push
+
+AWS Lambda tiene el inconveniente de que no permite automatizar los despliegues en cada push que se actualiza en el sistema, por ello para realizar dicho despligue se hace uso de un git hook que es simplemente un script que se ejecuta justo antes del push siempre que se realiza
+dicho script simplemente se traslada a la carpeta en la que está el archivo serverless y hace 
+> serverless deploy
+tal y como se muestra en la captura.
+
+![script githoook]()
+
+de esta forma siempre que hacemos push se ejecutará
 
 ---
 #### Enlaces que me han sido útiles:
 - Empecé siguiendo este [vídeo](https://www.youtube.com/watch?v=_aLMx7OFt5M) que me ayudó sobre todo a crear serverless.yml y manejar el framework de AWS, el repositorio de ese bot está [aquí](https://github.com/mkdev-me/germanizer)
 
-- 
+- [Bot de telegram con AWS y Ruby](https://github.com/jensendarren/telegram-bot-serverless)
 
 
 
