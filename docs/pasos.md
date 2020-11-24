@@ -42,3 +42,12 @@
 - Añadir la nueva documentación sobre todos los conceptos desarrollados en el hito, como puede ser la justificación de la plataforma, el uso del task runner o el aprovechamiento del dockerfile. Disponible en la carpeta [/docs](https://github.com/mariasanzs/makeupIV/tree/master/docs)
 - Avanzar y mejorar el código reflejado en las [user-stories](https://github.com/mariasanzs/makeupIV/issues?q=is%3Aopen+is%3Aissue+label%3Auser-stories)
 - Mejora y actualización del fichero [README.md](https://github.com/mariasanzs/makeupIV#readme).
+
+## Hito5 - Serverless
+
+- Realizar los ejercicios de autoevaluación
+- Creación y configuración de una cuenta en [Vercel](https://github.com/mariasanzs/makeupIV/blob/master/docs/despliegueVercel.md) 
+- Desarrollo de una función con sus respectivos HU e ISSUES con Vercel
+- Desarrollo de un bot de Telegram con [AWS lambda](https://github.com/mariasanzs/makeupIV/blob/master/docs/lambda.md)
+- Añadir la nueva documentación sobre todos los conceptos desarrollados en el hito, como puede ser la conexión entre el repositorio y Vercel o el uso de AWS. Disponible en la carpeta [/docs](https://github.com/mariasanzs/makeupIV/tree/master/docs)
+- Mejora y actualización del fichero [README.md](https://github.com/mariasanzs/makeupIV#readme).
