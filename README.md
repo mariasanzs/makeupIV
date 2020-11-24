@@ -17,7 +17,7 @@ La idea del proyecto es poder enterarse rápidamente de descuentos, promociones 
 
 #### Usando AWS Lambda
 
-- Puedes consultar toda la información de cómo he creado un bot de telegram con AWS Lambda y he automatizado su despliegue [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/lambda.md), esto incluye también una [explicación del fichero handler.rb](https://github.com/mariasanzs/makeupIV/blob/master/docs/handler-rb.md#explicaci%C3%B3n-del-fichero-handlerrb) y [otra del fichero serverless.yml](https://github.com/mariasanzs/makeupIV/blob/master/docs/serverless-yml.md)
+- Puedes consultar toda la información de cómo he creado un bot de telegram con AWS Lambda y he automatizado su despliegue [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/lambda.md). También se incluye también una [explicación del fichero handler.rb](https://github.com/mariasanzs/makeupIV/blob/master/docs/handler-rb.md#explicaci%C3%B3n-del-fichero-handlerrb) y [otra del fichero serverless.yml](https://github.com/mariasanzs/makeupIV/blob/master/docs/serverless-yml.md)
 
 - Puedes acceder al bot de telegram desde [aquí](http://t.me/makeup_iv_bot)
 
