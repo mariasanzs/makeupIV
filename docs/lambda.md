@@ -24,13 +24,13 @@ Una vez está instalado creamos un nuevo servicio ejecutando el siguiente comand
 
 ![serverlesscreate](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/serverlesscreate.png)
 
-Dentro de la carpeta que hemos creado llamada makeup-iv-bot viene toda la configuración del servicio dentro del archivo [serverless.yml](https://github.com/mariasanzs/makeupIV/blob/master/makeup-iv-bot/serverless.yml), en el que hemos sobreescrito el código generado por defecto. Puedes ver una pequeña explicación de este fichero [aquí](LINNKKKKKKKKK)
+Dentro de la carpeta que hemos creado llamada makeup-iv-bot viene toda la configuración del servicio dentro del archivo [serverless.yml](https://github.com/mariasanzs/makeupIV/blob/master/makeup-iv-bot/serverless.yml), en el que hemos sobreescrito el código generado por defecto. Puedes ver una pequeña explicación de este fichero [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/serverless-yml.md)
 
-También deberíamos de configurar nuestro archivo [handler.rb](https://github.com/mariasanzs/makeupIV/blob/master/makeup-iv-bot/handler.rb) en el que irán todas las funciones y que está explicado [aquí](link), aunque esto podemos dejarlo por defecto ahora y desarrollarlo una vez lo tengamos todo.
+También deberíamos de configurar nuestro archivo [handler.rb](https://github.com/mariasanzs/makeupIV/blob/master/makeup-iv-bot/handler.rb) en el que irán todas las funciones y que está explicado [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/handler-rb.md), aunque esto podemos dejarlo por defecto ahora y desarrollarlo una vez lo tengamos todo.
 
 Cuando ya hemos realizado estos pasos, y antes de hacer el despliegue, debemos de configurar serverless introduciendo unos credenciales (una llave y su clave) que deberíamos de tener creada con anterioridad.
 
-![serverlessconfig]()
+![serverlessconfig](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/serverlessconfig.jpg)
 
 Con respecto a como se han conseguido ese par de valores, en AWS se puede hacer de dos formas ambas en la sección "mis credenciales de seguridad" :
 	- primera opción: Usar nuestro propio usuario y generar una clave de acceso (ID de clave de acceso y clave de acceso secreta)
@@ -40,7 +40,7 @@ Hacemos
 > serverless deploy
  para realizar el despliege del serverless
 
-![serverlessdeploy]()
+![serverlessdeploy](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/serverlessdeply.png)
 
 Es importante tener recordar que al final del serverless deploy se nos da una URL, esta deberemos guardarla para realizar el WebHook como veremos después
 
@@ -48,18 +48,18 @@ Una vez tenemos el deployment hecho y si no ha habido problemas, podemos ver tod
 
 -> En cloudFormation podemos ver como Serverless Framework crea una pila por cada entorno del servicio (nosotros tenemos solo uno) y dentro de esta (en 'resources') como se han generado varios recursos diferentes.
 
-![cloudFormation](mcowmso)
-![resources]()
+![cloudFormation](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/cloudFormation.png)
+![resources](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/Resources.png)
 
 -> En la sección S3 (almacenamiento escalable en la nube) encontraremos un nuevo depósito para el servicio, que almacena el código de función empaquetado junto con la plantilla de CloudFormation compilada
 
-![s3objetos2]()
+![s3objetos2](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/s3objetos2.png)
 
 ## Creación del bot de Telegram
 
 Para la creación del bot de telegram simplemente deberemos de iniciar un chat con BotFather y enviar el comando `/newbot`, nos preguntará por el nombre y demás de nuestro bot y nos dará como resultado el propio bot y el token para acceder al HTTP API.
 
-![botTelegram]()
+![botTelegram](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/botTelegram.jpg)
 
 ## Creación de un WebHook para conectar el bot a la función lambda
 
@@ -67,11 +67,11 @@ Como habíamos dicho antes, al hacer deploy se nos devuelve una URL en la secci�
 
 > curl --request POST --url https://api.telegram.org/bot<TOKEN DE TELEGRAM>/setWebHook --header 'content-type: application/json' --data '{"url": "<URL DEL DEPLOY>"}'
 
-![webHook]()
+![webHook](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/wehook.jpg)
 
 y ya estaría creado el Web Hook y podríamos probar nuestro bot
 
-El link al bot está [aquí], prueba comandos como `/misdatos mariasanz@correo.ugr.es` o `/listaproducto Hollywood Flawless Filter - Charlotte Tilbury`
+El link al bot está [aquí](t.me/makeup_iv_bot), prueba comandos como `/misdatos mariasanz@correo.ugr.es` o `/listaproducto Hollywood Flawless Filter - Charlotte Tilbury`
 
 ## Creación de un script en git Hook para automatizar los deploy al hacer push
 
@@ -80,9 +80,9 @@ dicho script simplemente se traslada a la carpeta en la que está el archivo ser
 > serverless deploy
 tal y como se muestra en la captura.
 
-![script githoook]()
+![script githoook](https://github.com/mariasanzs/makeupIV/blob/master/docs/img/pre-push.png)
 
-de esta forma siempre que hacemos push se ejecutará
+De esta forma siempre que hacemos push se ejecutará
 
 ---
 #### Enlaces que me han sido útiles:
