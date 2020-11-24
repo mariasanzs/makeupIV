@@ -17,11 +17,11 @@ La idea del proyecto es poder enterarse rápidamente de descuentos, promociones 
 
 #### Usando AWS Lambda
 
-- Puedes consultar toda la información de cómo he creado un bot de telegram con AWS Lambda [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/lambda.md)
+- Puedes consultar toda la información de cómo he creado un bot de telegram con AWS Lambda y he automatizado su despliegue [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/lambda.md), esto incluye también una [explicación del fichero handler.rb](https://github.com/mariasanzs/makeupIV/blob/master/docs/handler-rb.md#explicaci%C3%B3n-del-fichero-handlerrb) y [otra del fichero serverless.yml](https://github.com/mariasanzs/makeupIV/blob/master/docs/serverless-yml.md)
 
 - Puedes acceder al bot de telegram desde [aquí](http://t.me/makeup_iv_bot)
 
-- Y también puedes acceder a todos los archivos necesarios en la carpeta [/makeup-iv-bot](https://github.com/mariasanzs/makeupIV/tree/master/makeup-iv-bot) en la que están, en el archivo [handler.rb](https://github.com/mariasanzs/makeupIV/blob/master/makeup-iv-bot/handler.rb) las funciones corresponientes a las [HU07](https://github.com/mariasanzs/makeupIV/issues/45) y [HU02](https://github.com/mariasanzs/makeupIV/issues/10)
+- Y también puedes acceder a todos los archivos necesarios en la carpeta [/makeup-iv-bot](https://github.com/mariasanzs/makeupIV/tree/master/makeup-iv-bot) en la que están, en el archivo [handler.rb](https://github.com/mariasanzs/makeupIV/blob/master/makeup-iv-bot/handler.rb) las funciones corresponientes a las [HU07](https://github.com/mariasanzs/makeupIV/issues/45) y [HU02](https://github.com/mariasanzs/makeupIV/issues/10) y en el archivo [serverless.yml]() la configuración de dicho serverless
 
 ## Enlaces a ficheros 📑
 
