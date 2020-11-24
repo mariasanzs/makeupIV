@@ -1,7 +1,5 @@
 entidad: src/makeup.rb
-
 lenguaje: Ruby
 test: spec/testMakeUpIV.rb
 taskfile: Rakefile
-
 URL: https://makeup-iv.vercel.app/api/clientes.rb?correo=mariasanz@correo.ugr.es
