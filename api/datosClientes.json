@@ -2,8 +2,8 @@
   "name": "Cientes de MakeUpIV",
   "clientes":[
     {
-      "nombre":"María",
-      "apellidos":"Sanz Sánchez",
+      "nombre":"Maria",
+      "apellidos":"Sanz Sanchez",
       "codigoPostal":"18012",
       "correo":"mariasanz@correo.ugr.es",
       "FechaNacimiento": "29-12-1999"

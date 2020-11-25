@@ -16,8 +16,8 @@ def datosCliente(correo)
       cad = " Mis Datos Personales:
       Nombre: #{clientes["clientes"][i]["nombre"]}
       Apellidos: #{clientes["clientes"][i]["apellidos"]}
-      Correo Electrónico: #{correo}
-      Código Postal: #{clientes["clientes"][i]["codigoPostal"]}
+      Correo Electronico: #{correo}
+      Codigo Postal: #{clientes["clientes"][i]["codigoPostal"]}
       Fecha de Nacimiento: #{clientes["clientes"][i]["FechaNacimiento"]} \n"
     end
   end
