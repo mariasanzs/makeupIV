@@ -6,6 +6,13 @@ Puedes acceder a la documentación de Sinatra [aquí](http://sinatrarb.com/docum
 
 Es un DSL ( domain-specific language) escrito en Ruby
 
+##¿Qué ventajas nos ofrece Sinatra?
+* Open Source
+* Uso simple similar a flask
+* Flexible y rápido
+* Mnimiza la dificultad en la creación de la aplicación web al no seguir el modelo vista controlador
+* Ademas Sinatra soporta todos las funcionalidades que se necesitan para poner en marcha el proyecto ( Content types, rutas, verbos http...)
+
 ## Otras alternativas a Sinatra
 
 * Padrino
@@ -13,13 +20,6 @@ Es un DSL ( domain-specific language) escrito en Ruby
 * Merb
 * Nitro
 * Campaign
-
-##¿Qué ventajas nos ofrece Sinatra?
-* Open Source
-* Uso simple similar a flask
-* Flexible y rápido
-* Mnimiza la dificultad en la creación de la aplicación web al no seguir el modelo vista controlador
-* Ademas Sinatra soporta todos las funcionalidades que se necesitan para poner en marcha el proyecto ( Content types, rutas, verbos http...)
 
 ## Poner en marcha Sinatra
 
