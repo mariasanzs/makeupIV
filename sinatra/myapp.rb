@@ -67,10 +67,10 @@ class MyApp < Sinatra::Base
   get '/comprar/:producto' do
     nombreproducto = params['producto']
     begin
-      producto = @almacen.buscarProducto(nombreproducto)
-      @cesta.anadirCesta(producto)
+      productoCompra = @almacen.buscarProducto(nombreproducto)
+      @cesta.anadirCesta(productoCompra)
       status 200
-      res.to_json
+      nombreproducto.to_json
     rescue StandardError
       status 400
       {:status => 'Error: No se puede añadir a tu cesta'}.to_json
