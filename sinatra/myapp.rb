@@ -64,6 +64,19 @@ class MyApp < Sinatra::Base
     @cesta.calcularPrecioTotal().to_json
   end
 
+  get '/comprar/:producto' do
+    nombreproducto = params['producto']
+    begin
+      producto = @almacen.buscarProducto(nombreproducto)
+      @cesta.anadirCesta(producto)
+      status 200
+      res.to_json
+    rescue StandardError
+      status 400
+      {:status => 'Error: No se puede añadir a tu cesta'}.to_json
+    end
+  end
+
   error 404 do
     content_type :json
     {:status => 'Error: ruta no encontrada'}.to_json
