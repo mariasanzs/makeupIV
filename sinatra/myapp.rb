@@ -39,6 +39,19 @@ class MyApp < Sinatra::Base
     end
   end
 
+  get '/producto/:producto/canjearCodigo/:codigo' do
+    content_type :json
+    n_codigo = params['codigo']
+    nombreproducto = params['producto']
+    res = @almacen.buscarProducto(nombreproducto).canjearCodigo(n_codigo)
+    if res.nil?
+      status 400
+      {:status => 'Error: no se encontró nada de este producto'}.to_json
+    else
+      res.to_json
+    end
+  end
+
   error 404 do
     content_type :json
     {:status => 'Error: ruta no encontrada'}.to_json
