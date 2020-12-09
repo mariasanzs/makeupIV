@@ -8,10 +8,11 @@ require_relative '../src/compra.rb'
 class MyApp < Sinatra::Base
 
   before do
+    cliente = 'cliente'
     @almacen = Almacen.new
     obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])
     @almacen.anadirProducto(obj)
-#    @cesta = Compra.new
+    @cesta = Compra.new(cliente)
   end
 
   get '/' do
@@ -21,12 +22,13 @@ class MyApp < Sinatra::Base
   get '/disponibilidad/:producto' do
     content_type :json
     nombreproducto = params['producto'].to_s
-    res = @almacen.buscarProducto(nombreproducto).consultarUnidadesDisponibles()
-    if res.nil?
-      status 400
-      {:status => 'Error: no se encontró nada de este producto'}.to_json
-    else
+    begin
+      res = @almacen.buscarProducto(nombreproducto).consultarUnidadesDisponibles()
+      status 200
       res.to_json
+    rescue StandardError
+      status 400
+      {:status => 'Error: no hay disponibilidad de este producto'}.to_json
     end
   end
 
@@ -55,6 +57,11 @@ class MyApp < Sinatra::Base
       status 400
       {:status => 'Error: No se puede canjear el código'}.to_json
     end
+  end
+
+  #HU06 - Como usuario, quiero saber el precio total de mi cesta
+  get '/preciocesta' do
+    @cesta.calcularPrecioTotal().to_json
   end
 
   error 404 do
