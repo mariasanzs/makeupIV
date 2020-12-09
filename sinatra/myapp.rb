@@ -15,6 +15,18 @@ class MyApp < Sinatra::Base
     {:status => 'ok'}.to_json
   end
 
+  get '/disponibilidad/:producto' do
+    content_type :json
+    nombreproducto = params['producto'].to_s
+    res = @almacen.buscarProducto(nombreproducto).consultarUnidadesDisponibles()
+    if res.nil?
+      status 400
+      {:status => 'Error: no se encontró nada de este producto'}.to_json
+    else
+      res.to_json
+    end
+  end
+
   error 404 do
     content_type :json
     {:status => 'Error: ruta no encontrada'}.to_json
