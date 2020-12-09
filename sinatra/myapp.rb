@@ -9,6 +9,9 @@ class MyApp < Sinatra::Base
 
   before do
     @almacen = Almacen.new
+    obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])
+    @almacen.anadirProducto(obj)
+#    @cesta = Compra.new
   end
 
   get '/' do
@@ -43,12 +46,13 @@ class MyApp < Sinatra::Base
     content_type :json
     n_codigo = params['codigo']
     nombreproducto = params['producto']
-    res = @almacen.buscarProducto(nombreproducto).canjearCodigo(n_codigo)
-    if res.nil?
-      status 400
-      {:status => 'Error: no se encontró nada de este producto'}.to_json
-    else
+    begin
+      res = @almacen.buscarProducto(nombreproducto).canjearCodigo(n_codigo)
+      status 200
       res.to_json
+    rescue StandardError
+      status 400
+      {:status => 'Error: No se puede canjear el código'}.to_json
     end
   end
 
