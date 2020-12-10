@@ -72,14 +72,19 @@ class MyApp < Sinatra::Base
 
   get '/descuento/:producto' do
     content_type :json
-    nombreproducto = params['producto']
     begin
+      nombreproducto = params['producto']
       res = @@almacen.buscarProducto(nombreproducto).consultarPrecioDescontado()
-      status 200
-      {:porcentajeDescuento => res}.to_json
+      begin
+        status 200
+        {:porcentajeDescuento => res}.to_json
+      rescue StandardError
+        status 400
+        {:status => 'Este producto no tiene ningun descuento'}.to_json
+      end
     rescue StandardError
       status 400
-      {:status => 'Error: no tiene este producto'}.to_json
+      {:status => 'Este producto no está en el catálogo'}.to_json
     end
   end
 
@@ -100,7 +105,7 @@ class MyApp < Sinatra::Base
       {:anadidoCesta => nombreproducto}.to_json
     rescue StandardError
       status 400
-      {:status => 'Error: No se puede añadir a tu cesta'}.to_json
+      {:status => 'Error: Este producto no está en el catálogo'}.to_json
     end
   end
 
