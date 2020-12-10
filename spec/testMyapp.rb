@@ -143,4 +143,31 @@ RSpec.describe 'MyApp' do
       expect(last_response.status).to eq (400)
     end
   end
+
+  describe "Quitar un producto en la cesta" do
+    it 'quitar cesta ok' do
+      delete '/quitarCesta/prueba'
+      res = 'prueba'
+      respuesta = {:quitadoCesta => res}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response).to be_ok
+    end
+
+    it 'añadir cesta error no existe producto' do
+      delete '/quitarCesta/noexisto'
+      respuesta = {:status => 'Error: Este producto no está en el catálogo'}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response.status).to eq (400)
+    end
+
+    it 'añadir cesta error no está en la cesta' do
+      delete '/quitarCesta/prueba'
+      respuesta = {:status => 'Error: Este producto no está en tu cesta'}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response.status).to eq (400)
+    end
+  end
 end
