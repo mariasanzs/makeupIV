@@ -11,6 +11,7 @@ RSpec.describe 'MyApp' do
     Sinatra::Application
   end
 
+
   describe "precios de la cesta" do
     it 'precio cesta correcto' do
       get '/preciocesta'
