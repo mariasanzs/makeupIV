@@ -76,7 +76,25 @@ RSpec.describe 'MyApp' do
     end
   end
 
+  describe "tonos disponibles de un producto" do
+    it 'tonos ok' do
+      get '/tonos/prueba'
+      res = [4,5,6,7]
+      respuesta = {:tonos => res}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response).to be_ok
+    end
 
+    it 'tonos error' do
+      get '/tonos/noexisto'
+      respuesta = {:status => 'Error: No hay tonos de este producto'}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response.status).to eq (400)
+    end
+  end
+    
   describe "precios de la cesta" do
     it 'preciocesta ok' do
       get '/preciocesta'
