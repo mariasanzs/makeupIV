@@ -109,12 +109,17 @@ class MyApp < Sinatra::Base
     begin
       nombreproducto = params['producto']
       productoCompra = @@almacen.buscarProducto(nombreproducto)
-      @@cesta.quitarCesta(productoCompra)
-      status 200
-      {:quitadoCesta => nombreproducto}.to_json
-    rescue ArgumentError
+      begin
+        @@cesta.quitarCesta(productoCompra)
+        status 200
+        {:quitadoCesta => nombreproducto}.to_json
+      rescue ArgumentError
+        status 400
+        {:status => 'Error: Este producto no está en tu cesta'}.to_json
+      end
+    rescue StandardError
       status 400
-      {:status => 'Error: No se puede quitar de tu cesta'}.to_json
+      {:status => 'Error: Este producto no está en el catálogo'}.to_json
     end
   end
 
