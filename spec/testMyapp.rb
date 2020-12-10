@@ -94,7 +94,34 @@ RSpec.describe 'MyApp' do
       expect(last_response.status).to eq (400)
     end
   end
-    
+
+  describe "porcentaje descuento de un producto" do
+    it 'descuento ok' do
+      get '/descuento/prueba'
+      res = 57.5
+      respuesta = {:porcentajeDescuento => res}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response).to be_ok
+    end
+
+    it 'descuento error no existe producto' do
+      get '/descuento/noexisto'
+      respuesta = {:status => 'Error: Este producto no está en el catálogo'}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response.status).to eq (400)
+    end
+
+    it 'descuento error no hay descuento' do
+      get '/descuento/prueba2'
+      respuesta = {:status => 'Error: Este producto no tiene ningun descuento'}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response.status).to eq (400)
+    end
+  end
+
   describe "precios de la cesta" do
     it 'preciocesta ok' do
       get '/preciocesta'

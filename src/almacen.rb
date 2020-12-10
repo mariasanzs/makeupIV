@@ -11,17 +11,14 @@ class Almacen
     def buscarProducto(nombreproducto)
       for producto in @productos
         if producto.nombre == nombreproducto
-          puts producto
           return producto
-        else
-          raise StandardError.new('Este producto no está en el catálogo')
         end
       end
+      raise StandardError.new('Este producto no está en el catálogo')
     end
 
     def anadirProducto(producto)
       @productos.push(producto)
-      puts @productos
       return @productos.last()
     end
 
