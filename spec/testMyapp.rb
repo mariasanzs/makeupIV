@@ -1,6 +1,6 @@
 ENV['APP_ENV'] = 'test'
 
-require_relative '../src/myapp.rb'
+require_relative '../sinatra/myapp.rb'
 require 'rspec'
 require 'rack/test'
 
@@ -11,9 +11,13 @@ RSpec.describe 'MyApp' do
     Sinatra::Application
   end
 
-  it "test_everything_ok" do
-    get '/'
-    expect(last_response).to be_ok
-    expect(last_response.body).to eq("{:status => 'ok'}")
+  describe "precios de la cesta" do
+    it 'precio cesta correcto' do
+      get '/preciocesta'
+      respuesta = ({"precioCesta":0}).to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response.ok?).to eq (true)
+    end
   end
 end
