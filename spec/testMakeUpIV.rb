@@ -184,4 +184,14 @@ describe Maquillaje do
     end
   end
 
+  describe "#quitarProducto" do
+    it "Debería quitar un producto al almacen" do
+      expect(almacen.quitarProducto(obj3)). to eql(true)
+    end
+
+    it "Debería lanzar error si no estuviera el producto en la cesta" do
+      expect{ almacen.buscarProducto(obj2)}.to raise_error(StandardError)
+    end
+  end
+
 end
