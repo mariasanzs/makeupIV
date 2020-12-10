@@ -26,8 +26,7 @@ class MyApp < Sinatra::Base
       {:unidadesDisponibles => res}.to_json
     rescue StandardError
       status 400
-      tam = @@almacen.productos
-      {:status => "Error: no hay disponibilidad de este producto, #{tam}"}.to_json
+      {:status => "Error: no hay disponibilidad de este producto"}.to_json
     end
   end
 
