@@ -45,15 +45,20 @@ class MyApp < Sinatra::Base
 
   get '/producto/:producto/canjearCodigo/:codigo' do
     content_type :json
-    n_codigo = params['codigo']
-    nombreproducto = params['producto']
     begin
-      res = @@almacen.buscarProducto(nombreproducto).canjearCodigo(n_codigo)
-      status 200
-      {:preciorebajado => res}.to_json
+      n_codigo = params['codigo']
+      nombreproducto = params['producto']
+      begin
+        res = @@almacen.buscarProducto(nombreproducto).canjearCodigo(n_codigo)
+        status 200
+        {:preciorebajado => res}.to_json
+      rescue StandardError
+        status 400
+        {:status => 'Error: Este código no es válido'}.to_json
+      end
     rescue StandardError
       status 400
-      {:status => 'Error: No se puede canjear el código'}.to_json
+      {:status => 'Este producto no está en el catálogo'}.to_json
     end
   end
 

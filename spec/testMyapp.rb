@@ -8,13 +8,14 @@ RSpec.describe 'MyApp' do
   include Rack::Test::Methods
 
   def app
-    Sinatra::Application
+    MyApp
   end
 
   describe "precios de la cesta" do
     it 'precio cesta correcto' do
       get '/preciocesta'
-      respuesta = ({"precioCesta":0}).to_json
+      res = 0
+      respuesta = {:precioCesta => res}.to_json
       expect(last_response.body).to eq (respuesta)
       expect(last_response.content_type).to eq ('application/json')
       expect(last_response).to be_ok
