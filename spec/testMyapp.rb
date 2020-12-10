@@ -11,6 +11,15 @@ RSpec.describe 'MyApp' do
     MyApp
   end
 
+  describe "Pagina Inicial" do
+    it 'ruta inicial ok' do
+      get '/'
+      respuesta = {:status => 'ok'}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('text/html;charset=utf-8')
+      expect(last_response).to be_ok
+    end
+  end
   describe "disponibilidad de un producto" do
     it 'disponibilidad ok' do
       get '/disponibilidad/prueba'
@@ -168,6 +177,16 @@ RSpec.describe 'MyApp' do
       expect(last_response.body).to eq (respuesta)
       expect(last_response.content_type).to eq ('application/json')
       expect(last_response.status).to eq (400)
+    end
+  end
+
+  describe "Hay un error 404" do
+    it "no existe la ruta" do
+      get '/error404'
+      respuesta = {:status => 'Error: ruta no encontrada'}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response.status).to eq (404)
     end
   end
 end
