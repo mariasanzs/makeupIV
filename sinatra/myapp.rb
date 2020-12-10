@@ -135,6 +135,7 @@ class MyApp < Sinatra::Base
     end
   end
 
+
   delete '/quitarProducto/:producto' do
     content_type :json
     nombreproducto = params['producto']
