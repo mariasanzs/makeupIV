@@ -6,7 +6,6 @@ describe Maquillaje do
   obj2 = Maquillaje.new('prueba',[1, 2, 3, 4],10.0,5.0,[3, 4, 2, 3],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])
   obj.venderProducto(5)
   obj.venderProducto(6)
-
   comp1 = Compra.new('00001')
   obj3 = Maquillaje.new('hola',[1, 2, 3, 4],10.0,5.0,[3, 4, 2, 3],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])
 
