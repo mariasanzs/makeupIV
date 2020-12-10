@@ -7,6 +7,12 @@ require_relative '../src/almacen.rb'
 require_relative '../src/compra.rb'
 class MyApp < Sinatra::Base
 
+  @@cliente = 'cliente'
+  @@almacen = Almacen.new
+  @@obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])
+  @@almacen.anadirProducto(@@obj)
+  @@cesta = Compra.new(@@cliente)
+
   get '/' do
     {:status => 'ok'}.to_json
   end
@@ -42,8 +48,9 @@ class MyApp < Sinatra::Base
     begin
       n_codigo = params['codigo']
       nombreproducto = params['producto']
+      prod = @@almacen.buscarProducto(nombreproducto)
       begin
-        res = @@almacen.buscarProducto(nombreproducto).canjearCodigo(n_codigo)
+        res = prod.canjearCodigo(n_codigo)
         status 200
         {:preciorebajado => res}.to_json
       rescue StandardError
