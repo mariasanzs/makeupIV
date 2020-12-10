@@ -52,7 +52,7 @@ class MyApp < Sinatra::Base
       end
     rescue StandardError
       status 400
-      {:status => 'Este producto no está en el catálogo'}.to_json
+      {:status => 'Error: Este producto no está en el catálogo'}.to_json
     end
   end
 
@@ -65,7 +65,7 @@ class MyApp < Sinatra::Base
       {:tonos => res}.to_json
     rescue StandardError
       status 400
-      {:status => 'Error: no hay tonos de este producto'}.to_json
+      {:status => 'Error: No hay tonos de este producto'}.to_json
     end
   end
 
@@ -79,11 +79,11 @@ class MyApp < Sinatra::Base
         {:porcentajeDescuento => res}.to_json
       rescue StandardError
         status 400
-        {:status => 'Este producto no tiene ningun descuento'}.to_json
+        {:status => 'Error: Este producto no tiene ningun descuento'}.to_json
       end
     rescue StandardError
       status 400
-      {:status => 'Este producto no está en el catálogo'}.to_json
+      {:status => 'Error: Este producto no está en el catálogo'}.to_json
     end
   end
 
