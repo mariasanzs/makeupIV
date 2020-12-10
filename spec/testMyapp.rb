@@ -114,7 +114,7 @@ RSpec.describe 'MyApp' do
     end
 
     it 'descuento error no hay descuento' do
-      get '/descuento/prueba2'
+      get '/descuento/pintalabios'
       respuesta = {:status => 'Error: Este producto no tiene ningun descuento'}.to_json
       expect(last_response.body).to eq (respuesta)
       expect(last_response.content_type).to eq ('application/json')
