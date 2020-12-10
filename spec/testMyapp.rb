@@ -36,6 +36,25 @@ RSpec.describe 'MyApp' do
     end
   end
 
+  describe "caracteristicas de un producto" do
+    it 'caracteristicas ok' do
+      get '/caracteristicas/prueba'
+      res = " Detalles del producto:\n    Nombre: prueba\n    Tipo: labios\n    Tonos: [4, 5, 6, 7]\n    Tonos disponibles: [4, 5, 6, 7]\n    Precio: 10.0\n    Precio Rebajado: 5.0\n    Ahorras un 50.0%\n    Unidades de cada tono: [3, 2, 1, 7] \n"
+      respuesta = {:caracteristicas => res}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response).to be_ok
+    end
+
+    it 'caracteristicas error' do
+      get '/caracteristicas/noexisto'
+      respuesta = {:status => 'Error: no se encontró nada de este producto'}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response.status).to eq (400)
+    end
+  end
+
   describe "precios de la cesta" do
     it 'preciocesta ok' do
       get '/preciocesta'
