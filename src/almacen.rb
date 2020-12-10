@@ -7,4 +7,14 @@ class Almacen
     def initialize()
       @productos = Array.new
     end
+    
+    def buscarProducto(nombreproducto)
+      for producto in @productos
+        if producto.nombre == nombreproducto
+          return producto
+        end
+      end
+      raise StandardError.new('Este producto no está en el catálogo')
+    end
+
 end
