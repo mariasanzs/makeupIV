@@ -178,4 +178,10 @@ describe Maquillaje do
     end
   end
 
+  describe "#anadirProducto" do
+    it "Debería añadir un producto al almacen" do
+      expect(almacen.anadirProducto(obj2)). to eql(obj2)
+    end
+  end
+
 end
