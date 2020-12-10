@@ -26,7 +26,6 @@ class Almacen
       if(@productos.include?(producto))
         indice = @productos.index(producto)
         @productos.delete_at(indice);
-        puts @productos
       else
         raise ArgumentError.new('Este producto no está en el almacén')
       end

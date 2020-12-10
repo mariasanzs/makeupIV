@@ -7,7 +7,7 @@ require_relative '../src/almacen.rb'
 require_relative '../src/compra.rb'
 class MyApp < Sinatra::Base
 
-  @@cliente = 'cliente'
+  @@cliente = 'clientepordefecto'
   @@almacen = Almacen.new
   @@obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])
   @@almacen.anadirProducto(@@obj)
@@ -132,6 +132,20 @@ class MyApp < Sinatra::Base
     rescue StandardError
       status 400
       {:status => 'Error: Este producto no está en el catálogo'}.to_json
+    end
+  end
+
+  delete '/quitarProducto/:producto' do
+    content_type :json
+    nombreproducto = params['producto']
+    productoCompra = @@almacen.buscarProducto(nombreproducto)
+    begin
+      @@almacen.quitarProducto(productoCompra)
+      status 200
+      {:quitadoAlmacen => nombreproducto }.to_json
+    rescue ArgumentError
+      status 400
+      {:status => 'Error: Este producto no está en tu almacen'}.to_json
     end
   end
 
