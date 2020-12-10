@@ -57,6 +57,19 @@ class MyApp < Sinatra::Base
     end
   end
 
+  get '/tonos/:producto' do
+    content_type :json
+    nombreproducto = params['producto']
+    begin
+      res = @@almacen.buscarProducto(nombreproducto).tonosDisponibles()
+      status 200
+      {:tonos => res}.to_json
+    rescue StandardError
+      status 400
+      {:status => 'Error: no hay tonos de este producto'}.to_json
+    end
+  end
+  
   get '/preciocesta' do
     @@cesta.calcularPrecioTotal().to_json
   end
