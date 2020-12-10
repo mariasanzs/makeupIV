@@ -23,7 +23,7 @@ class MyApp < Sinatra::Base
     begin
       res = @@almacen.buscarProducto(nombreproducto).consultarUnidadesDisponibles()
       status 200
-      res.to_json
+      {:unidadesDisponibles => res}.to_json
     rescue StandardError
       status 400
       {:status => 'Error: no hay disponibilidad de este producto'}.to_json
@@ -36,7 +36,7 @@ class MyApp < Sinatra::Base
     begin
       res = @@almacen.buscarProducto(nombreproducto).listarCaracteristicasProducto()
       status 200
-      res.to_json
+      {:caracteristicas => res}.to_json
     rescue StandardError
       status 400
       {:status => 'Error: no se encontró nada de este producto'}.to_json
@@ -50,7 +50,7 @@ class MyApp < Sinatra::Base
     begin
       res = @@almacen.buscarProducto(nombreproducto).canjearCodigo(n_codigo)
       status 200
-      res.to_json
+      {:preciorebajado => res}.to_json
     rescue StandardError
       status 400
       {:status => 'Error: No se puede canjear el código'}.to_json
