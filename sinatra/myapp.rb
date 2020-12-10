@@ -70,6 +70,19 @@ class MyApp < Sinatra::Base
     end
   end
 
+  get '/descuento/:producto' do
+    content_type :json
+    nombreproducto = params['producto']
+    begin
+      res = @@almacen.buscarProducto(nombreproducto).consultarPrecioDescontado()
+      status 200
+      {:porcentajeDescuento => res}.to_json
+    rescue StandardError
+      status 400
+      {:status => 'Error: no tiene este producto'}.to_json
+    end
+  end
+
   get '/preciocesta' do
     content_type :json
     status 200
