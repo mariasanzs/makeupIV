@@ -7,13 +7,11 @@ require_relative '../src/almacen.rb'
 require_relative '../src/compra.rb'
 class MyApp < Sinatra::Base
 
-  before do
-    cliente = 'cliente'
-    @almacen = Almacen.new
-    obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])
-    @almacen.anadirProducto(obj)
-    @cesta = Compra.new(cliente)
-  end
+  @@cliente = 'cliente'
+  @@almacen = Almacen.new
+  @@obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])
+  @@almacen.anadirProducto(@@obj)
+  @@cesta = Compra.new(@@cliente)
 
   get '/' do
     {:status => 'ok'}.to_json
@@ -23,7 +21,7 @@ class MyApp < Sinatra::Base
     content_type :json
     nombreproducto = params['producto'].to_s
     begin
-      res = @almacen.buscarProducto(nombreproducto).consultarUnidadesDisponibles()
+      res = @@almacen.buscarProducto(nombreproducto).consultarUnidadesDisponibles()
       status 200
       res.to_json
     rescue StandardError
@@ -36,7 +34,7 @@ class MyApp < Sinatra::Base
     content_type :json
     nombreproducto = params['producto']
     begin
-      res = @almacen.buscarProducto(nombreproducto).listarCaracteristicasProducto()
+      res = @@almacen.buscarProducto(nombreproducto).listarCaracteristicasProducto()
       status 200
       res.to_json
     rescue StandardError
@@ -50,7 +48,7 @@ class MyApp < Sinatra::Base
     n_codigo = params['codigo']
     nombreproducto = params['producto']
     begin
-      res = @almacen.buscarProducto(nombreproducto).canjearCodigo(n_codigo)
+      res = @@almacen.buscarProducto(nombreproducto).canjearCodigo(n_codigo)
       status 200
       res.to_json
     rescue StandardError
@@ -59,16 +57,16 @@ class MyApp < Sinatra::Base
     end
   end
 
-  #HU06 - Como usuario, quiero saber el precio total de mi cesta
   get '/preciocesta' do
-    @cesta.calcularPrecioTotal().to_json
+    @@cesta.calcularPrecioTotal().to_json
   end
 
-  get '/comprar/:producto' do
+  post '/comprar/:producto' do
+    content_type :json
     nombreproducto = params['producto']
     begin
-      productoCompra = @almacen.buscarProducto(nombreproducto)
-      @cesta.anadirCesta(productoCompra)
+      productoCompra = @@almacen.buscarProducto(nombreproducto)
+      @@cesta.anadirCesta(productoCompra)
       status 200
       nombreproducto.to_json
     rescue StandardError
