@@ -69,22 +69,39 @@ class MyApp < Sinatra::Base
       {:status => 'Error: no hay tonos de este producto'}.to_json
     end
   end
-  
+
   get '/preciocesta' do
-    @@cesta.calcularPrecioTotal().to_json
+    content_type :json
+    status 200
+    res = @@cesta.calcularPrecioTotal()
+    {:precioCesta => res}.to_json
   end
 
-  post '/comprar/:producto' do
+  post '/anadirCesta/:producto' do
     content_type :json
     nombreproducto = params['producto']
     begin
       productoCompra = @@almacen.buscarProducto(nombreproducto)
       @@cesta.anadirCesta(productoCompra)
       status 200
-      nombreproducto.to_json
+      {:anadidoCesta => nombreproducto}.to_json
     rescue StandardError
       status 400
       {:status => 'Error: No se puede añadir a tu cesta'}.to_json
+    end
+  end
+
+  delete '/quitarCesta/:producto' do
+    content_type :json
+    begin
+      nombreproducto = params['producto']
+      productoCompra = @@almacen.buscarProducto(nombreproducto)
+      @@cesta.quitarCesta(productoCompra)
+      status 200
+      {:quitadoCesta => nombreproducto}.to_json
+    rescue ArgumentError
+      status 400
+      {:status => 'Error: No se puede quitar de tu cesta'}.to_json
     end
   end
 
