@@ -51,3 +51,12 @@
 - Desarrollo de un bot de Telegram con [AWS lambda](https://github.com/mariasanzs/makeupIV/blob/master/docs/lambda.md)
 - Añadir la nueva documentación sobre todos los conceptos desarrollados en el hito, como puede ser la conexión entre el repositorio y Vercel o el uso de AWS. Disponible en la carpeta [/docs](https://github.com/mariasanzs/makeupIV/tree/master/docs)
 - Mejora y actualización del fichero [README.md](https://github.com/mariasanzs/makeupIV#readme).
+
+## Hito6 - Microservicios
+
+- Realizar los ejercicios de [autoevaluación](https://github.com/mariasanzs/EjerciciosIV/blob/master/hito6/autoevaluacionHito6.md#enlaces-a-los-ejercicios)
+- Diseñar a modo general la API con sus respectivas rutas y tipos devueltos por las peticiones que correspondan con HU
+- Desarrollo de test de acuerdo a las HU
+- Crear un fichero de log haciendo uso de un middleware
+- Añadir la nueva documentación sobre todos los conceptos desarrollados en el hito. Disponible en la carpeta [/docs](https://github.com/mariasanzs/makeupIV/tree/master/docs)
+- Mejora y actualización del fichero [README.md](https://github.com/mariasanzs/makeupIV#readme).
