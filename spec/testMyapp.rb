@@ -180,6 +180,25 @@ RSpec.describe 'MyApp' do
     end
   end
 
+  describe "Quitar un producto del almacen" do
+    it 'quitar almacen ok' do
+      delete '/quitarProducto/prueba'
+      res = 'prueba'
+      respuesta = {:quitadoAlmacen => res}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response).to be_ok
+    end
+
+    it 'Quitar producto error no está en Almacen' do
+      delete '/quitarProducto/noexisto'
+      respuesta = {:status => 'Error: Este producto no está en tu almacen'}.to_json
+      expect(last_response.body).to eq (respuesta)
+      expect(last_response.content_type).to eq ('application/json')
+      expect(last_response.status).to eq (400)
+    end
+  end
+
   describe "Hay un error 404" do
     it "no existe la ruta" do
       get '/error404'

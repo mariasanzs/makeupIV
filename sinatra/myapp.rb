@@ -139,15 +139,19 @@ class MyApp < Sinatra::Base
   delete '/quitarProducto/:producto' do
     content_type :json
     nombreproducto = params['producto']
-    productoCompra = @@almacen.buscarProducto(nombreproducto)
     begin
-      @@almacen.quitarProducto(productoCompra)
-      status 200
-      {:quitadoAlmacen => nombreproducto }.to_json
-    rescue ArgumentError
-      status 400
-      {:status => 'Error: Este producto no está en tu almacen'}.to_json
-    end
+      productoCompra = @@almacen.buscarProducto(nombreproducto)
+      begin
+        @@almacen.quitarProducto(productoCompra)
+        status 200
+        {:quitadoAlmacen => nombreproducto }.to_json
+      rescue ArgumentError
+        status 400
+      end
+      rescue StandardError
+        status 400
+        {:status => 'Error: Este producto no está en tu almacen'}.to_json
+      end
   end
 
   error 404 do
