@@ -117,6 +117,7 @@ class MyApp < Sinatra::Base
   get '/preciocesta' do
     content_type :json
     status 200
+    log.info "Obteniendo precio total de la cesta"
     res = @@cesta.calcularPrecioTotal()
     {:precioCesta => res}.to_json
   end
@@ -126,10 +127,12 @@ class MyApp < Sinatra::Base
     nombreproducto = params['producto']
     begin
       productoCompra = @@almacen.buscarProducto(nombreproducto)
+      log.info "Añadiendo un producto a la cesta"
       @@cesta.anadirCesta(productoCompra)
       status 200
       {:anadidoCesta => nombreproducto}.to_json
     rescue StandardError
+      log.info "ERROR!!! -> Añadiendo un producto a la cesta"
       status 400
       {:status => 'Error: Este producto no está en el catálogo'}.to_json
     end
@@ -141,6 +144,7 @@ class MyApp < Sinatra::Base
       nombreproducto = params['producto']
       productoCompra = @@almacen.buscarProducto(nombreproducto)
       begin
+        log.info "Quitando un producto de la cesta"
         @@cesta.quitarCesta(productoCompra)
         status 200
         {:quitadoCesta => nombreproducto}.to_json
@@ -150,6 +154,7 @@ class MyApp < Sinatra::Base
       end
     rescue StandardError
       status 400
+      log.info "ERROR!!! -> Quitando un producto de la cesta"
       {:status => 'Error: Este producto no está en el catálogo'}.to_json
     end
   end
