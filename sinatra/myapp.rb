@@ -166,13 +166,16 @@ class MyApp < Sinatra::Base
     begin
       productoCompra = @@almacen.buscarProducto(nombreproducto)
       begin
+        log.info "Quitando producto del almacén"
         @@almacen.quitarProducto(productoCompra)
         status 200
         {:quitadoAlmacen => nombreproducto }.to_json
       rescue ArgumentError
+        log.info "ERROR!!! -> Quitando producto del almacén"
         status 400
       end
       rescue StandardError
+        log.info "ERROR!!! -> Quitando producto del almacén"
         status 400
         {:status => 'Error: Este producto no está en tu almacen'}.to_json
       end
@@ -201,6 +204,7 @@ class MyApp < Sinatra::Base
 
   error 404 do
     content_type :json
+    log.info "ERROR!!! -> ruta no encontrada"
     {:status => 'Error: ruta no encontrada'}.to_json
   end
 end
