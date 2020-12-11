@@ -2,10 +2,23 @@
 
 require 'sinatra'
 require 'json'
+require 'logger'
 
 require_relative '../src/almacen.rb'
 require_relative '../src/compra.rb'
+
+
 class MyApp < Sinatra::Base
+
+  ::Logger.class_eval { alias :write :'<<' }
+  access_log = ::File.join(::File.dirname(::File.expand_path(__FILE__)),'..','log','access.log')
+  access_logger = ::Logger.new(access_log)
+  error_logger = ::File.new(::File.join(::File.dirname(::File.expand_path(__FILE__)),'..','log','error.log'),"a+")
+  error_logger.sync = true
+
+  configure do
+    use ::Rack::CommonLogger, access_logger
+  end
 
   @@cliente = 'clientepordefecto'
   @@almacen = Almacen.new
@@ -14,6 +27,7 @@ class MyApp < Sinatra::Base
   @@cesta = Compra.new(@@cliente)
 
   get '/' do
+    access_logger.info "Accediendo a la página principal"
     {:status => 'ok'}.to_json
   end
 
@@ -21,6 +35,7 @@ class MyApp < Sinatra::Base
     content_type :json
     nombreproducto = params['producto'].to_s
     begin
+      access_logger.info "Accediendo al método get de disponibilidad de un producto"
       res = @@almacen.buscarProducto(nombreproducto).consultarUnidadesDisponibles()
       status 200
       {:unidadesDisponibles => res}.to_json
@@ -152,6 +167,27 @@ class MyApp < Sinatra::Base
         status 400
         {:status => 'Error: Este producto no está en tu almacen'}.to_json
       end
+  end
+
+  post '/anadirProducto/:nombre/:tonos/:precio/:preciorebajado/:unidades/:tipo/:codigos' do
+    content_type :json
+    nombreproducto = params['nombre']
+    #if @@almacen.buscarProducto(nombreproducto).nil?
+  #    tonosp = params['tonos']
+      preciop = params['precio']
+      preciorebajadop = params['preciorebajado']
+  #    unidadesp = params['unidades']
+      tipop = params['tipo']
+#      codigosp = params['codigos']
+      #producto = Maquillaje.new(nombreproducto, tonosp, preciop, preciorebajadop, unidadesp, tipop, codigosp)
+      #@@almacen.anadirAlmacen(producto)
+      status 200
+      tam = @@almacen.productos.size
+      {:anadidoAlmacen => nombreproducto, :tamanoAlmacen => tam }.to_json
+    #else
+    #  status 400
+    #  {:status => 'Error: Este producto ya está en el almacen'}.to_json
+    #end
   end
 
   error 404 do
