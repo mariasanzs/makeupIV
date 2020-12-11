@@ -84,3 +84,6 @@ I, [2020-12-11T18:55:48.148483 #23061]  INFO -- : Accediendo a la disponibilidad
 127.0.0.1 - - [11/Dec/2020:18:55:48 +0100] "GET /disponibilidad/prueba HTTP/1.1" 200 33 0.0005
 I, [2020-12-11T18:55:51.164612 #23061]  INFO -- : ERROR!!! -> Accediendo a la disponibilidad de un producto
 127.0.0.1 - - [11/Dec/2020:18:55:51 +0100] "GET /disponibilidad/prue HTTP/1.1" 400 58 0.0007
+I, [2020-12-11T19:30:12.450407 #23061]  INFO -- : Accediendo a la disponibilidad de un producto
+127.0.0.1 - - [11/Dec/2020:19:30:12 +0100] "GET /disponibilidad/prueba HTTP/1.1" 200 33 0.0007
+127.0.0.1 - - [11/Dec/2020:19:30:26 +0100] "GET /caracteristicas/prueba HTTP/1.1" 200 255 0.0048

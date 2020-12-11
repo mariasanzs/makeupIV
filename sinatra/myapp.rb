@@ -83,10 +83,12 @@ class MyApp < Sinatra::Base
     nombreproducto = params['producto']
     begin
       res = @@almacen.buscarProducto(nombreproducto).tonosDisponibles()
+      log.info "Obteniendo tonos de un producto"
       status 200
       {:tonos => res}.to_json
     rescue StandardError
       status 400
+      log.info "ERROR!!! -> Obteniendo tonos de un producto"
       {:status => 'Error: No hay tonos de este producto'}.to_json
     end
   end
@@ -105,6 +107,7 @@ class MyApp < Sinatra::Base
         {:status => 'Error: Este producto no tiene ningun descuento'}.to_json
       end
     rescue StandardError
+
       status 400
       {:status => 'Error: Este producto no está en el catálogo'}.to_json
     end
