@@ -8,7 +8,7 @@ Ruby posee diversos frameworks, lo que hace que sea un lenguaje muy potente para
 
 Es un DSL ( domain-specific language) escrito en Ruby y que destaca y surge por la relación simplicidad-funcionalidad que ofrece.
 
-###¿Qué ventajas nos ofrece Sinatra?
+### ¿Qué ventajas nos ofrece Sinatra?
 
 Sinatra tiene una gran popular entre los desarrolladores de Ruby, siendo así que además ha servido para crear otros frameworks esto es debido a los siguientes factores:
 
