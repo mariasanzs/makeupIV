@@ -99,6 +99,7 @@ class MyApp < Sinatra::Base
       nombreproducto = params['producto']
       prod = @@almacen.buscarProducto(nombreproducto)
       begin
+        log.info "Consultando descuento de un producto"
         res = prod.consultarPrecioDescontado()
         status 200
         {:porcentajeDescuento => res}.to_json
@@ -107,7 +108,7 @@ class MyApp < Sinatra::Base
         {:status => 'Error: Este producto no tiene ningun descuento'}.to_json
       end
     rescue StandardError
-
+      log.info "ERROR!!! -> Consultando descuento de un producto"
       status 400
       {:status => 'Error: Este producto no está en el catálogo'}.to_json
     end
