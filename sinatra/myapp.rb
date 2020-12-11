@@ -9,12 +9,12 @@ require_relative '../src/compra.rb'
 
 class MyApp < Sinatra::Base
 
-  log = ::Logger.new('../log/info.log')
+  log = ::Logger.new(File.join(File.dirname(File.expand_path(__FILE__)),'..','log','info.log'))
 
   configure do
     use ::Rack::CommonLogger, log
   end
-  
+
   @@cliente = 'clientepordefecto'
   @@almacen = Almacen.new
   @@obj = Maquillaje.new('prueba',[4, 5, 6, 7],10.0,5.0,[3, 2, 1, 7],TipoProducto::LABIOS,[['maria15','labios30'],[15,30]])

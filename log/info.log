@@ -6,3 +6,81 @@ I, [2020-12-11T13:13:21.110171 #16015]  INFO -- : ERROR!!! -> Accediendo a la di
 127.0.0.1 - - [11/Dec/2020:13:13:21 +0100] "GET /disponibilidad/pruea HTTP/1.1" 400 58 0.0023
 I, [2020-12-11T13:13:26.040540 #16015]  INFO -- : Accediendo a la página principal de MakeupIV
 127.0.0.1 - - [11/Dec/2020:13:13:26 +0100] "GET / HTTP/1.1" 200 15 0.0020
+I, [2020-12-11T18:21:34.228974 #20966]  INFO -- : Accediendo a la página principal de MakeupIV
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET / " 200 15 0.0015
+I, [2020-12-11T18:21:34.233559 #20966]  INFO -- : Accediendo a la disponibilidad de un producto
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET /disponibilidad/prueba " 200 33 0.0022
+I, [2020-12-11T18:21:34.234141 #20966]  INFO -- : ERROR!!! -> Accediendo a la disponibilidad de un producto
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET /disponibilidad/noexisto " 400 58 0.0002
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET /caracteristicas/prueba " 200 255 0.0008
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET /caracteristicas/noexisto " 400 57 0.0001
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET /producto/prueba/canjearCodigo/maria15 " 200 23 0.0010
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET /producto/noexisto/canjearCodigo/maria15 " 400 58 0.0002
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET /producto/prueba/canjearCodigo/noexisto " 400 46 0.0001
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET /tonos/prueba " 200 19 0.0005
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET /tonos/noexisto " 400 49 0.0002
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET /descuento/prueba " 200 28 0.0006
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET /descuento/noexisto " 400 58 0.0001
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET /preciocesta " 200 17 0.0001
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "POST /anadirCesta/prueba " 200 25 0.0030
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "POST /anadirCesta/noexisto " 400 58 0.0002
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "DELETE /quitarCesta/prueba " 200 25 0.0006
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "DELETE /quitarCesta/noexisto " 400 58 0.0002
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "DELETE /quitarCesta/prueba " 400 54 0.0001
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "DELETE /quitarProducto/prueba " 200 27 0.0007
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "DELETE /quitarProducto/noexisto " 400 56 0.0002
+127.0.0.1 - - [11/Dec/2020:18:21:34 +0100] "GET /error404 " 404 38 0.0002
+I, [2020-12-11T18:47:15.495136 #21828]  INFO -- : Accediendo a la página principal de MakeupIV
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET / " 200 15 0.0015
+I, [2020-12-11T18:47:15.499669 #21828]  INFO -- : Accediendo a la disponibilidad de un producto
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET /disponibilidad/prueba " 200 33 0.0022
+I, [2020-12-11T18:47:15.500251 #21828]  INFO -- : ERROR!!! -> Accediendo a la disponibilidad de un producto
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET /disponibilidad/noexisto " 400 58 0.0002
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET /caracteristicas/prueba " 200 255 0.0008
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET /caracteristicas/noexisto " 400 57 0.0001
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET /producto/prueba/canjearCodigo/maria15 " 200 23 0.0010
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET /producto/noexisto/canjearCodigo/maria15 " 400 58 0.0002
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET /producto/prueba/canjearCodigo/noexisto " 400 46 0.0001
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET /tonos/prueba " 200 19 0.0005
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET /tonos/noexisto " 400 49 0.0002
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET /descuento/prueba " 200 28 0.0006
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET /descuento/noexisto " 400 58 0.0001
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET /preciocesta " 200 17 0.0001
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "POST /anadirCesta/prueba " 200 25 0.0031
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "POST /anadirCesta/noexisto " 400 58 0.0002
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "DELETE /quitarCesta/prueba " 200 25 0.0007
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "DELETE /quitarCesta/noexisto " 400 58 0.0002
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "DELETE /quitarCesta/prueba " 400 54 0.0002
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "DELETE /quitarProducto/prueba " 200 27 0.0010
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "DELETE /quitarProducto/noexisto " 400 56 0.0002
+127.0.0.1 - - [11/Dec/2020:18:47:15 +0100] "GET /error404 " 404 38 0.0002
+I, [2020-12-11T18:55:24.976019 #23059]  INFO -- : Accediendo a la página principal de MakeupIV
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET / " 200 15 0.0014
+I, [2020-12-11T18:55:24.980579 #23059]  INFO -- : Accediendo a la disponibilidad de un producto
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET /disponibilidad/prueba " 200 33 0.0022
+I, [2020-12-11T18:55:24.981166 #23059]  INFO -- : ERROR!!! -> Accediendo a la disponibilidad de un producto
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET /disponibilidad/noexisto " 400 58 0.0002
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET /caracteristicas/prueba " 200 255 0.0008
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET /caracteristicas/noexisto " 400 57 0.0001
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET /producto/prueba/canjearCodigo/maria15 " 200 23 0.0010
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET /producto/noexisto/canjearCodigo/maria15 " 400 58 0.0002
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET /producto/prueba/canjearCodigo/noexisto " 400 46 0.0002
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET /tonos/prueba " 200 19 0.0006
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET /tonos/noexisto " 400 49 0.0002
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET /descuento/prueba " 200 28 0.0006
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET /descuento/noexisto " 400 58 0.0002
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET /preciocesta " 200 17 0.0001
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "POST /anadirCesta/prueba " 200 25 0.0030
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "POST /anadirCesta/noexisto " 400 58 0.0002
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "DELETE /quitarCesta/prueba " 200 25 0.0006
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "DELETE /quitarCesta/noexisto " 400 58 0.0002
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "DELETE /quitarCesta/prueba " 400 54 0.0001
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "DELETE /quitarProducto/prueba " 200 27 0.0007
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "DELETE /quitarProducto/noexisto " 400 56 0.0002
+127.0.0.1 - - [11/Dec/2020:18:55:24 +0100] "GET /error404 " 404 38 0.0002
+I, [2020-12-11T18:55:45.680570 #23061]  INFO -- : Accediendo a la disponibilidad de un producto
+127.0.0.1 - - [11/Dec/2020:18:55:45 +0100] "GET /disponibilidad/prueba HTTP/1.1" 200 33 0.0100
+I, [2020-12-11T18:55:48.148483 #23061]  INFO -- : Accediendo a la disponibilidad de un producto
+127.0.0.1 - - [11/Dec/2020:18:55:48 +0100] "GET /disponibilidad/prueba HTTP/1.1" 200 33 0.0005
+I, [2020-12-11T18:55:51.164612 #23061]  INFO -- : ERROR!!! -> Accediendo a la disponibilidad de un producto
+127.0.0.1 - - [11/Dec/2020:18:55:51 +0100] "GET /disponibilidad/prue HTTP/1.1" 400 58 0.0007
