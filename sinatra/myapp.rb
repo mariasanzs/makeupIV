@@ -64,10 +64,12 @@ class MyApp < Sinatra::Base
       prod = @@almacen.buscarProducto(nombreproducto)
       begin
         res = prod.canjearCodigo(n_codigo)
+        log.info "Canjeando código de un producto"
         status 200
         {:preciorebajado => res}.to_json
       rescue StandardError
         status 400
+        log.info "ERROR!!! -> Canjeando código de un producto"
         {:status => 'Error: Este código no es válido'}.to_json
       end
     rescue StandardError
