@@ -6,7 +6,7 @@ Ruby posee diversos frameworks, lo que hace que sea un lenguaje muy potente para
 
 ## Sobre Sinatra:
 
-Es un DSL ( domain-specific language) escrito en Ruby y que destaca por la relación simplicidad-funcionalidad que ofrece.
+Es un DSL ( domain-specific language) escrito en Ruby y que destaca y surge por la relación simplicidad-funcionalidad que ofrece.
 
 ###¿Qué ventajas nos ofrece Sinatra?
 
@@ -15,8 +15,8 @@ Sinatra tiene una gran popular entre los desarrolladores de Ruby, siendo así qu
 * Es Open Source
 * Se hace destacar por su uso simple (muy similar al framework Flask de Phyton)
 * Es flexible y rápido
-* Mnimiza la dificultad en la creación de la aplicación web al no seguir el modelo vista controlador
-* Ademas Sinatra soporta todos las funcionalidades que se necesitan para poner en marcha el proyecto ( Content types, rutas, verbos http...)
+* Minimiza la dificultad en la creación de la aplicación web al no seguir el modelo vista controlador
+* Además Sinatra soporta todos las funcionalidades que se necesitan para poner en marcha el proyecto ( Content types, rutas, verbos http...)
 
 ### Otras alternativas a Sinatra
 
@@ -49,10 +49,14 @@ get '/infraestructuravirtual' do
 end
 ~~~
 
-Para ejecutar la aplicación pode
+Para ejecutar la aplicación deberemos de crear un archivo [config.ru](https://github.com/mariasanzs/makeupIV/blob/master/config.ru), en el que simplemente le indicaremos la ruta al archivo de la aplicación y ordenaremos su ejecución.
 
+De esta forma, tendremos disponible ahora en nuestro localhost el servicio, por ejemplo en la ruta:
 
+ > http://localhost:9292/caracteristicas/prueba
 
-y ejecutar dicho código, de esta forma, tendremos disponible ahora en nuestro localhost el servicio.
+Para ver las características del producto 'prueba'.
+
+En nuestro caso el puerto por defecto es 9292 (aunque se puede cambiar), esto es porque ejecutamos config.ru haciendo rackup (también hay que añadir la gema Rack para usarlo), aunque también podemos usar otras gemas como Shotgun, cuyo puerto por defecto es 9393. 
 
 
