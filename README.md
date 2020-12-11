@@ -4,6 +4,65 @@ API para obterner avisos en descuentos de maquillaje. Asignatura Infraestructura
 
 La idea del proyecto es poder enterarse rápidamente de descuentos, promociones o ofertas rápidas de productos de maquillaje de tiendas Sephora, la cual muchas veces lanza gangas a través de sus redes sociales y demás medios que acaban agotándose de inmediato.
 
+## MICROSERVICIOS
+
+Puedes ver la justificación de por qué he elegido Sinatra como framework y documentación del uso de este [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/sinatra.md)
+
+Puedes ver como he diseñado la API y toda la documentación relativa a esta [aquí]()
+
+## Enlaces a ficheros 📑
+
+***🆕myapp.rb***
+
+Puedes consultar el fichero myapp.rb en el que he desarrollado la gran mayoría de la API con Sinatra [aquí](https://github.com/mariasanzs/makeupIV/blob/master/sinatra/myapp.rb)
+
+***🆕testMyapp.rb***
+
+Puedes consultar el fichero con todos los test del fichero myapp.rb [aqui](https://github.com/mariasanzs/makeupIV/blob/master/spec/testMyapp.rb)
+
+***🆕Código fuente***
+
+Puedes acceder al código fuente del proyecto desde la carpeta [/src](https://github.com/mariasanzs/makeupIV/tree/master/src)
+
+***🆕Ficheros de test***
+
+Todos los test están localizados en la carpeta [/spec](https://github.com/mariasanzs/makeupIV/tree/master/spec)
+
+***🆕Ficheros de dependencias***
+
+Aquí se encuentran los ficheros [Gemfile](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile) y [Gemfile.lock](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile.lock). En Gemfile especificamos que gemas vamos a usar mientras que Gemfile.lock se encarga de mantener esas versiones actualizadas cuando corremos [Bundler](https://github.com/mariasanzs/makeupIV/blob/master/docs/bundler.md#bundler---gestor-de-dependencias).
+
+***🆕Fichero de gestión de tareas***
+
+Aquí se encuentra el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) con el que podemos gestionar la tareas y automatizarlas con [Rake](https://github.com/mariasanzs/makeupIV/blob/master/docs/rake.md)
+
+
+***iv.yaml***
+
+Puedes consultar el fichero iv.yaml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/iv.yaml)
+
+***5.json***
+
+Puedes consultar el fichero 5.json [aqui](https://github.com/mariasanzs/makeupIV/blob/master/5.json)
+
+***.travis.yml***
+
+Puedes consultar el fichero .travis.yml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/.travis.yml)
+
+***Shippable.yml***
+
+Puedes consultar el fichero shippable.yml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/shippable.yml)
+
+***Dockerfile***
+
+Puedes consultar el fichero Dockerfile [aqui](https://github.com/mariasanzs/makeupIV/blob/master/Dockerfile)
+
+También puedes consultar la documentación del dockerfile y la justificación de las ordenes [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/dockerfile.md)
+
+---
+---
+
+
 ## Serverless 
 
 #### Usando Vercel
@@ -23,49 +82,6 @@ La idea del proyecto es poder enterarse rápidamente de descuentos, promociones 
 
 - Y también puedes acceder a todos los archivos necesarios en la carpeta [/makeup-iv-bot](https://github.com/mariasanzs/makeupIV/tree/master/makeup-iv-bot) en la que están, en el archivo [handler.rb](https://github.com/mariasanzs/makeupIV/blob/master/makeup-iv-bot/handler.rb) las funciones corresponientes a las [HU07](https://github.com/mariasanzs/makeupIV/issues/45) y [HU02](https://github.com/mariasanzs/makeupIV/issues/10) y en el archivo [serverless.yml]() la configuración de dicho serverless
 
-## Enlaces a ficheros 📑
-
-***🆕 iv.yaml***
-
-Puedes consultar el fichero iv.yaml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/iv.yaml)
-
-***🆕 5.json***
-
-Puedes consultar el fichero 5.json [aqui](https://github.com/mariasanzs/makeupIV/blob/master/5.json)
-
-***.travis.yml***
-
-Puedes consultar el fichero .travis.yml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/.travis.yml)
-
-***Shippable.yml***
-
-Puedes consultar el fichero shippable.yml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/shippable.yml)
-
-***Dockerfile***
-
-Puedes consultar el fichero Dockerfile [aqui](https://github.com/mariasanzs/makeupIV/blob/master/Dockerfile)
-
-También puedes consultar la documentación del dockerfile y la justificación de las ordenes [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/dockerfile.md)
-
-***Código fuente***
-
-Puedes acceder al código fuente del proyecto desde la carpeta [/src](https://github.com/mariasanzs/makeupIV/tree/master/src)
-
-***Ficheros de test***
-
-Todos los test están localizados en la carpeta [/spec](https://github.com/mariasanzs/makeupIV/tree/master/spec)
-
-
-***Ficheros de dependencias***
-
-Aquí se encuentran los ficheros [Gemfile](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile) y [Gemfile.lock](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile.lock). En Gemfile especificamos que gemas vamos a usar mientras que Gemfile.lock se encarga de mantener esas versiones actualizadas cuando corremos [Bundler](https://github.com/mariasanzs/makeupIV/blob/master/docs/bundler.md#bundler---gestor-de-dependencias).
-
-***Fichero de gestión de tareas***
-
-Aquí se encuentra el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) con el que podemos gestionar la tareas y automatizarlas con [Rake](https://github.com/mariasanzs/makeupIV/blob/master/docs/rake.md)
-
----
----
 ## Integración Continua 🟡➡✔ 
 
 La integración garantiza que los cambios se creen y prueben con la última versión de todo el código base con el fin de encontrar errores lo antes posible y asegurar la calidad del código.
