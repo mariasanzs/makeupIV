@@ -46,9 +46,11 @@ class MyApp < Sinatra::Base
     nombreproducto = params['producto']
     begin
       res = @@almacen.buscarProducto(nombreproducto).listarCaracteristicasProducto()
+      log.info "Accediendo a las caracteristicas de un producto"
       status 200
       {:caracteristicas => res}.to_json
     rescue StandardError
+      log.info "ERROR!!! -> Accediendo a las caracteristicas de un producto"
       status 400
       {:status => 'Error: no se encontró nada de este producto'}.to_json
     end
