@@ -169,3 +169,44 @@ I, [2020-12-12T01:10:21.525937 #15138]  INFO -- : ERROR!!! -> Quitando producto 
 127.0.0.1 - - [12/Dec/2020:01:10:21 +0100] "DELETE /quitarProducto/noexisto " 400 56 0.0002
 I, [2020-12-12T01:10:21.526480 #15138]  INFO -- : ERROR!!! -> ruta no encontrada
 127.0.0.1 - - [12/Dec/2020:01:10:21 +0100] "GET /error404 " 404 38 0.0002
+I, [2020-12-12T13:03:23.535472 #9591]  INFO -- : Accediendo a la página principal de MakeupIV
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET / " 200 15 0.0339
+I, [2020-12-12T13:03:23.607830 #9591]  INFO -- : Accediendo a la disponibilidad de un producto
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET /disponibilidad/prueba " 200 33 0.0178
+I, [2020-12-12T13:03:23.610650 #9591]  INFO -- : ERROR!!! -> Accediendo a la disponibilidad de un producto
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET /disponibilidad/noexisto " 400 58 0.0010
+I, [2020-12-12T13:03:23.612571 #9591]  INFO -- : Accediendo a las caracteristicas de un producto
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET /caracteristicas/prueba " 200 255 0.0010
+I, [2020-12-12T13:03:23.613956 #9591]  INFO -- : ERROR!!! -> Accediendo a las caracteristicas de un producto
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET /caracteristicas/noexisto " 400 57 0.0007
+I, [2020-12-12T13:03:23.616765 #9591]  INFO -- : Canjeando código de un producto
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET /producto/prueba/canjearCodigo/maria15 " 200 23 0.0014
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET /producto/noexisto/canjearCodigo/maria15 " 400 58 0.0005
+I, [2020-12-12T13:03:23.621948 #9591]  INFO -- : ERROR!!! -> Canjeando código de un producto
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET /producto/prueba/canjearCodigo/noexisto " 400 46 0.0005
+I, [2020-12-12T13:03:23.623724 #9591]  INFO -- : Obteniendo tonos de un producto
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET /tonos/prueba " 200 19 0.0010
+I, [2020-12-12T13:03:23.624527 #9591]  INFO -- : ERROR!!! -> Obteniendo tonos de un producto
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET /tonos/noexisto " 400 49 0.0003
+I, [2020-12-12T13:03:23.626082 #9591]  INFO -- : Consultando descuento de un producto
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET /descuento/prueba " 200 28 0.0011
+I, [2020-12-12T13:03:23.626687 #9591]  INFO -- : ERROR!!! -> Consultando descuento de un producto
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET /descuento/noexisto " 400 58 0.0003
+I, [2020-12-12T13:03:23.627277 #9591]  INFO -- : Obteniendo precio total de la cesta
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET /preciocesta " 200 17 0.0002
+I, [2020-12-12T13:03:23.653627 #9591]  INFO -- : Añadiendo un producto a la cesta
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "POST /anadirCesta/prueba " 200 25 0.0260
+I, [2020-12-12T13:03:23.654335 #9591]  INFO -- : ERROR!!! -> Añadiendo un producto a la cesta
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "POST /anadirCesta/noexisto " 400 58 0.0003
+I, [2020-12-12T13:03:23.655430 #9591]  INFO -- : Quitando un producto de la cesta
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "DELETE /quitarCesta/prueba " 200 25 0.0008
+I, [2020-12-12T13:03:23.655943 #9591]  INFO -- : ERROR!!! -> Quitando un producto de la cesta
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "DELETE /quitarCesta/noexisto " 400 58 0.0002
+I, [2020-12-12T13:03:23.656384 #9591]  INFO -- : Quitando un producto de la cesta
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "DELETE /quitarCesta/prueba " 400 54 0.0002
+I, [2020-12-12T13:03:23.657517 #9591]  INFO -- : Quitando producto del almacén
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "DELETE /quitarProducto/prueba " 200 27 0.0009
+I, [2020-12-12T13:03:23.657988 #9591]  INFO -- : ERROR!!! -> Quitando producto del almacén
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "DELETE /quitarProducto/noexisto " 400 56 0.0002
+I, [2020-12-12T13:03:23.658481 #9591]  INFO -- : ERROR!!! -> ruta no encontrada
+127.0.0.1 - - [12/Dec/2020:13:03:23 +0100] "GET /error404 " 404 38 0.0002
