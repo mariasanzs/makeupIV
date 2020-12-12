@@ -8,38 +8,57 @@ La idea del proyecto es poder enterarse rápidamente de descuentos, promociones 
 
 Puedes ver la justificación de por qué he elegido Sinatra como framework y documentación del uso de este [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/sinatra.md)
 
-Puedes ver como he diseñado la API y toda la documentación relativa a esta [aquí]()
+Puedes ver como he diseñado la API y toda la documentación relativa a esta y a los test que se han realizado [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/api.md#documentaci%C3%B3n-del-desarrollo-de-la-api)
+
+Puedes ver como he generado un archivo log en el que se almacenan todos los registros de peticiones [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/log.md#uso-de-middleware-para-creaci%C3%B3n-de-un-fichero-log)
+
+Puedes instalar todas las dependencias haciendo `rake install` y pasar los test haciendo `rake test`. Puedes ver todas estas instrucciones (task) en el archivo [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile)
+
+También puedes iniciar el servicio haciendo `rackup`
 
 ## Enlaces a ficheros 📑
 
-***🆕myapp.rb***
+***🆕 iv.yaml***
+
+Puedes consultar el fichero iv.yaml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/iv.yaml)
+
+***🆕 config.ru***
+
+Puedes consultar el fichero iv.yaml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/config.ru)
+
+
+***🆕 sinatra/myapp.rb***
 
 Puedes consultar el fichero myapp.rb en el que he desarrollado la gran mayoría de la API con Sinatra [aquí](https://github.com/mariasanzs/makeupIV/blob/master/sinatra/myapp.rb)
 
-***🆕testMyapp.rb***
+***🆕 src/almacen.rb***
+
+Puedes consultar el fichero almacen.rb en el que han desarrollado funciones para la [HU08](https://github.com/mariasanzs/makeupIV/issues/53) y cuya clase actúa como una de las clases controladoras de la API [aquí](https://github.com/mariasanzs/makeupIV/blob/master/src/almacen.rb)
+
+***🆕 spec/testMyapp.rb***
 
 Puedes consultar el fichero con todos los test del fichero myapp.rb [aqui](https://github.com/mariasanzs/makeupIV/blob/master/spec/testMyapp.rb)
 
-***🆕Código fuente***
+***🆕 sinatra/log***
 
-Puedes acceder al código fuente del proyecto desde la carpeta [/src](https://github.com/mariasanzs/makeupIV/tree/master/src)
+Puedes consultar la información recogida durante las peticiones a la api en el fichero [info.log](https://github.com/mariasanzs/makeupIV/blob/master/sinatra/log/info.log)
 
-***🆕Ficheros de test***
-
-Todos los test están localizados en la carpeta [/spec](https://github.com/mariasanzs/makeupIV/tree/master/spec)
-
-***🆕Ficheros de dependencias***
+***🆕 Ficheros de dependencias***
 
 Aquí se encuentran los ficheros [Gemfile](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile) y [Gemfile.lock](https://github.com/mariasanzs/makeupIV/blob/master/Gemfile.lock). En Gemfile especificamos que gemas vamos a usar mientras que Gemfile.lock se encarga de mantener esas versiones actualizadas cuando corremos [Bundler](https://github.com/mariasanzs/makeupIV/blob/master/docs/bundler.md#bundler---gestor-de-dependencias).
 
-***🆕Fichero de gestión de tareas***
+***🆕 Fichero de gestión de tareas***
 
 Aquí se encuentra el fichero [Rakefile](https://github.com/mariasanzs/makeupIV/blob/master/Rakefile) con el que podemos gestionar la tareas y automatizarlas con [Rake](https://github.com/mariasanzs/makeupIV/blob/master/docs/rake.md)
 
+***Código fuente***
 
-***iv.yaml***
+Puedes acceder al código fuente del proyecto desde la carpeta [/src](https://github.com/mariasanzs/makeupIV/tree/master/src)
 
-Puedes consultar el fichero iv.yaml [aqui](https://github.com/mariasanzs/makeupIV/blob/master/iv.yaml)
+***Ficheros de test***
+
+Todos los test están localizados en la carpeta [/spec](https://github.com/mariasanzs/makeupIV/tree/master/spec)
+
 
 ***5.json***
 
@@ -61,7 +80,9 @@ También puedes consultar la documentación del dockerfile y la justificación d
 
 ---
 ---
-
+De hitos anteriores:
+---
+---
 
 ## Serverless 
 
