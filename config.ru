@@ -1,5 +1,3 @@
-require "./myapp.rb"
+require "./sinatra/myapp.rb"
 
-set :environment, :production
-set :port, 4567
 run MyApp
