@@ -24,9 +24,7 @@ class MyApp < Sinatra::Base
   end
 ~~~
 
-Con respecto a todo lo relacionado con 'log', podemos ver [aquí](LINK) un poco mejor sobre el uso de un middleware para la creación de un fichero log
-
-~~~
+Con respecto a todo lo relacionado con 'log', podemos ver [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/log.md#uso-de-middleware-para-creaci%C3%B3n-de-un-fichero-log) un poco mejor sobre el uso de un middleware para la creación de un fichero log
 
 Al no disponer de persistencia en la aplicación se han creado las siguientes estancias de clase para poder testear las rutas, además de esto se han declarado las dos clases que funcianarán como clases controladoras ( Almacén y Compra)
 
@@ -104,6 +102,8 @@ o
 
 
 
+
+
 * Para la [HU02](https://github.com/mariasanzs/makeupIV/issues/10)
 
 El código para esta historia de usuario es muy similar al anterior, solo que esta vez se llama a la función que lista las características de un producto.
@@ -118,6 +118,8 @@ o
 
 
 
+
+
 * Para la [HU03](https://github.com/mariasanzs/makeupIV/issues/12)
 
 Nuevamente la ruta es una petición get muy similar a las anteriores, pero en este caso se llama a la función que de makeupiv.rb que muestra los tonos en los que está disponible un producto.
@@ -129,6 +131,8 @@ o
 > curl --header "Content-Type:application/json" --request GET --data '{"producto":"prueba"}' https://localhost:9292/tonos/prueba
 
 
+
+
 * Para la [HU04](https://github.com/mariasanzs/makeupIV/issues/13)
 
 En este caso se muestra el tanto por ciento de descuento que se aplica a un producto siguiendo el mismo esquema de código mediante una petición GET
@@ -138,6 +142,9 @@ En este caso se muestra el tanto por ciento de descuento que se aplica a un prod
 o
 
 > curl --header "Content-Type:application/json" --request GET --data '{"producto":"prueba"}' https://localhost:9292/descuento/prueba
+
+
+
 
 
 * Para la [HU05](https://github.com/mariasanzs/makeupIV/issues/32)
@@ -179,6 +186,8 @@ o
 > curl --header "Content-Type:application/json" --request GET --data '{"producto":"prueba", "canjearCodigo":"maria15"}' https://localhost:9292/producto/canjearCodigo/maria15
 
 
+
+
 * Para la [HU06](https://github.com/mariasanzs/makeupIV/issues/42)
 
 El caso de la HU es algo diferente ya que deberemos de especificar diferentes rutas:
@@ -208,6 +217,8 @@ Al igual que podemos añadir productos a la cesta también tenemos que poder qui
 Para probarlo en el servidor deberíamos de hacer:
 
 >curl --header "Content-Type:application/json" --request DELETE --data '{"producto":"prueba"}' http://localhost:9292/quitarCesta/producto
+
+
 
 
 * Para la [HU08](https://github.com/mariasanzs/makeupIV/issues/53)
@@ -300,7 +311,7 @@ Por último para ejecutar los test de integración podemos hacer
 
 ## Registro en un archivo de log de todas las peticiones realizadas
 
-Se ha creado un fichero de log haciendo uso de un middleware y que puede consultar [aquí](https://github.com/mariasanzs/makeupIV/tree/master/sinatra/log). También puedes consultar toda la documentación de como he realizado esto haciendo click [aquí]() |||||||||||||||||||||||||||||||||||||||||||||||PON RUTA
+Se ha creado un fichero de log haciendo uso de un middleware y que puede consultar [aquí](https://github.com/mariasanzs/makeupIV/tree/master/sinatra/log). También puedes consultar toda la documentación de como he realizado esto haciendo click [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/log.md#uso-de-middleware-para-creaci%C3%B3n-de-un-fichero-log)
 
 
 
