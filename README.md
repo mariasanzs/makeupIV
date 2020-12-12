@@ -80,7 +80,6 @@ También puedes consultar la documentación del dockerfile y la justificación d
 
 ---
 ---
-De hitos anteriores:
 ---
 ---
 
