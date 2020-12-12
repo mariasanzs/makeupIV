@@ -17,9 +17,8 @@ require_relative '../src/compra.rb'
 
 class MyApp < Sinatra::Base
 
-  log = ::Logger.new(File.join(File.dirname(File.expand_path(__FILE__)),'.','log','info.log'))
-
-  configure do
+  configure :development do
+    log = ::Logger.new(File.join(File.dirname(File.expand_path(__FILE__)),'.','log','info.log'))
     use ::Rack::CommonLogger, log
   end
 ~~~
@@ -45,7 +44,6 @@ Para que aparezca al iniciar el servidor en:
 >  http://localhost:9292
 ~~~
   get '/' do
-    log.info "Accediendo a la página principal de MakeupIV"
     {:status => 'ok'}.to_json
   end
 ~~~
@@ -55,7 +53,6 @@ Y para el caso en el que no se encuentre la ruta dada devolviendo el estado 404 
 ~~~
   error 404 do
     content_type :json
-    log.info "ERROR!!! -> ruta no encontrada"
     {:status => 'Error: ruta no encontrada'}.to_json
   end
 ~~~
@@ -80,11 +77,9 @@ Buscamos el producto que corresponde con ese nombre y consultamos cuantas unidad
     nombreproducto = params['producto'].to_s
     begin
       res = @@almacen.buscarProducto(nombreproducto).consultarUnidadesDisponibles()
-      log.info "Accediendo a la disponibilidad de un producto"
       status 200
       {:unidadesDisponibles => res}.to_json
     rescue StandardError
-      log.info "ERROR!!! -> Accediendo a la disponibilidad de un producto"
       status 400
       {:status => "Error: no hay disponibilidad de este producto"}.to_json
     end
@@ -99,8 +94,6 @@ Podemos probar esta ruta poniendo en marcha el servicio y haciendo:
 o
 
 > curl --header "Content-Type:application/json" --request GET --data '{"producto":"prueba"}' https://localhost:9292/disponibilidad/prueba
-
-
 
 
 
@@ -162,12 +155,10 @@ Buscamos el producto y consultamos si dicho código de descuento se le puede apl
       prod = @@almacen.buscarProducto(nombreproducto)
       begin
         res = prod.canjearCodigo(n_codigo)
-        log.info "Canjeando código de un producto"
         status 200
         {:preciorebajado => res}.to_json
       rescue StandardError
         status 400
-        log.info "ERROR!!! -> Canjeando código de un producto"
         {:status => 'Error: Este código no es válido'}.to_json
       end
     rescue StandardError
