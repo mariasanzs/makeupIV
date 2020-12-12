@@ -9,7 +9,7 @@ require_relative '../src/compra.rb'
 
 class MyApp < Sinatra::Base
 
-  configure :production do
+  configure :development do
     log = ::Logger.new(File.join(File.dirname(File.expand_path(__FILE__)),'.','log','info.log'))
     use ::Rack::CommonLogger, log
   end

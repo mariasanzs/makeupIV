@@ -9,21 +9,21 @@ Aprovechando esa funcionalidad podemos realizar gran variendad de cosas en nuest
 Se puede realizar de una forma muy sencilla: 
 
 ~~~
-  log = ::Logger.new(File.join(File.dirname(File.expand_path(__FILE__)),'.','log','info.log'))
-
-  configure do
+  configure :production do
+    log = ::Logger.new(File.join(File.dirname(File.expand_path(__FILE__)),'.','log','info.log'))
     use ::Rack::CommonLogger, log
   end
+
 ~~~
 
 Simplemente definimos una variable con la ruta en la que queremos que se almacene la información y hacemos uso de ´::Rack::CommonLogger´ que registra en una línea cada solucion dada a la aplicación.
 
+Destacar que este fragmento se ejecuta una única vez al iniciar el servidor y solo si está en modo de producción.
+
 Puedes consultar info sobre ::Rack::CommonLogger [aquí](https://www.rubydoc.info/gems/rack/Rack/CommonLogger)
 
-Ahora, para almacenar un mensaje con información deberemos de incluir dentro del código de nuestras rutas la siguiente línea en todos los diferentes casos en los que la app devuelve algún resultado:
+Ahora, se almacenarán todas las peticiones que se vayan realizando al servicio, puedes consultar dicho fichero de log [aquí](https://github.com/mariasanzs/makeupIV/tree/master/sinatra/log/info.log)
 
-> log.info "Mensaje que quiero que se añada a info.log"
-
-Finalmente, Puedes consultar dicho fichero de log [aquí](https://github.com/mariasanzs/makeupIV/tree/master/sinatra/log/info.log)
+Cabe destacar que no solo podemos usar middleware de funciones predefinidas si no que podemos crear nuestras propias funcionalidades. 
 
 
