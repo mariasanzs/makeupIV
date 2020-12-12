@@ -181,26 +181,6 @@ class MyApp < Sinatra::Base
       end
   end
 
-  post '/anadirProducto/:nombre/:tonos/:precio/:preciorebajado/:unidades/:tipo/:codigos' do
-    content_type :json
-    nombreproducto = params['nombre']
-    #if @@almacen.buscarProducto(nombreproducto).nil?
-  #    tonosp = params['tonos']
-      preciop = params['precio']
-      preciorebajadop = params['preciorebajado']
-  #    unidadesp = params['unidades']
-      tipop = params['tipo']
-#      codigosp = params['codigos']
-      #producto = Maquillaje.new(nombreproducto, tonosp, preciop, preciorebajadop, unidadesp, tipop, codigosp)
-      #@@almacen.anadirAlmacen(producto)
-      status 200
-      tam = @@almacen.productos.size
-      {:anadidoAlmacen => nombreproducto, :tamanoAlmacen => tam }.to_json
-    #else
-    #  status 400
-    #  {:status => 'Error: Este producto ya está en el almacen'}.to_json
-    #end
-  end
 
   error 404 do
     content_type :json
