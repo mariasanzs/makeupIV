@@ -9,7 +9,7 @@ Aprovechando esa funcionalidad podemos realizar gran variendad de cosas en nuest
 Se puede realizar de una forma muy sencilla: 
 
 ~~~
-  configure :production do
+  configure :development do
     log = ::Logger.new(File.join(File.dirname(File.expand_path(__FILE__)),'.','log','info.log'))
     use ::Rack::CommonLogger, log
   end
@@ -18,7 +18,7 @@ Se puede realizar de una forma muy sencilla:
 
 Simplemente definimos una variable con la ruta en la que queremos que se almacene la información y hacemos uso de ´::Rack::CommonLogger´ que registra en una línea cada solucion dada a la aplicación.
 
-Destacar que este fragmento se ejecuta una única vez al iniciar el servidor y solo si está en modo de producción.
+Destacar que este fragmento se ejecuta una única vez al iniciar el servidor y solo si está en modo `development`.
 
 Puedes consultar info sobre ::Rack::CommonLogger [aquí](https://www.rubydoc.info/gems/rack/Rack/CommonLogger)
 
