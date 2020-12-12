@@ -9,4 +9,4 @@ test:
   -spec/testMyapp.rb
 taskfile: Rakefile
 URL: https://makeup-iv.vercel.app/api/clientes.rb?correo=mariasanz@correo.ugr.es
-make: make
+make: rake
