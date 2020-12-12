@@ -27,7 +27,7 @@ Como ya habíamos comentado, hay otras muchas opciones de framework para Ruby, a
 * Roda: Destaca por su enrutamiento siguiendo una estructura de árbol lo que hace que tenga muy buen rendimiento. Sin embargo solo se adapta bien a proyecto pequeños y no dispone de un marco completo.
 * Otros conocidos son: Hanami (Bastante Popular), Merb, Nitro, Campaign, Cuba ...
 
-Puedes encontrar comparaciones entre diferentes Frameworks de Ruby en cuanto a popularidad,uso , actualizaciones y demás [aquí]
+Puedes encontrar comparaciones entre diferentes Frameworks de Ruby en cuanto a popularidad,uso , actualizaciones y demás [aquí](https://ruby.libhunt.com/categories/242-web-frameworks)
 
 ## Poner en marcha Sinatra
 
@@ -53,7 +53,7 @@ Para ejecutar la aplicación deberemos de crear un archivo [config.ru](https://g
 
 De esta forma, tendremos disponible ahora en nuestro localhost el servicio, por ejemplo en la ruta:
 
- > http://localhost:9292/caracteristicas/prueba
+ > http://localhost:9292/caracteristicas/prueba en el navegador
 
 Para ver las características del producto 'prueba'.
 
