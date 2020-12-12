@@ -1,4 +1,4 @@
-#DOCUMENTACIÓN DEL DESARROLLO DE LA API
+# DOCUMENTACIÓN DEL DESARROLLO DE LA API
 
 Para desarrollar la aplicación he usado Sinatra, puedes ver alguna documentación que he desarrollado sobre la elección de este y su uso [aquí](https://github.com/mariasanzs/makeupIV/blob/master/docs/sinatra.md#justificaci%C3%B3n-t%C3%A9cnica-del-framework-sinatra-y-documentaci%C3%B3n-sobre-c%C3%B3mo-se-usa-en-la-pr%C3%A1ctica)
 
