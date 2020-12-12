@@ -14,8 +14,6 @@ RUN adduser -D my-test-user
 #Gives ownership to our user
 RUN chown my-test-user $GEM_HOME &&  chmod 777 $GEM_HOME
 
-RUN chmod 775 /test
-
 #Set the user for CMD
 USER my-test-user
 

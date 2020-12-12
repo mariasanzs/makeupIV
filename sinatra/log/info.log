@@ -90,3 +90,23 @@ I, [2020-12-12T16:10:49.248639 #6]  INFO -- : ERROR!!! -> Quitando producto del 
 127.0.0.1 - - [12/Dec/2020:16:10:49 +0000] "DELETE /quitarProducto/noexisto " 400 56 0.0002
 I, [2020-12-12T16:10:49.249256 #6]  INFO -- : ERROR!!! -> ruta no encontrada
 127.0.0.1 - - [12/Dec/2020:16:10:49 +0000] "GET /error404 " 404 38 0.0003
+I, [2020-12-12T17:35:06.188459 #25710]  INFO -- : Accediendo a la página principal de MakeupIV
+I, [2020-12-12T17:35:06.192922 #25710]  INFO -- : Accediendo a la disponibilidad de un producto
+I, [2020-12-12T17:35:06.193528 #25710]  INFO -- : ERROR!!! -> Accediendo a la disponibilidad de un producto
+I, [2020-12-12T17:35:06.194087 #25710]  INFO -- : Accediendo a las caracteristicas de un producto
+I, [2020-12-12T17:35:06.194443 #25710]  INFO -- : ERROR!!! -> Accediendo a las caracteristicas de un producto
+I, [2020-12-12T17:35:06.194988 #25710]  INFO -- : Canjeando código de un producto
+I, [2020-12-12T17:35:06.195756 #25710]  INFO -- : ERROR!!! -> Canjeando código de un producto
+I, [2020-12-12T17:35:06.196371 #25710]  INFO -- : Obteniendo tonos de un producto
+I, [2020-12-12T17:35:06.197104 #25710]  INFO -- : ERROR!!! -> Obteniendo tonos de un producto
+I, [2020-12-12T17:35:06.198871 #25710]  INFO -- : Consultando descuento de un producto
+I, [2020-12-12T17:35:06.199363 #25710]  INFO -- : ERROR!!! -> Consultando descuento de un producto
+I, [2020-12-12T17:35:06.199758 #25710]  INFO -- : Obteniendo precio total de la cesta
+I, [2020-12-12T17:35:06.203980 #25710]  INFO -- : Añadiendo un producto a la cesta
+I, [2020-12-12T17:35:06.204881 #25710]  INFO -- : ERROR!!! -> Añadiendo un producto a la cesta
+I, [2020-12-12T17:35:06.206960 #25710]  INFO -- : Quitando un producto de la cesta
+I, [2020-12-12T17:35:06.207776 #25710]  INFO -- : ERROR!!! -> Quitando un producto de la cesta
+I, [2020-12-12T17:35:06.208276 #25710]  INFO -- : Quitando un producto de la cesta
+I, [2020-12-12T17:35:06.209430 #25710]  INFO -- : Quitando producto del almacén
+I, [2020-12-12T17:35:06.209863 #25710]  INFO -- : ERROR!!! -> Quitando producto del almacén
+I, [2020-12-12T17:35:06.210279 #25710]  INFO -- : ERROR!!! -> ruta no encontrada
