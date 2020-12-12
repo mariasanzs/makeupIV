@@ -110,3 +110,23 @@ I, [2020-12-12T17:35:06.208276 #25710]  INFO -- : Quitando un producto de la ces
 I, [2020-12-12T17:35:06.209430 #25710]  INFO -- : Quitando producto del almacén
 I, [2020-12-12T17:35:06.209863 #25710]  INFO -- : ERROR!!! -> Quitando producto del almacén
 I, [2020-12-12T17:35:06.210279 #25710]  INFO -- : ERROR!!! -> ruta no encontrada
+I, [2020-12-12T16:38:21.380949 #6]  INFO -- : Accediendo a la página principal de MakeupIV
+I, [2020-12-12T16:38:21.388562 #6]  INFO -- : Accediendo a la disponibilidad de un producto
+I, [2020-12-12T16:38:21.389423 #6]  INFO -- : ERROR!!! -> Accediendo a la disponibilidad de un producto
+I, [2020-12-12T16:38:21.391312 #6]  INFO -- : Accediendo a las caracteristicas de un producto
+I, [2020-12-12T16:38:21.392129 #6]  INFO -- : ERROR!!! -> Accediendo a las caracteristicas de un producto
+I, [2020-12-12T16:38:21.394708 #6]  INFO -- : Canjeando código de un producto
+I, [2020-12-12T16:38:21.395694 #6]  INFO -- : ERROR!!! -> Canjeando código de un producto
+I, [2020-12-12T16:38:21.396740 #6]  INFO -- : Obteniendo tonos de un producto
+I, [2020-12-12T16:38:21.397272 #6]  INFO -- : ERROR!!! -> Obteniendo tonos de un producto
+I, [2020-12-12T16:38:21.398526 #6]  INFO -- : Consultando descuento de un producto
+I, [2020-12-12T16:38:21.399049 #6]  INFO -- : ERROR!!! -> Consultando descuento de un producto
+I, [2020-12-12T16:38:21.399511 #6]  INFO -- : Obteniendo precio total de la cesta
+I, [2020-12-12T16:38:21.404498 #6]  INFO -- : Añadiendo un producto a la cesta
+I, [2020-12-12T16:38:21.405201 #6]  INFO -- : ERROR!!! -> Añadiendo un producto a la cesta
+I, [2020-12-12T16:38:21.407153 #6]  INFO -- : Quitando un producto de la cesta
+I, [2020-12-12T16:38:21.408214 #6]  INFO -- : ERROR!!! -> Quitando un producto de la cesta
+I, [2020-12-12T16:38:21.408835 #6]  INFO -- : Quitando un producto de la cesta
+I, [2020-12-12T16:38:21.411066 #6]  INFO -- : Quitando producto del almacén
+I, [2020-12-12T16:38:21.411922 #6]  INFO -- : ERROR!!! -> Quitando producto del almacén
+I, [2020-12-12T16:38:21.412868 #6]  INFO -- : ERROR!!! -> ruta no encontrada
