@@ -1,5 +1,12 @@
-entidad: src/makeup.rb
+entidad:
+  - src/almacen.rb
+  - src/compra.rb
+  - src/makeup.rb
+  - src/tipoProducto.rb
 lenguaje: Ruby
-test: spec/testMakeUpIV.rb
+test:
+  -spec/testMakeUpIV.rb
+  -spec/testMyapp.rb
 taskfile: Rakefile
 URL: https://makeup-iv.vercel.app/api/clientes.rb?correo=mariasanz@correo.ugr.es
+make: make
